@@ -36,8 +36,16 @@ function init() {
 		//strength column
 		$("#"+readerObj.reader_name+" td:nth-child(5)").text(readerObj.strength);
 		
+		
+		var date = new Date(readerObj.created_at);
+		var formatDate = date.getFullYear() + "-"+addZero(date.getMonth()+1)+"-"+addZero(date.getDate())+" "
+		+addZero(date.getHours()) + ":" + addZero(date.getMinutes())+":"+addZero(date.getSeconds());                                
+		
 		//created at column
-		$("#"+readerObj.reader_name+" td:nth-child(6)").text(readerObj.created_at);
+		$("#"+readerObj.reader_name+" td:nth-child(6)").text(formatDate);
+		
+		
+		
 		
 	});	
 
@@ -80,6 +88,8 @@ function init() {
 	});
 
 }
-
+function addZero(n){
+ return n < 10 ? '0' + n : '' + n;
+}
 $(document).on('ready', init);
 
