@@ -1,40 +1,54 @@
 var ReaderInstance= require('../models/reader'); 
 
-// Handle /api/keyService/v1/readers for POST
+// Handle /2.4/v1/readers for GET
 exports.getReaders = function(req, res,next) {
 	var customErr = new Error();
-	var readerInstance = new ReaderInstance();		
-	var sql = "select * from reader";
-	readerInstance.query(sql,function(err, rows, fields) {
-		if(err) 
-		{
-			console.log(JSON.stringify(err));
-
-			// customErr.status = 503;
-			// customErr.message = "db query error";		
-			// next(customErr);			
-		}
-		else
-		{
-			var apiOutput = {};
-			apiOutput.status = "success";
-			apiOutput.message = "readers found";
-			apiOutput.response = rows;			
-			res.json(apiOutput);	
-		}
-	});	
-/* 	var errorMessages = new Array();
+	var errorMessages = new Array();
 	customErr.status = 400;
+	var readerInstance = new ReaderInstance();		
 	
-	// email,imei,mac,package_name
-	if(typeof req.body.email === "undefined")errorMessages.push("Missing 'email' field");
-	if(typeof req.body.mac === "undefined")errorMessages.push("Missing 'mac' field");
-	if(typeof req.body.imei === "undefined")errorMessages.push("Missing 'imei' field");
-	if(typeof req.body.package_name === "undefined")errorMessages.push("Missing 'package_name' field");
 	
-	var concatenate = errorMessages.join(", ");
-	customErr.message = concatenate;
+	if(customErr.message !== "")
+	{
+		next(customErr);	
+	}
+	else
+	{
+		var sql = "select * from reader";
+		readerInstance.query(sql,function(err, rows, fields) {
+			if(err) 
+			{
+				console.log(JSON.stringify(err));
 
+				customErr.status = 503;
+				customErr.message = "db query error";		
+				next(customErr);			
+			}
+			else
+			{
+				var apiOutput = {};
+				apiOutput.status = "success";
+				apiOutput.message = "readers found";
+				apiOutput.response = rows;			
+				res.json(apiOutput);	
+			}
+		});
+
+
+
+	}
+};
+// Handle /2.4/v1/readers for POST
+exports.postReaders = function(req, res,next) {
+	var customErr = new Error();
+	var errorMessages = new Array();
+	customErr.status = 400;
+	var readerInstance = new ReaderInstance();		
+	if(typeof req.body.reader_name === "undefined")errorMessages.push("Missing 'reader_name' field");
+	if(typeof req.body.position === "undefined")errorMessages.push("Missing 'position' field");
+	var concatenate = errorMessages.join(", ");
+	customErr.message = concatenate;	
+	
 	if(customErr.message !== "")
 	{
 		next(customErr);	
@@ -42,76 +56,68 @@ exports.getReaders = function(req, res,next) {
 	else
 	{
 	
-
-		var email = keyServiceKeys.escape(req.body.email);
-		var mac = keyServiceKeys.escape(req.body.mac);
-		var imei = keyServiceKeys.escape(req.body.imei);
-		var package_name = keyServiceKeys.escape(req.body.package_name);
-		var created_at = new Date();
-		var ip = getClientIp(req);
-		//先找到account_id
-
-		var sql = "select id from account where email = '"+email+"'";
-
-		keyServiceAccounts.query(sql,function(err, rows, fields) {
+		var reader_name = readerInstance.escape(req.body.reader_name);
+		var position = readerInstance.escape(req.body.position);
+		
+		console.log("reader_name:"+reader_name);
+		console.log("position:"+position);
+ 		console.log("is reader_name numeric:"+validation.isNumber(reader_name));
+		if(!validation.isNumber(reader_name))
+		{
+			customErr.status = 400;
+			customErr.message = "reader_name is not a number";		
+			next(customErr);	
+		
+		} 
+		
+		
+		
+ 		readerInstance.set('reader_name', reader_name);
+		readerInstance.set('position', position);
+		readerInstance.save(function(err){
 			if(err) 
 			{
 				console.log(JSON.stringify(err));
-
-				customErr.status = 503;
-				customErr.message = "db query error";		
-				next(customErr);					
-			}
-			else
-			{
-				if(rows.length>0)
-				{
-					//再用account_id,imei,mac,package_name找key紀錄
-					sql = "select * from key_record where account_id = '"+rows[0].id+"' and imei = '"+imei+"' and mac = '"+mac+"' and package_name = '"+package_name+"'";		
-					keyServiceKeys.query(sql,function(err, rows, fields) {
-						if(err) 
-						{
-							console.log(JSON.stringify(err));
-
-							customErr.status = 503;
-							customErr.message = "db query error";		
-							next(customErr);					
-						}
-						else
-						{
-							if(rows.length > 0)
-							{
-								var apiOutput = {};
-								apiOutput.status = "success";
-								apiOutput.message = "UID found";
-								apiOutput.response = rows;
-								
-								
-								
-								res.json(apiOutput);			
-							}
-							else
-							{				
-								customErr.status = 404;
-								customErr.message = "ResourceNotFound";		
-								next(customErr);					
-
-							}
-						}
-					});					
 				
+				if(err.errno === 1062)
+				{
+					customErr.status = 409;
+					customErr.message = "reader record already exists";
 				}
 				else
 				{
-					customErr.status = 404;
-					customErr.message = "ResourceNotFound";		
-					next(customErr);					
-				
+					customErr.status = 503;
+					customErr.message = "db query error";			
 				}
+				next(customErr);			
 			}
-		});				
-	} */		
+			else
+			{	
+				var sql = "select * from reader where reader_name = "+reader_name+"";
+				console.log("sql:"+sql);
+				
+ 				readerInstance.query(sql,function(err, rows, fields) {
+					if(err) 
+					{
+						console.log(JSON.stringify(err));
 
+						customErr.status = 503;
+						customErr.message = "db query error";		
+						next(customErr);					
+					}
+					else
+					{
+							var apiOutput = {};
+							apiOutput.status = "success";
+							apiOutput.message = "new reader established";
+							apiOutput.response = rows;
+							res.json(apiOutput);	
+					}
+				});	 	
+			
+			}
+		}); 
+	}
 };
 function getClientIp(req) {
   var ipAddress;
@@ -129,4 +135,20 @@ function getClientIp(req) {
     ipAddress = req.connection.remoteAddress;
   }
   return ipAddress;
-};  
+}; 
+var validation = {
+	isEmailAddress:function(str) {
+	   var pattern =/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+	   return pattern.test(str);  // returns a boolean
+	},
+	isNotEmpty:function (str) {
+	   var pattern =/\S+/;
+	   return pattern.test(str);  // returns a boolean
+	},
+	isNumber:function(str) {
+	   var pattern = /^\d+$/;
+	   return pattern.test(str);  // returns a boolean
+	},
+	isSame:function(str1,str2){
+	  return str1 === str2;
+}};   

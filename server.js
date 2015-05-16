@@ -4,6 +4,7 @@ var express = require('express');
 var flash = require('connect-flash');
 var bodyParser = require('body-parser');
 var readersController = require('./controllers/readers');
+var time_linesController = require('./controllers/time_lines');
 
 
 var session = require('express-session');
@@ -22,6 +23,9 @@ app.set("jsonp callback", true);
 // http
 var http = require('http');
 var httpServer = http.createServer(app);
+
+var io = require("socket.io").listen(httpServer);
+io.set('transports', ['polling', 'websocket']);
 var fs = require('fs');
 app.use("/registration/v1/img",express.static(__dirname + "/public/img"));
 
@@ -42,15 +46,58 @@ app.use(session({
 }))
 app.use(passport.session());
 
+app.set("views", __dirname + "/views");
+app.engine('.html', require('ejs').__express);
+app.set('view engine', 'html');
 
 
 
+
+
+app.use("/2.4/v1",express.static("public", __dirname + "/public"));
+app.all("/2.4/v1/index", function(request, response) {
+	response.render('index');
+
+
+});
+app.all("/2.4/v1/channel", function(request, response) {
+	var reader_name = request.body.reader_name;
+	var position = request.body.position;
+	var tag_name = request.body.tag_name;
+	var tag_uid = request.body.tag_uid;
+	var strength = request.body.strength;
+	var created_at = new Date();
+
+	console.log("reader_name:"+reader_name);
+	console.log("position:"+position);
+	console.log("tag_name:"+tag_name);
+	console.log("tag_uid:"+tag_uid);
+	console.log("strength:"+strength);
+	var time_line_record = {};
+	
+	time_line_record.reader_name = reader_name;
+	time_line_record.position = position;
+	time_line_record.tag_name = tag_name;
+	time_line_record.tag_uid = tag_uid;
+	time_line_record.strength = strength;
+	time_line_record.created_at = created_at;
+	
+	
+	
+	io.sockets.emit("channel1", time_line_record);
+	response.send("message send");
+
+	
+});
 var routerRegistration = express.Router();
 app.use('/2.4/v1', routerRegistration);
 
 routerRegistration.route('/readers')
-	.get(readersController.getReaders);		
+	.get(readersController.getReaders)
+	.post(readersController.postReaders);
 	
+routerRegistration.route('/time_lines')	
+	.post(time_linesController.posttime_lines);
 // Error Hanlding
 app.use(function(err, req, res, next) {
 	var apiOutput = {};
