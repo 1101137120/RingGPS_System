@@ -1,4 +1,4 @@
- var serverBaseUrl = document.domain;
+ var serverBaseUrl = document.domain+":9004";
 function init() {
 
 	

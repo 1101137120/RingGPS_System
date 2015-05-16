@@ -71,12 +71,12 @@ app.all("/2.4/v1/channel", function(request, response) {
 	console.log("reader_name:"+reader_name);
 	// console.log("position:"+position);
 	// console.log("tag_name:"+tag_name);
-	// console.log("tag_uid:"+tag_uid);
+	console.log("tag_uid:"+tag_uid);
 	// console.log("strength:"+strength);
 	
 	
-	var sql = "select * from reader,tag where reader_name = '"+reader_name+"' or tag_uid = '"+tag_uid+"'";
-		
+	var sql = "select * from tag where tag_uid = '"+tag_uid+"'";
+	console.log(sql);
 	time_lineInstance.query(sql,function(err,rows,fields){
 		if(err) 
 		{
@@ -90,11 +90,17 @@ app.all("/2.4/v1/channel", function(request, response) {
 		{
 			console.log("----emit block");
 			var time_line_record = {};
+			if(typeof rows[0] !== "undefined")
+			{
+				time_line_record.tag_name = rows[0].tag_name;
+			
+			}
+			else
+			{
+				time_line_record.tag_name = "";
+			}
 			
 			time_line_record.reader_name = reader_name;
-			// time_line_record.position = rows[0].position;
-			// time_line_record.tag_name = rows[0].tag_name;
-			time_line_record.tag_name = "hey hey";
 			time_line_record.tag_uid = tag_uid;
 			time_line_record.strength = strength;
 			time_line_record.created_at = created_at;
