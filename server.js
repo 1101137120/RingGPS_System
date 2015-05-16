@@ -69,22 +69,23 @@ app.all("/2.4/v1/channel", function(request, response) {
 	var created_at = new Date();
 
 	console.log("reader_name:"+reader_name);
-	console.log("position:"+position);
-	console.log("tag_name:"+tag_name);
-	console.log("tag_uid:"+tag_uid);
-	console.log("strength:"+strength);
+	// console.log("position:"+position);
+	// console.log("tag_name:"+tag_name);
+	// console.log("tag_uid:"+tag_uid);
+	// console.log("strength:"+strength);
 	var time_line_record = {};
 	
 	time_line_record.reader_name = reader_name;
 	time_line_record.position = position;
 	time_line_record.tag_name = tag_name;
-	time_line_record.tag_uid = tag_uid;
+	// time_line_record.uid = tag_uid;
 	time_line_record.strength = strength;
-	time_line_record.created_at = created_at;
+	// time_line_record.created_at = created_at;
 	
 	
-	
+	console.log("what's going on:"+JSON.stringify(time_line_record));
 	io.sockets.emit("channel1", time_line_record);
+	console.log("reader:"+time_line_record.reader_name+" message emit")
 	response.send("message send");
 
 	

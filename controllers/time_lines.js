@@ -30,17 +30,17 @@ exports.posttime_lines = function(req, res,next) {
 		var reader_name = time_lineInstance.escape(req.body.reader_name);
 		var is_read = time_lineInstance.escape(req.body.is_read);
 		var created_at = new Date();
-		console.log("group_code:"+group_code);
-		console.log("run_code:"+run_code);
-		console.log("reader_name:"+reader_name);
-		console.log("is_read:"+is_read);
+		// console.log("group_code:"+group_code);
+		// console.log("run_code:"+run_code);
+		// console.log("reader_name:"+reader_name);
+		// console.log("is_read:"+is_read);
 		
-		console.log("is reader_name numeric:"+validation.isNumber(reader_name));
+		// console.log("is reader_name numeric:"+validation.isNumber(reader_name));
 		if(!validation.isNumber(reader_name))
 		{
 			customErr.status = 400;
 			customErr.message = "reader_name must be a number";		
-			console.log("reader_name must be a number");
+			// console.log("reader_name must be a number");
 			next(customErr);	
 		
 		}
@@ -77,7 +77,7 @@ exports.posttime_lines = function(req, res,next) {
 					apiOutput.status = "success";
 					apiOutput.message = "new time_line established";
 					res.json(apiOutput);		
-					console.log(JSON.stringify(apiOutput));
+					// console.log(JSON.stringify(apiOutput));
 				}
 			});		
 		

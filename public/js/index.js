@@ -11,8 +11,8 @@ function init() {
 	});	
 
 	socket.on("channel1", function (readerObj) {
-		console.log("2.4頁面receive"+readerObj);
-		console.log("get the reader name:"+readerObj.reader_name);	
+		console.log("2.4頁面receive"+JSON.stringify(readerObj));
+ 		console.log("get the reader name:"+readerObj.reader_name);	
 		
 		$("#readerTable tr").css('background','#FFFFFF');
 		console.log("did I get readerTable:"+$("#readerTable").length);
