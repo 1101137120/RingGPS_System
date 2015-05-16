@@ -8,8 +8,8 @@ exports.posttime_lines = function(req, res,next) {
 	var time_lineInstance = new Time_lineInstance();		
 
 	
-	if(typeof req.body.group_code === "undefined")errorMessages.push("Missing 'group_code' field");
-	if(typeof req.body.run_code === "undefined")errorMessages.push("Missing 'run_code' field");
+	// if(typeof req.body.group_code === "undefined")errorMessages.push("Missing 'group_code' field");
+	// if(typeof req.body.run_code === "undefined")errorMessages.push("Missing 'run_code' field");
 	if(typeof req.body.reader_name === "undefined")errorMessages.push("Missing 'reader_name' field");
 	if(typeof req.body.is_read === "undefined")errorMessages.push("Missing 'is_read' field");
 
@@ -23,63 +23,89 @@ exports.posttime_lines = function(req, res,next) {
 	}
 	else
 	{
-	
-
-		var group_code = time_lineInstance.escape(req.body.group_code);
-		var run_code = time_lineInstance.escape(req.body.run_code);
+		var strength = time_lineInstance.escape(req.body.strength);
+		var tag_uid = time_lineInstance.escape(req.body.tag_uid);
+		
+		
 		var reader_name = time_lineInstance.escape(req.body.reader_name);
 		var is_read = time_lineInstance.escape(req.body.is_read);
 		var created_at = new Date();
-		// console.log("group_code:"+group_code);
-		// console.log("run_code:"+run_code);
-		// console.log("reader_name:"+reader_name);
-		// console.log("is_read:"+is_read);
 		
+
+	
 		// console.log("is reader_name numeric:"+validation.isNumber(reader_name));
 		if(!validation.isNumber(reader_name))
 		{
 			customErr.status = 400;
 			customErr.message = "reader_name must be a number";		
-			// console.log("reader_name must be a number");
+			console.log("reader_name must be a number");
 			next(customErr);	
 		
 		}
 		else
 		{
-			time_lineInstance.set('group_code', group_code);
-			time_lineInstance.set('run_code', run_code);
-			time_lineInstance.set('reader_name', reader_name);
-			time_lineInstance.set('is_read', is_read);
-			time_lineInstance.set('created_at', created_at);
-			time_lineInstance.save(function(err){
+		
+			var sql = "select * from reader,tag where reader_name = '"+reader_name+"' or tag_uid = '"+tag_uid+"'";
+		
+			time_lineInstance.query(sql,function(err,rows,fields){
 				if(err) 
 				{
-					console.log(JSON.stringify(err));
-					
-					if(err.errno === 1062)
-					{
-						customErr.status = 409;
-						customErr.message = "time_line record already exists";
-						console.log("time_line record already exists");
-					}
-					else
-					{
-						customErr.status = 503;
-						customErr.message = "db query error";	
-						console.log("db query error");
-					}
+					customErr.status = 503;
+					customErr.message = "db query error";	
+					console.log("db query error");
 					next(customErr);			
+						
 				}
 				else
-				{	
+				{
+					 
+					 // console.log("sql:"+sql);
+					 // console.log("db result:"+JSON.stringify(rows[0]));
+					if(strength !== "")
+						time_lineInstance.set('strength', strength);
 						
-					var apiOutput = {};
-					apiOutput.status = "success";
-					apiOutput.message = "new time_line established";
-					res.json(apiOutput);		
-					// console.log(JSON.stringify(apiOutput));
+					if(tag_uid !== "")
+						time_lineInstance.set('tag_uid', tag_uid);
+
+						
+					// time_lineInstance.set('position', rows[0].position);
+					time_lineInstance.set('tag_name', rows[0].tag_name);
+					time_lineInstance.set('reader_name', reader_name);
+					time_lineInstance.set('is_read', is_read);
+					time_lineInstance.set('created_at', created_at);
+					time_lineInstance.save(function(err){
+						if(err) 
+						{
+							// console.log(JSON.stringify(err));
+							
+							if(err.errno === 1062)
+							{
+								customErr.status = 409;
+								customErr.message = "time_line record already exists";
+								console.log("time_line record already exists");
+							}
+							else
+							{
+								customErr.status = 503;
+								customErr.message = "db query error";	
+								console.log("db query error");
+							}
+							next(customErr);			
+						}
+						else
+						{	
+								
+							var apiOutput = {};
+							apiOutput.status = "success";
+							apiOutput.message = "new time_line established";
+							res.json(apiOutput);		
+							// console.log(JSON.stringify(apiOutput));
+						}
+					});					
 				}
-			});		
+			
+			});
+	
 		
 		
 		}

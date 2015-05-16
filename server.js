@@ -5,7 +5,7 @@ var flash = require('connect-flash');
 var bodyParser = require('body-parser');
 var readersController = require('./controllers/readers');
 var time_linesController = require('./controllers/time_lines');
-
+var Time_lineInstance= require('./models/time_lines'); 
 
 var session = require('express-session');
 var passport = require('passport');
@@ -67,26 +67,54 @@ app.all("/2.4/v1/channel", function(request, response) {
 	var tag_uid = request.body.tag_uid;
 	var strength = request.body.strength;
 	var created_at = new Date();
-
+	var time_lineInstance = new Time_lineInstance();		
 	console.log("reader_name:"+reader_name);
 	// console.log("position:"+position);
 	// console.log("tag_name:"+tag_name);
 	// console.log("tag_uid:"+tag_uid);
 	// console.log("strength:"+strength);
-	var time_line_record = {};
-	
-	time_line_record.reader_name = reader_name;
-	time_line_record.position = position;
-	time_line_record.tag_name = tag_name;
-	// time_line_record.uid = tag_uid;
-	time_line_record.strength = strength;
-	// time_line_record.created_at = created_at;
 	
 	
-	console.log("what's going on:"+JSON.stringify(time_line_record));
-	io.sockets.emit("channel1", time_line_record);
-	console.log("reader:"+time_line_record.reader_name+" message emit")
-	response.send("message send");
+	var sql = "select * from reader,tag where reader_name = '"+reader_name+"' or tag_uid = '"+tag_uid+"'";
+		
+	time_lineInstance.query(sql,function(err,rows,fields){
+		if(err) 
+		{
+			customErr.status = 503;
+			customErr.message = "db query error";	
+			console.log("db query error");
+			next(customErr);			
+				
+		}
+		else
+		{
+			console.log("----emit block");
+			var time_line_record = {};
+			
+			time_line_record.reader_name = reader_name;
+			// time_line_record.position = rows[0].position;
+			// time_line_record.tag_name = rows[0].tag_name;
+			time_line_record.tag_name = "hey hey";
+			time_line_record.tag_uid = tag_uid;
+			time_line_record.strength = strength;
+			time_line_record.created_at = created_at;
+			
+			
+			io.sockets.emit("channel1", time_line_record);
+			response.send("message send");		
+		
+		
+		
+
+		}
+		
+					
+
+	});
+	
+	
+	
+
 
 	
 });
