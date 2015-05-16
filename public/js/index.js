@@ -18,6 +18,11 @@ function init() {
 		console.log("did I get readerTable:"+$("#readerTable").length);
 		//adding color
 		$("#"+readerObj.reader_name).css('background-color','#FFE700');
+		if(readerObj.wrong_packet ==="1")
+		{
+			$("#"+readerObj.reader_name).css('background-color','#FF0000');
+		
+		}
 		
 		//position column
 		$("#"+readerObj.reader_name+" td:nth-child(2)").text(readerObj.position);

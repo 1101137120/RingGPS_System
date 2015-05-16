@@ -66,6 +66,7 @@ app.all("/2.4/v1/channel", function(request, response) {
 	var tag_name = request.body.tag_name;
 	var tag_uid = request.body.tag_uid;
 	var strength = request.body.strength;
+	var wrong_packet = request.body.wrong_packet;
 	var created_at = new Date();
 	var time_lineInstance = new Time_lineInstance();		
 	console.log("reader_name:"+reader_name);
@@ -105,7 +106,7 @@ app.all("/2.4/v1/channel", function(request, response) {
 			time_line_record.strength = strength;
 			time_line_record.created_at = created_at;
 			
-			
+			time_line_record.wrong_packet = wrong_packet;
 			io.sockets.emit("channel1", time_line_record);
 			response.send("message send");		
 		

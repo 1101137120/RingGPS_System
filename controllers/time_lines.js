@@ -45,14 +45,14 @@ exports.posttime_lines = function(req, res,next) {
 		else
 		{
 		
-			var sql = "select * from reader,tag where reader_name = '"+reader_name+"' or tag_uid = '"+tag_uid+"'";
+			var sql = "select * from tag where tag_uid = '"+tag_uid+"'";
 		
 			time_lineInstance.query(sql,function(err,rows,fields){
 				if(err) 
 				{
 					customErr.status = 503;
 					customErr.message = "db query error";	
-					console.log("db query error");
+					console.log("db query error:"+err);
 					next(customErr);			
 						
 				}
@@ -67,16 +67,20 @@ exports.posttime_lines = function(req, res,next) {
 					if(tag_uid !== "")
 						time_lineInstance.set('tag_uid', tag_uid);
 
-						
+					if(typeof rows[0] !== "undefined")
+					{
+					
+						time_lineInstance.set('tag_name', rows[0].tag_name);
+					}
 					// time_lineInstance.set('position', rows[0].position);
-					time_lineInstance.set('tag_name', rows[0].tag_name);
+					
 					time_lineInstance.set('reader_name', reader_name);
 					time_lineInstance.set('is_read', is_read);
 					time_lineInstance.set('created_at', created_at);
 					time_lineInstance.save(function(err){
 						if(err) 
 						{
-							// console.log(JSON.stringify(err));
+							console.log(JSON.stringify(err));
 							
 							if(err.errno === 1062)
 							{
@@ -99,7 +103,7 @@ exports.posttime_lines = function(req, res,next) {
 							apiOutput.status = "success";
 							apiOutput.message = "new time_line established";
 							res.json(apiOutput);		
-							// console.log(JSON.stringify(apiOutput));
+							console.log(JSON.stringify(apiOutput));
 						}
 					});					
 				}
