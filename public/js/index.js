@@ -51,7 +51,7 @@ function init() {
 
 	$.ajax({
 		 type: "GET",
-		 url: "http://10.1.1.130:9004/2.4/v1/readers ",
+		 url: "http://10.1.1.77:9004/2.4/v1/readers ",
 	})
 	.success(function( msg ) {
 		//alert(JSON.stringify(msg));

@@ -17,7 +17,7 @@ var done=false;
 // Create our Express application
 var app = express();
 app.set('http_port', 9004);
-app.set('ip', "10.1.1.130");
+app.set('ip', "10.1.1.77");
 //handle for jsonp
 app.set("jsonp callback", true);
 // http
