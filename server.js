@@ -5,6 +5,8 @@ var flash = require('connect-flash');
 var bodyParser = require('body-parser');
 var readersController = require('./controllers/readers');
 var time_linesController = require('./controllers/time_lines');
+var collecteddataController = require('./controllers/collecteddata');
+
 var Time_lineInstance= require('./models/time_lines'); 
 
 var session = require('express-session');
@@ -57,6 +59,11 @@ app.set('view engine', 'html');
 app.use("/2.4/v1",express.static("public", __dirname + "/public"));
 app.all("/2.4/v1/index", function(request, response) {
 	response.render('index');
+
+
+});
+app.all("/2.4/v1/chart", function(request, response) {
+	response.render('d3');
 
 
 });
@@ -134,6 +141,9 @@ routerRegistration.route('/readers')
 	
 routerRegistration.route('/time_lines')	
 	.post(time_linesController.posttime_lines);
+	
+routerRegistration.route('/collecteddata')	
+	.post(collecteddataController.getCollectedData);	
 // Error Hanlding
 app.use(function(err, req, res, next) {
 	var apiOutput = {};
