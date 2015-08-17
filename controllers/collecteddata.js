@@ -39,7 +39,7 @@ exports.getCollectedData = function(req, res,next) {
 		{
 		
 			var sql = 
-			" select reader_name,FROM_UNIXTIME(FLOOR(UNIX_TIMESTAMP(created_at)/ 900)*900) as date,count(*) as 'count',strength"+
+			" select reader_name,FROM_UNIXTIME(FLOOR(UNIX_TIMESTAMP(created_at)/ 60)*60) as date,count(*) as 'count',strength"+
 			" from time_line "+
 			" where reader_name = '"+reader_name+"' and "+
 			" created_at between '"+start+"' and '"+end+"' "+

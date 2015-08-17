@@ -1,7 +1,6 @@
  var serverBaseUrl = document.domain+":9004";
 function init() {
 
-	
 	console.log("server base url:"+"http://"+serverBaseUrl);
 	var socket = io.connect("http://"+serverBaseUrl);
 
@@ -23,14 +22,20 @@ function init() {
 			$("#"+readerObj.reader_name).css('background-color','#FF0000');
 		
 		}
-		
+		console.log("position:"+readerObj.position);
 		//position column
-		$("#"+readerObj.reader_name+" td:nth-child(2)").text(readerObj.position);
+		$("#"+readerObj.tag_uid+" td:nth-child(4)").text(readerObj.position);
 		
+		var date = new Date(readerObj.created_at);
+		var formatDate = date.getFullYear() + "-"+addZero(date.getMonth()+1)+"-"+addZero(date.getDate())+" "
+		+addZero(date.getHours()) + ":" + addZero(date.getMinutes())+":"+addZero(date.getSeconds()); 
+		
+		$("#"+readerObj.tag_uid+" td:nth-child(5)").text(formatDate);
+		$("#"+readerObj.tag_uid).css('background-color','#FFE700');
 		//tag name column
-		$("#"+readerObj.reader_name+" td:nth-child(3)").text(readerObj.tag_name);
+		//$("#"+readerObj.reader_name+" td:nth-child(3)").text(readerObj.tag_name);
 		
-		//tag uid column
+/* 		//tag uid column
 		$("#"+readerObj.reader_name+" td:nth-child(4)").text(readerObj.tag_uid);
 		
 		//strength column
@@ -43,18 +48,20 @@ function init() {
 		
 		//created at column
 		$("#"+readerObj.reader_name+" td:nth-child(6)").text(formatDate);
+		 */
 		
 		
 		
-		
-	});	
+	});
+
+
 	var protocol = location.protocol;
 	var hostname = location.hostname;
 	$.ajax({
 		 type: "GET",
 		 //url: "http://10.1.1.77:9004/2.4/v1/readers ",
 		 //url: "http://1.163.240.170:9004/2.4/v1/readers ",
-		 url: protocol+"//"+hostname+":9004/2.4/v1/readers",
+		 url: protocol+"//"+hostname+":9004/2.4/v1/tags",
 	})
 	.success(function( msg ) {
 		//alert(JSON.stringify(msg));
@@ -64,18 +71,30 @@ function init() {
 		console.log("readerArray:"+JSON.stringify(readerArray));
 		for(var i=0;i<readerArray.length;i++)
 		{
+			if(readerArray[i].tag_name.trim() !== "")
+			{
+				var row = 
+					"<tr id='"+readerArray[i].tag_uid+"'>"+
+						"<td data-field='tag_id'>"+readerArray[i].id+"</td>"+
+						"<td data-field='tag_name'>"+readerArray[i].tag_name+"</td>"+
+						"<td data-field='tag_uid'>"+readerArray[i].tag_uid+"</td>"+
+						"<td data-field='newest_position'></td>"+
+						"<td data-field='last_modified'></td>"+
+					"</tr>";
+				$("#readerTable tbody").append(row);				
+			}
+
+
 			
-			var row = 
-				"<tr id='"+readerArray[i].reader_name+"'>"+
-					"<td data-field='reader_name'>"+readerArray[i].reader_name+"</td>"+
-					"<td data-field='position'>"+readerArray[i].position+"</td>"+
-					"<td data-field='tag_name'></td>"+
-					"<td data-field='tag_uid'></td>"+
-					"<td data-field='strength'></td>"+
-					"<td data-field='created_at'></td>"+
-				"</tr>";
-			$("#readerTable tbody").append(row);			
+			
+			
 		
+			
+			
+			
+			
+			
+
 		
 		}
 		

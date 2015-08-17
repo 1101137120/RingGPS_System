@@ -4,6 +4,9 @@ var express = require('express');
 var flash = require('connect-flash');
 var bodyParser = require('body-parser');
 var readersController = require('./controllers/readers');
+var tagsController = require('./controllers/tags');
+var tagPositionController = require('./controllers/tag_position');
+
 var time_linesController = require('./controllers/time_lines');
 var collecteddataController = require('./controllers/collecteddata');
 
@@ -20,6 +23,11 @@ var done=false;
 var app = express();
 app.set('http_port', 9004);
 app.set('ip', "10.1.1.77");
+
+// app.set('ip', "10.1.1.77");
+//app.set('ip', "1.163.240.170");
+//app.set('ip', "127.0.0.1");
+
 //handle for jsonp
 app.set("jsonp callback", true);
 // http
@@ -59,6 +67,16 @@ app.set('view engine', 'html');
 app.use("/2.4/v1",express.static("public", __dirname + "/public"));
 app.all("/2.4/v1/index", function(request, response) {
 	response.render('index');
+
+
+});
+app.all("/2.4/v1/tag", function(request, response) {
+	response.render('tag');
+
+
+});
+app.all("/2.4/v1/tagadmin", function(request, response) {
+	response.render('tagadmin');
 
 
 });
@@ -108,15 +126,48 @@ app.all("/2.4/v1/channel", function(request, response) {
 				time_line_record.tag_name = "";
 			}
 			
-			time_line_record.reader_name = reader_name;
-			time_line_record.tag_uid = tag_uid;
-			time_line_record.strength = strength;
-			time_line_record.created_at = created_at;
+	
+
 			
-			time_line_record.wrong_packet = wrong_packet;
-			io.sockets.emit("channel1", time_line_record);
-			response.send("message send");		
-		
+			sql = "select position from reader where reader_name = '"+reader_name+"'";
+			console.log(sql);
+			time_lineInstance.query(sql,function(err,rows,fields){
+				if(err) 
+				{
+					customErr.status = 503;
+					customErr.message = "db query error";	
+					console.log("db query error");
+					next(customErr);			
+						
+				}
+				else
+				{
+					if(rows.length > 0)
+					{
+						time_line_record.reader_name = reader_name;
+						time_line_record.tag_uid = tag_uid;
+						time_line_record.strength = strength;
+						time_line_record.created_at = created_at;
+						
+						time_line_record.wrong_packet = wrong_packet;
+						time_line_record.position = rows[0].position;
+						io.sockets.emit("channel1", time_line_record);
+													
+					
+					}
+					else
+					{
+						response.send("message send");	
+					
+					}
+	
+				
+
+				}
+				
+							
+
+			});		
 		
 		
 
@@ -138,6 +189,11 @@ app.use('/2.4/v1', routerRegistration);
 routerRegistration.route('/readers')
 	.get(readersController.getReaders)
 	.post(readersController.postReaders);
+	
+routerRegistration.route('/tags')
+	.get(tagsController.getTags);	
+routerRegistration.route('/tag_position')
+	.post(tagPositionController.postFindTagPosition);
 	
 routerRegistration.route('/time_lines')	
 	.post(time_linesController.posttime_lines);

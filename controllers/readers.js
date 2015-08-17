@@ -6,7 +6,7 @@ exports.getReaders = function(req, res,next) {
 	var errorMessages = new Array();
 	customErr.status = 400;
 	var readerInstance = new ReaderInstance();		
-	
+	console.log("getReaders---");
 	
 	if(customErr.message !== "")
 	{

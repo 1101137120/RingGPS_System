@@ -89,9 +89,9 @@
 
                         //xScale = d3.scale.linear().range([MARGINS.left, WIDTH - MARGINS.right]).domain([2000, 2010]),
 						xScale = d3.time.scale()
-						.domain([new Date(data[0].date), d3.time.minute.offset(new Date(data[data.length - 1].date), 3)])
+						.domain([new Date(data[0].date), d3.time.minute.offset(new Date(data[data.length - 1].date), 0)])
 						.rangeRound([MARGINS.left, WIDTH - MARGINS.right]);	
-                        yScale = d3.scale.linear().range([HEIGHT - MARGINS.top, MARGINS.bottom]).domain([10, 60]),
+                        yScale = d3.scale.linear().range([HEIGHT - MARGINS.top, MARGINS.bottom]).domain([0, 80]),
 
                         xAxis = d3.svg.axis()
                         .scale(xScale),
@@ -179,24 +179,27 @@
 					var reader_name_field = $('#reader_name').val();
 					var readers = reader_name_field.split(",");
 					//console.log("readers:"+readers.length);
+					var protocol = location.protocol;
+					var hostname = location.hostname;
 					for(var i=0;i<readers.length;i++)
 					{
 						console.log("reader name:"+readers[i]);
 					$.ajax({
 						 type: "POST",
-						 url: "http://10.1.1.77:9004/2.4/v1/collecteddata",
+						 url: protocol+"//"+hostname+":9004/2.4/v1/collecteddata",
+						 //url: "http://1.163.240.170:9004/2.4/v1/collecteddata",
 						 data:{reader_name:readers[i],start:firstpick,end:secondpick},
 					})
 					.success(function( msg ) {
 							//alert(JSON.stringify(msg));
 							
 							console.log("msg.reader_name:"+msg.reader_name);
+							console.log(JSON.stringify(msg));
 							
 							
 							
-							
-							$('body').append("<svg id='reader"+msg.reader_name+"' width='1000' height='500'></svg>");
-							$('body').append("<label class='graphtitle'>ReaderID:"+msg.reader_name+"</label><br/><br/>");
+							$('.parent').after("<svg id='reader"+msg.reader_name+"' width='1000' height='500'></svg><br/><br/>");
+							$('#reader'+msg.reader_name).after("<label class='graphtitle'>ReaderID:"+msg.reader_name+"</label>");
 							InitChart(msg.response,"reader"+msg.reader_name);
 					})
 					.fail(function(err) {
