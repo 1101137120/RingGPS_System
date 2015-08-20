@@ -81,7 +81,38 @@ function init() {
 						"<td data-field='newest_position'></td>"+
 						"<td data-field='last_modified'></td>"+
 					"</tr>";
-				$("#readerTable tbody").append(row);				
+				$("#readerTable tbody").append(row);
+				var tag_id = readerArray[i].id;
+				var tag_uid = readerArray[i].tag_uid;
+				
+				(function(tag_uid){
+					$.ajax({
+						 type: "POST",
+						 url: protocol+"//"+hostname+":9004/2.4/v1/tag_position",
+						 data:{tag_id:tag_id}
+					})
+					.success(function(msg) {
+						//alert(JSON.stringify(msg));
+						// console.log("tag id:"+JSON.stringify(msg.response[0].position));
+						console.log("tag_uid:"+tag_uid);
+						$("#"+tag_uid+" td:nth-child(4)").text(msg.response[0].position);
+
+						var date = new Date(msg.response[0].created_at);
+						var formatDate = date.getFullYear() + "-"+addZero(date.getMonth()+1)+"-"+addZero(date.getDate())+" "
+						+addZero(date.getHours()) + ":" + addZero(date.getMinutes())+":"+addZero(date.getSeconds()); 
+						
+						$("#"+tag_uid+" td:nth-child(5)").text(formatDate);
+						
+
+					})
+					.fail(function() {
+							console.log("error");
+					})
+					.always(function() {
+							console.log("complete")
+					});					
+				
+				})(tag_uid);				
 			}
 
 

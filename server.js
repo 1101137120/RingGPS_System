@@ -6,9 +6,13 @@ var bodyParser = require('body-parser');
 var readersController = require('./controllers/readers');
 var tagsController = require('./controllers/tags');
 var tagPositionController = require('./controllers/tag_position');
+var loadTestController = require('./controllers/loadtest');
 
 var time_linesController = require('./controllers/time_lines');
+var time_lines_todayController = require('./controllers/time_lines_today');
 var collecteddataController = require('./controllers/collecteddata');
+var duringController = require('./controllers/during');
+var duringTestController = require('./controllers/duringtest');
 
 var Time_lineInstance= require('./models/time_lines'); 
 
@@ -77,6 +81,11 @@ app.all("/2.4/v1/tag", function(request, response) {
 });
 app.all("/2.4/v1/tagadmin", function(request, response) {
 	response.render('tagadmin');
+
+
+});
+app.all("/2.4/v1/tagtest", function(request, response) {
+	response.render('tagtest');
 
 
 });
@@ -197,9 +206,21 @@ routerRegistration.route('/tag_position')
 	
 routerRegistration.route('/time_lines')	
 	.post(time_linesController.posttime_lines);
+
+routerRegistration.route('/time_lines_today')	
+	.post(time_lines_todayController.posttime_lines_today);	
+	
 	
 routerRegistration.route('/collecteddata')	
 	.post(collecteddataController.getCollectedData);	
+	
+routerRegistration.route('/during')	
+	.post(duringController.postDuring);		
+routerRegistration.route('/loadtest')
+	.post(loadTestController.postloadtest);			
+	
+routerRegistration.route('/duringtest')	
+	.post(duringTestController.postDuring);		
 // Error Hanlding
 app.use(function(err, req, res, next) {
 	var apiOutput = {};
