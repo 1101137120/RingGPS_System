@@ -94,7 +94,6 @@ exports.postDuring = function(req, res,next) {
 				}
 				else
 				{
-					// res.json("!!!!!!!!!!!!!!!!!!!!!!!!!date is the same");
 					var tag_name = time_lineInstance.escape(req.body.tag_name);
 					var created_at = new Date();
 					
@@ -122,7 +121,6 @@ exports.postDuring = function(req, res,next) {
 							customErr.status = 503;
 							customErr.message = "db query error";	
 							console.log("db query error:"+err);
-							console.log("----------------------錯誤發生1");
 							next(customErr);			
 								
 						}
@@ -142,39 +140,31 @@ exports.postDuring = function(req, res,next) {
 										customErr.status = 503;
 										customErr.message = "db query error";	
 										console.log("db query error:"+err);
-										console.log("----------------------錯誤發生2");
 										next(customErr);			
 											
 									}
 									else
 									{
-										// console.log("insertion success");
-										var today = new Date(rows[0].minCreated);
-										var Christmas = new Date(rows[0].maxCreated);
-										var diffMs = (Christmas - today); // milliseconds between now & Christmas
-										var diffDays = Math.floor(diffMs / 86400000); // days
+										if(rows[0].minCreated == null)
+										{
+											rows[0].minCreated = null;												
+											rows[0].maxCreated = null;	
+											rows[0].during = null;
+
+										}					
+										else
+										{
+											rows[0].minCreated = formatDateime(rows[0].minCreated);												
+											rows[0].maxCreated = formatDateime(rows[0].maxCreated);											
+											rows[0].during = diffDatetime(rows[0].maxCreated,rows[0].minCreated).diffresult;
 										
+										}										
 										
-										
-										var diffHrs = Math.floor((diffMs % 86400000) / 3600000); // hours
-										var diffMins = Math.floor(((diffMs % 86400000) % 3600000) / 60000); // minutes
-										var diffresult = diffDays + " days, " + diffHrs + " hours, " + diffMins + " minutes ";				
-										
-										var date = new Date(rows[0].minCreated);
-										var formatDate = date.getFullYear() + "-"+addZero(date.getMonth()+1)+"-"+addZero(date.getDate())+" "
-										+addZero(date.getHours()) + ":" + addZero(date.getMinutes())+":"+addZero(date.getSeconds());					
-										rows[0].minCreated = formatDate;
-										
-										date = new Date(rows[0].maxCreated);
-										var formatDate = date.getFullYear() + "-"+addZero(date.getMonth()+1)+"-"+addZero(date.getDate())+" "
-										+addZero(date.getHours()) + ":" + addZero(date.getMinutes())+":"+addZero(date.getSeconds());						
-										rows[0].maxCreated = formatDate;
-										rows[0].during = diffresult;
 										var apiOutput = {};
 										apiOutput.status = "success";
 										apiOutput.message = "during test";
 										apiOutput.response = rows;
-										res.json(JSON.stringify(apiOutput));										
+										res.json(JSON.stringify(apiOutput));											
 									
 									}
 								});							
@@ -182,28 +172,11 @@ exports.postDuring = function(req, res,next) {
 							}
 							else
 							{
-							
-								var today = new Date(rows[0].minCreated);
-								var Christmas = new Date(rows[0].maxCreated);
-								var diffMs = (Christmas - today); // milliseconds between now & Christmas
-								var diffDays = Math.floor(diffMs / 86400000); // days
-								
-								
-								
-								var diffHrs = Math.floor((diffMs % 86400000) / 3600000); // hours
-								var diffMins = Math.floor(((diffMs % 86400000) % 3600000) / 60000); // minutes
-								var diffresult = diffDays + " days, " + diffHrs + " hours, " + diffMins + " minutes ";				
-								
-								var date = new Date(rows[0].minCreated);
-								var formatDate = date.getFullYear() + "-"+addZero(date.getMonth()+1)+"-"+addZero(date.getDate())+" "
-								+addZero(date.getHours()) + ":" + addZero(date.getMinutes())+":"+addZero(date.getSeconds());					
-								rows[0].minCreated = formatDate;
-								
-								date = new Date(rows[0].maxCreated);
-								var formatDate = date.getFullYear() + "-"+addZero(date.getMonth()+1)+"-"+addZero(date.getDate())+" "
-								+addZero(date.getHours()) + ":" + addZero(date.getMinutes())+":"+addZero(date.getSeconds());						
-								rows[0].maxCreated = formatDate;
-								rows[0].during = diffresult;
+									
+					
+								rows[0].minCreated = formatDateime(rows[0].minCreated);												
+								rows[0].maxCreated = formatDateime(rows[0].maxCreated);											
+								rows[0].during = diffDatetime(rows[0].maxCreated,rows[0].minCreated).diffresult;
 								var apiOutput = {};
 								apiOutput.status = "success";
 								apiOutput.message = "during test";
@@ -323,6 +296,30 @@ exports.postDuring = function(req, res,next) {
 
 	}
 };
+
+
+
+function formatDateime(timestr)
+{
+	var date = new Date(timestr);
+	var formatDate = date.getFullYear() + "-"+addZero(date.getMonth()+1)+"-"+addZero(date.getDate())+" "
+	+addZero(date.getHours()) + ":" + addZero(date.getMinutes())+":"+addZero(date.getSeconds());					
+	return formatDate;
+}
+function diffDatetime(maxCreated,minCreated)
+{
+		var min = new Date(minCreated);
+		var max = new Date(maxCreated);
+		var diffMs = (max - min); // milliseconds between min & max
+		var diffDays = Math.floor(diffMs / 86400000); // days				
+		var diffHrs = Math.floor((diffMs % 86400000) / 3600000); // hours
+		var diffMins = Math.floor(((diffMs % 86400000) % 3600000) / 60000); // minutes
+		var diffresult = diffDays + " days, " + diffHrs + " hours, " + diffMins + " minutes ";		
+
+		var result = {'diffMs':diffMs,'diffDays':diffDays,'diffHrs':diffHrs,'diffMins':diffMins,'diffresult':diffresult};
+		return result;
+
+}
 function getClientIp(req) {
   var ipAddress;
   // The request may be forwarded from local web server.

@@ -1,5 +1,16 @@
- var serverBaseUrl = document.domain+":9004";
- var intervalArray = [];
+var serverBaseUrl = document.domain+":9004";
+var protocol = location.protocol;
+var hostname = location.hostname; 
+var intervaObj = {};
+var tableStructure = {};
+tableStructure.tag_id = 1;
+tableStructure.tag_name =2;
+tableStructure.tag_uid = 3;
+tableStructure.strength = 4;
+tableStructure.position = 5;
+tableStructure.created_at = 6;
+tableStructure.during = 7;
+tableStructure.comment = 8;
 function init() {
 
 	console.log("server base url:"+"http://"+serverBaseUrl);
@@ -11,201 +22,203 @@ function init() {
 	});	
 
 	socket.on("channel1", function (readerObj) {
-		// console.log("2.4頁面receive"+JSON.stringify(readerObj));
- 		// console.log("get the reader name:"+readerObj.reader_name);	
 		
-		//$("#readerTable tr").css('background','#FFFFFF');
-		// console.log("did I get readerTable:"+$("#readerTable").length);
-		//adding color
-		$("#"+readerObj.reader_name).css('background-color','#FFE700');
-		if(readerObj.wrong_packet ==="1")
+
+		// console.log("data from channel:"+JSON.stringify(readerObj));
+ 		if(readerObj.tag_uid !== "無" && readerObj.tag_uid !== "" && readerObj.tag_uid !== null && readerObj.tag_name !== "")
 		{
-			$("#"+readerObj.reader_name).css('background-color','#FF0000');
-		
-		}
-		console.log("position:"+readerObj.position);
-		$("#"+readerObj.tag_uid+" td:nth-child(4)").text(readerObj.strength);
-		//position column
-		
-		console.log("channel send position:"+$("#"+readerObj.tag_uid+" td:nth-child(5)").text());
-		var tag_name = $("#"+readerObj.tag_uid+" td:nth-child(2)").text();
-		var tag_uid = $("#"+readerObj.tag_uid+" td:nth-child(3)").text();
-		var position = $("#"+readerObj.tag_uid+" td:nth-child(5)").text();
-		console.log("channel tag_name:"+tag_name);
-		console.log("channel position:"+position);
-		console.log("len:"+$("#"+readerObj.tag_uid+"").length);
-		$("#"+readerObj.tag_uid+" td:nth-child(5)").text(readerObj.position);
-		if($("#"+readerObj.tag_uid+"").length != 0)
-		{
-			if(position !== readerObj.position)
-			{
+
+
+			var positionOnRow = $("#"+readerObj.tag_uid+" td:nth-child("+tableStructure.position+")").text();
+			var positionFromChannel = readerObj.position;
+			// var positionFromChannel = "備料室";
+
+
+
+			// 把這次讀到的TAG設成黃色
+			$("#"+readerObj.tag_uid).css('background-color','#FFE700');
 			
-				// alert("有重新算, text"+$("#"+readerObj.tag_uid+" td:nth-child(5)").val()+", new position:"+readerObj.position);
-				//過10秒重新算
-				clearInterval(intervalArray[tag_name]);
-				delete intervalArray[tag_name];
-				setTimeout(function(){
-					console.log();
-					
-						
-							// var tag_name = 'Jenny';
-							
-							console.log("in the setinterval");
-							console.log("tag_name:"+tag_name);
-							$.ajax({
-								 type: "POST",
-								 url: protocol+"//"+hostname+":9004/2.4/v1/duringtest",
-								 data:{tag_name:tag_name}
-							})
-							.success(function(msg) {
-								console.log("msg:"+JSON.stringify(msg));
-								var ojb = JSON.parse(msg)
-								console.log("ojb.response[0]:"+ojb.response[0].during);
-								// $("#"+tag_uid+" td:nth-child(7)").text(ojb.response[0].during);
-								var minCreated = ojb.response[0].minCreated;
-								intervalArray[tag_name] = 
-								
-								
-									setInterval(function(){
-										// console.log("minCreated:"+minCreated);
-										
-										
-										if(minCreated !== "1970-01-01 08:00:00")
-										{
-											var minTime = new Date(minCreated);
-											// var currentTime = new Date();
-											// var left_time = (currentTime.getTime() - minTime.getTime())/1000/60;
-											var today = new Date(ojb.response[0].minCreated);
-											var Christmas = new Date();
-											var diffMs = (Christmas - today); // milliseconds between now & Christmas
-											var diffDays = Math.floor(diffMs / 86400000); // days
-											
-											
-											
-											var diffHrs = Math.floor((diffMs % 86400000) / 3600000); // hours
-											var diffMins = Math.floor(((diffMs % 86400000) % 3600000) / 60000); // minutes
-											var diffresult = diffDays + " days, " + diffHrs + " hours, " + diffMins + " minutes ";										
- 											if(diffMs > 1000 * 60 * 5)
-											{
-											
-												$("#"+tag_uid).css('background-color','#C3EEE7');
-											}
-											else
-											{
-													$("#"+tag_uid).css('background-color','#dfdfdf');
-											
-											
-											}	 										
-											// console.log(diffresult);									
-											$("#"+tag_uid+" td:nth-child(7)").text(diffresult);
-										
-										}
-
-										
-									
-									
-									},1000);							
-
-							})
-							.fail(function(error) {
-									console.log("error:"+JSON.stringify(error));
-							})
-							.always(function() {
-									console.log("complete")
-							});							
-
-									
-				
-				
-				
-				
-				
-				
-				},10000);
-			
-			}	
-			else
+			// 如果傳來的封包有問題則設成紅色
+			if(readerObj.wrong_packet ==="1")
 			{
-				//clearInterval(intervalArray[tag_name]);
-				console.log("!!!clearInterval:"+intervalArray[tag_name]);
-				console.log("!!!clearInterval tag_name:"+tag_name);			
+				$("#"+readerObj.reader_name).css('background-color','#FF0000');
 			
 			}
-		
+			
+			//設定強度與地點
+			$("#"+readerObj.tag_uid+" td:nth-child("+tableStructure.position+")").text(readerObj.position);
+			$("#"+readerObj.tag_uid+" td:nth-child("+tableStructure.strength+")").text(readerObj.strength);
+
+			// 設定最後更新時間
+			var created_at = new Date(readerObj.created_at);
+			var formatCreated_at = created_at.getFullYear() + "-"+addZero(created_at.getMonth()+1)+"-"+addZero(created_at.getDate())+" "
+			+addZero(created_at.getHours()) + ":" + addZero(created_at.getMinutes())+":"+addZero(created_at.getSeconds()); 
+			
+			$("#"+readerObj.tag_uid+" td:nth-child("+tableStructure.created_at+")").text(formatCreated_at);
+
+
+			
+			if(positionOnRow != null&& positionOnRow !== ""  && positionOnRow !== positionFromChannel)
+			{
+				console.log("position on row:"+positionOnRow);
+				console.log("position from channel:"+positionFromChannel);		
+				console.log("tag_name from channel:"+readerObj.tag_name);			
+				var tag_uid = readerObj.tag_uid;
+				var tag_name = readerObj.tag_name;		
+				
+				clearInterval(intervaObj[tag_uid]);
+				delete intervaObj[tag_uid];			
+			
+				$("#"+readerObj.tag_uid).css('background-color','#ff0066');
+				setInterval(function(){
+				
+					$.ajax({
+						 type: "POST",
+						 url: protocol+"//"+hostname+":9004/2.4/v1/duringtest",
+						 data:{tag_name:tag_name}
+					})
+					.success(function(msg) {
+						var ojb = JSON.parse(msg)
+						var minCreated = ojb.response[0].minCreated;
+						console.log("tag_uid:"+tag_uid);
+						console.log("intervaObj[tag_uid]:"+intervaObj[tag_uid]);
+						clearInterval(intervaObj[tag_uid]);
+						delete intervaObj[tag_uid];								
+						intervaObj[tag_uid] = 					
+						
+							setInterval(function(){
+								
+								// console.log("minCreated:"+minCreated);
+								if(minCreated != null)
+								{
+									var diffobj = diffDatetime(null,minCreated);
+									// console.log("diffobj.diffMs:"+diffobj.diffMs);
+
+									
+									// 如果距離現在時刻大於五分鐘就把顏色設成綠色
+									if(diffobj.diffMs > 1000 * 60 * 5)
+									{
+									
+											$("#"+tag_uid).css('background-color','#C3EEE7');
+									}
+									else // 如果距離現在時刻小於五分鐘就把顏色設成灰色
+									{
+											$("#"+tag_uid).css('background-color','#dfdfdf');
+									
+									
+									} 
+									$("#"+tag_uid+" td:nth-child("+tableStructure.during+")").text(diffobj.diffresult);									
+
+								}
+
+							},1000);	
+						console.log("after assign intervaObj[tag_uid]:"+intervaObj[tag_uid]);
+
+					})
+					.fail(function(error) {
+							//console.log("error:"+JSON.stringify(error));
+					})
+					.always(function() {
+							//console.log("complete")
+					});					
+				
+				
+				},10000);	
+			
+				
+				
+				
+				
+				
+				
+/* 				var tag_uid = readerObj.tag_uid;
+				var tag_name = readerObj.tag_name;
+				console.log("tag_uid:"+tag_uid);
+				console.log("intervaObj.tag_uid:"+intervaObj[tag_uid]);
+				
+				
+				clearInterval(intervaObj[tag_uid]);
+				delete intervaObj[tag_uid];
+				console.log("after deletion:"+intervaObj[tag_uid]);
+				
+				$.ajax({
+					 type: "POST",
+					 url: protocol+"//"+hostname+":9004/2.4/v1/duringtest",
+					 data:{tag_name:tag_name}
+				})
+				.success(function(msg) {
+					var ojb = JSON.parse(msg)
+					var minCreated = ojb.response[0].minCreated;
+					intervaObj[tag_uid] = 					
+					
+						setInterval(function(){
+							
+							// console.log("minCreated:"+minCreated);
+							if(minCreated != null)
+							{
+								var diffobj = diffDatetime(null,minCreated);
+								// console.log("diffobj.diffMs:"+diffobj.diffMs);
+
+								
+								// 如果距離現在時刻大於五分鐘就把顏色設成綠色
+								if(diffobj.diffMs > 1000 * 60 * 5)
+								{
+								
+										$("#"+tag_uid).css('background-color','#C3EEE7');
+								}
+								else // 如果距離現在時刻小於五分鐘就把顏色設成灰色
+								{
+										$("#"+tag_uid).css('background-color','#dfdfdf');
+								
+								
+								} 
+								$("#"+tag_uid+" td:nth-child("+tableStructure.during+")").text(diffobj.diffresult);									
+
+							}
+
+						},1000);	
+
+				})
+				.fail(function(error) {
+						//console.log("error:"+JSON.stringify(error));
+				})
+				.always(function() {
+						//console.log("complete")
+				}); */					
+				
+				
+				
+			}
 		
 		}
-		else
-		{
+		
 
-		}
-
-
-		
-		
-		
-		var date = new Date(readerObj.created_at);
-		var formatDate = date.getFullYear() + "-"+addZero(date.getMonth()+1)+"-"+addZero(date.getDate())+" "
-		+addZero(date.getHours()) + ":" + addZero(date.getMinutes())+":"+addZero(date.getSeconds()); 
-		
-		$("#"+readerObj.tag_uid+" td:nth-child(6)").text(formatDate);
-		$("#"+readerObj.tag_uid).css('background-color','#FFE700');
-		//tag name column
-		//$("#"+readerObj.reader_name+" td:nth-child(3)").text(readerObj.tag_name);
-		
-/* 		//tag uid column
-		$("#"+readerObj.reader_name+" td:nth-child(4)").text(readerObj.tag_uid);
-		
-		//strength column
-		$("#"+readerObj.reader_name+" td:nth-child(5)").text(readerObj.strength);
-		
-		
-		var date = new Date(readerObj.created_at);
-		var formatDate = date.getFullYear() + "-"+addZero(date.getMonth()+1)+"-"+addZero(date.getDate())+" "
-		+addZero(date.getHours()) + ":" + addZero(date.getMinutes())+":"+addZero(date.getSeconds());                                
-		
-		//created at column
-		$("#"+readerObj.reader_name+" td:nth-child(6)").text(formatDate);
-		 */
-		
-		
-		
 	});
 
 
-	var protocol = location.protocol;
-	var hostname = location.hostname;
+
 	$.ajax({
 		 type: "GET",
-		 //url: "http://10.1.1.77:9004/2.4/v1/readers ",
-		 //url: "http://1.163.240.170:9004/2.4/v1/readers ",
-		 url: protocol+"//"+hostname+":9004/2.4/v1/tags",
+		 url: protocol+"//"+hostname+":9004/2.4/v1/tags"
 	})
 	.success(function( msg ) {
-		//alert(JSON.stringify(msg));
-		//msg.response
 		
 		var readerArray = msg.response;
-		console.log("readerArray:"+JSON.stringify(readerArray));
 		for(var i=0;i<readerArray.length;i++)
 		{
 			if(readerArray[i].tag_name.trim() !== "")
 			{
 				var comment = "";
-				console.log("comment:"+readerArray[i].comment);
  				if(readerArray[i].comment !== null)
-				{
-				
-					comment = readerArray[i].comment;
-				
+				{				
+					comment = readerArray[i].comment;				
 				} 
-
 				
 				var row = 
 					"<tr id='"+readerArray[i].tag_uid+"'>"+
 						"<td data-field='tag_id'>"+readerArray[i].id+"</td>"+
 						"<td data-field='tag_name'>"+readerArray[i].tag_name+"</td>"+
-						"<td data-field='tag_uid'>"+readerArray[i].tag_uid+"</td>"+
-						
+						"<td data-field='tag_uid'>"+readerArray[i].tag_uid+"</td>"+						
 						"<td data-field='tag_strength'></td>"+						
 						"<td data-field='newest_position'></td>"+
 						"<td data-field='last_modified'></td>"+
@@ -214,9 +227,7 @@ function init() {
 					"</tr>";
 				$("#readerTable tbody").append(row);
 				
-				
-				
-				
+
 				var tag_id = readerArray[i].id;
 				var tag_uid = readerArray[i].tag_uid;
 				var tag_name = readerArray[i].tag_name;
@@ -227,186 +238,109 @@ function init() {
 						 data:{tag_id:tag_id}
 					})
 					.success(function(msg) {
-						//alert(JSON.stringify(msg));
-						// console.log("tag id:"+JSON.stringify(msg.response[0].position));
-						console.log("tag_uid:"+tag_uid);
-						$("#"+tag_uid+" td:nth-child(5)").text(msg.response[0].position);
+
+						$("#"+tag_uid+" td:nth-child("+tableStructure.position+")").text(msg.response[0].position);
 
 						var date = new Date(msg.response[0].created_at);
 						var formatDate = date.getFullYear() + "-"+addZero(date.getMonth()+1)+"-"+addZero(date.getDate())+" "
 						+addZero(date.getHours()) + ":" + addZero(date.getMinutes())+":"+addZero(date.getSeconds()); 
 						
-						$("#"+tag_uid+" td:nth-child(6)").text(formatDate);
+						$("#"+tag_uid+" td:nth-child("+tableStructure.created_at+")").text(formatDate);
 						
 
 
 					})
 					.fail(function() {
-							console.log("error");
+							//console.log("error");
 					})
 					.always(function() {
-							console.log("complete")
+							//console.log("complete")
 					});					
 				
 				})(tag_uid);
-/*      					(function(tag_uid,tag_name){
-						// var tag_name = 'Jenny';
-						setInterval(function(){
-							console.log("in the setinterval");
-							console.log("tag_name:"+tag_name);
-							$.ajax({
-								 type: "POST",
-								 url: protocol+"//"+hostname+":9004/2.4/v1/duringtest",
-								 data:{tag_name:tag_name}
-							})
-							.success(function(msg) {
-								console.log("msg:"+JSON.stringify(msg));
-								var ojb = JSON.parse(msg)
-								console.log("ojb.response[0]:"+ojb.response[0].during);
-								$("#"+tag_uid+" td:nth-child(7)").text(ojb.response[0].during);
-
-							})
-							.fail(function(error) {
-									console.log("error:"+JSON.stringify(error));
-							})
-							.always(function() {
-									console.log("complete")
-							});							
-						
-						
-						
-						
-						},60000);	 		
-					
-					
-					
-					
-					
-					
-					})(tag_uid,tag_name); 	*/			
+		
 	
-					(function(tag_uid,tag_name){
-						// var tag_name = 'Jenny';
+				(function(tag_uid,tag_name){
 
-						console.log("in the setinterval");
-						console.log("tag_name:"+tag_name);
-						$.ajax({
-							 type: "POST",
-							 url: protocol+"//"+hostname+":9004/2.4/v1/duringtest",
-							 data:{tag_name:tag_name}
-						})
-						.success(function(msg) {
-							console.log("msg:"+JSON.stringify(msg));
-							var ojb = JSON.parse(msg)
-							console.log("ojb.response[0]:"+ojb.response[0].during);
-							// $("#"+tag_uid+" td:nth-child(7)").text(ojb.response[0].during);
-							var minCreated = ojb.response[0].minCreated;
-							intervalArray[tag_name] = 
-							
-							
-								setInterval(function(){
-									// console.log("minCreated:"+minCreated);
+					$.ajax({
+						 type: "POST",
+						 url: protocol+"//"+hostname+":9004/2.4/v1/duringtest",
+						 data:{tag_name:tag_name}
+					})
+					.success(function(msg) {
+						var ojb = JSON.parse(msg)
+						var minCreated = ojb.response[0].minCreated;
+						intervaObj[tag_uid] = 					
+						
+							setInterval(function(){
+								
+								// console.log("minCreated:"+minCreated);
+								if(minCreated != null)
+								{
+									var diffobj = diffDatetime(null,minCreated);
+									// console.log("diffobj.diffMs:"+diffobj.diffMs);
+
 									
-									
-									if(minCreated !== "1970-01-01 08:00:00")
+									// 如果距離現在時刻大於五分鐘就把顏色設成綠色
+									if(diffobj.diffMs > 1000 * 60 * 5)
 									{
-										var minTime = new Date(minCreated);
-										// var currentTime = new Date();
-										// var left_time = (currentTime.getTime() - minTime.getTime())/1000/60;
-										var today = new Date(ojb.response[0].minCreated);
-										var Christmas = new Date();
-										var diffMs = (Christmas - today); // milliseconds between now & Christmas
-										var diffDays = Math.floor(diffMs / 86400000); // days
-										
-										
-										
-										var diffHrs = Math.floor((diffMs % 86400000) / 3600000); // hours
-										var diffMins = Math.floor(((diffMs % 86400000) % 3600000) / 60000); // minutes
-										var diffresult = diffDays + " days, " + diffHrs + " hours, " + diffMins + " minutes ";										
- 										if(diffMs > 1000 * 60 * 5)
-										{
-										
-												$("#"+tag_uid).css('background-color','#C3EEE7');
-										}
-										else
-										{
-												$("#"+tag_uid).css('background-color','#dfdfdf');
-										
-										
-										} 
-										// console.log(diffresult);									
-										$("#"+tag_uid+" td:nth-child(7)").text(diffresult);
 									
+											$("#"+tag_uid).css('background-color','#C3EEE7');
 									}
-
+									else // 如果距離現在時刻小於五分鐘就把顏色設成灰色
+									{
+											$("#"+tag_uid).css('background-color','#dfdfdf');
 									
-								
-								
-								},1000);	
+									
+									} 
+									$("#"+tag_uid+" td:nth-child("+tableStructure.during+")").text(diffobj.diffresult);									
 
-							console.log("what the hell to the interval array:"+intervalArray[tag_name]);								
-/* 							(function(minCreated){
-								setInterval(function(){
-									console.log("minCreated:"+minCreated);
-								
-								
-								
-								
-								},1000);							
-							
-							
-							})(minCreated); */
-							
-							
-							
+								}
 
-						})
-						.fail(function(error) {
-								console.log("error:"+JSON.stringify(error));
-						})
-						.always(function() {
-								console.log("complete")
-						});							
-						
-						
+							},1000);	
 
-					
-					
-					
-					
-					
-					})(tag_uid,tag_name);  
-				
-				
-				
-			
+					})
+					.fail(function(error) {
+							//console.log("error:"+JSON.stringify(error));
+					})
+					.always(function() {
+							//console.log("complete")
+					});							
+
+				})(tag_uid,tag_name);  
+
 			}
 
-
-			
-			
-			
-		
-			
-			
-			
-			
-			
-
-		
 		}
-		
-		
-	
 
 	})
 	.fail(function() {
-			console.log("error");
+			//console.log("error");
 	})
 	.always(function() {
-			console.log("complete")
+			//console.log("complete")
 	});
 
+
+}
+function diffDatetime(maxCreated,minCreated)
+{
+		var min = new Date(minCreated);
+		var max = new Date(maxCreated);
+		if(maxCreated == null)
+		{
+			max = new Date();
+		}
+		var diffMs = (max - min); // milliseconds between min & max
+		var diffDays = Math.floor(diffMs / 86400000); // days				
+		var diffHrs = Math.floor((diffMs % 86400000) / 3600000); // hours
+		var diffMins = Math.floor(((diffMs % 86400000) % 3600000) / 60000); // minutes
+		var diffresult = diffDays + " days, " + diffHrs + " hours, " + diffMins + " minutes ";		
+
+		var result = {'diffMs':diffMs,'diffDays':diffDays,'diffHrs':diffHrs,'diffMins':diffMins,'diffresult':diffresult};
+		// console.log("diffMs:"+diffMs);
+		// console.log("result.diffMs:"+result.diffMs);
+		return result;
 
 }
 function addZero(n){
