@@ -15,6 +15,7 @@ var duringController = require('./controllers/during');
 var duringTestController = require('./controllers/duringtest');
 
 var Time_lineInstance= require('./models/time_lines'); 
+var departmentTagsController = require('./controllers/departmentTags');
 
 var session = require('express-session');
 var passport = require('passport');
@@ -76,6 +77,11 @@ app.all("/2.4/v1/index", function(request, response) {
 });
 app.all("/2.4/v1/tag", function(request, response) {
 	response.render('tag');
+
+
+});
+app.all("/2.4/v1/department", function(request, response) {
+	response.render('department_tag');
 
 
 });
@@ -206,6 +212,10 @@ routerRegistration.route('/readers')
 	
 routerRegistration.route('/tags')
 	.get(tagsController.getTags);	
+	
+routerRegistration.route('/department/tags')
+	.get(departmentTagsController.getDepartmentTags);	
+	
 routerRegistration.route('/tag_position')
 	.post(tagPositionController.postFindTagPosition);
 	
