@@ -13,6 +13,7 @@ tableStructure.during = 7;
 tableStructure.comment = 8;
 function init() {
 
+
 	console.log("server base url:"+"http://"+serverBaseUrl);
 	var socket = io.connect("http://"+serverBaseUrl);
 
@@ -37,7 +38,9 @@ function init() {
 
 			// 把這次讀到的TAG設成黃色
 			$("#"+readerObj.tag_uid).css('background-color','#FFE700');
-			
+
+			// $('table a:hover').css('background-color','#FFE700');
+			$('table tr:hover td').css('background-color','#FFE700');
 			// 如果傳來的封包有問題則設成紅色
 			if(readerObj.wrong_packet ==="1")
 			{
@@ -226,7 +229,7 @@ function init() {
 						"<td data-field='tag_comment'>"+comment+"</td>"+
 					"</tr>";
 				$("#readerTable tbody").append(row);
-				
+		
 
 				var tag_id = readerArray[i].id;
 				var tag_uid = readerArray[i].tag_uid;
@@ -285,11 +288,11 @@ function init() {
 									if(diffobj.diffMs > 1000 * 60 * 5)
 									{
 									
-											$("#"+tag_uid).css('background-color','#C3EEE7');
+											$("#"+tag_uid).css('background-color','#fafafa');
 									}
 									else // 如果距離現在時刻小於五分鐘就把顏色設成灰色
 									{
-											$("#"+tag_uid).css('background-color','#dfdfdf');
+											$("#"+tag_uid).css('background-color','#c75359');
 									
 									
 									} 

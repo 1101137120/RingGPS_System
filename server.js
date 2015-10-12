@@ -94,6 +94,11 @@ app.all("/2.4/v1/chart", function(request, response) {
 
 
 });
+app.all("/2.4/v1/format", function(request, response) {
+	response.render('format');
+
+
+});
 app.all("/2.4/v1/channel", function(request, response) {
 	var reader_name = request.body.reader_name;
 	var position = request.body.position;
