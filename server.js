@@ -16,6 +16,8 @@ var duringTestController = require('./controllers/duringtest');
 
 var Time_lineInstance= require('./models/time_lines'); 
 var departmentTagsController = require('./controllers/departmentTags');
+var demoReadersController = require('./controllers/demoReaders');
+
 
 var session = require('express-session');
 var passport = require('passport');
@@ -80,6 +82,11 @@ app.all("/2.4/v1/tag", function(request, response) {
 
 
 });
+app.all("/2.4/v1/animal", function(request, response) {
+	response.render('animaldemo');
+
+
+});
 app.all("/2.4/v1/department", function(request, response) {
 	response.render('department_tag');
 
@@ -105,6 +112,109 @@ app.all("/2.4/v1/format", function(request, response) {
 
 
 });
+// 畜牧demo channel
+app.all("/2.4/v1/demochannel", function(request, response) {
+	var reader_name = request.body.reader_name;
+	var position = request.body.position;
+	var tag_name = request.body.tag_name;
+	var tag_uid = request.body.tag_uid;
+	var strength = request.body.strength;
+	var wrong_packet = request.body.wrong_packet;
+	var created_at = new Date();
+	var time_lineInstance = new Time_lineInstance();		
+	console.log("reader_name:"+reader_name);
+	// console.log("position:"+position);
+	// console.log("tag_name:"+tag_name);
+	console.log("tag_uid:"+tag_uid);
+	// console.log("strength:"+strength);
+	
+	
+	var sql = "select * from tag where tag_uid = '"+tag_uid+"'";
+	console.log(sql);
+	time_lineInstance.query(sql,function(err,rows,fields){
+		if(err) 
+		{
+			customErr.status = 503;
+			customErr.message = "db query error";	
+			console.log("db query error");
+			next(customErr);			
+				
+		}
+		else
+		{
+			console.log("----emit block");
+			var time_line_record = {};
+			if(typeof rows[0] !== "undefined")
+			{
+				time_line_record.tag_name = rows[0].tag_name;
+				time_line_record.tag_id = rows[0].id;
+			}
+			else
+			{
+				time_line_record.tag_name = "";
+				time_line_record.tag_id = "";
+			}
+			
+	
+
+			
+			sql = "select position from reader where reader_name = '"+reader_name+"'";
+			console.log(sql);
+			time_lineInstance.query(sql,function(err,rows,fields){
+				if(err) 
+				{
+					customErr.status = 503;
+					customErr.message = "db query error";	
+					console.log("db query error");
+					next(customErr);			
+						
+				}
+				else
+				{
+					if(rows.length > 0)
+					{
+						time_line_record.reader_name = reader_name;
+						time_line_record.tag_uid = tag_uid;
+						time_line_record.strength = strength;
+						time_line_record.created_at = created_at;
+						
+						time_line_record.wrong_packet = wrong_packet;
+						time_line_record.position = rows[0].position;
+						io.sockets.emit("demochannel", time_line_record);
+													
+					
+					}
+					else
+					{
+						response.send("message send");	
+					
+					}
+	
+				
+
+				}
+				
+							
+
+			});		
+		
+		
+
+		}
+		
+					
+
+	});
+	
+	
+	
+
+
+	
+});
+
+
+
 app.all("/2.4/v1/channel", function(request, response) {
 	var reader_name = request.body.reader_name;
 	var position = request.body.position;
@@ -236,6 +346,12 @@ routerRegistration.route('/loadtest')
 	
 routerRegistration.route('/duringtest')	
 	.post(duringTestController.postDuring);		
+	
+routerRegistration.route('/demoreaders')	
+	.get(demoReadersController.getDemoReaders);		
+	
+	
+	
 // Error Hanlding
 app.use(function(err, req, res, next) {
 	var apiOutput = {};
