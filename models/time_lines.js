@@ -1,8 +1,8 @@
 var mysqlModel = require('mysql-model');
 var MyAppModel = mysqlModel.createConnection({
-  host     : '10.1.1.77',
-  user     : 'root',
-  password : 'ruixinihoin',
+  host     : 'localhost',
+  user     : 'mike8675',
+  password : '',
   database : '2.4_test',
   port:'3306'
 });

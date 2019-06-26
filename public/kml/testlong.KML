@@ -1,0 +1,150 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<kml xmlns='http://www.opengis.net/kml/2.2' xmlns:gx='http://www.google.com/kml/ext/2.2'>
+<Document>
+<name>GPS device</name>
+<snippet>Created 週五 十月 27 9:28:26 2017</snippet>
+<LookAt>
+<gx:TimeSpan>
+<begin>2017-10-19T10:24:29.000Z</begin>
+<end>2017-10-19T10:24:29.000Z</end>
+</gx:TimeSpan>
+<longitude>121.455688</longitude>
+<latitude>25.001797</latitude>
+<range>0</range>
+</LookAt>
+<!-- Normal track style -->
+<Style id='track_n'>
+<IconStyle>
+<scale>.5</scale>
+<Icon>
+<href>http://earth.google.com/images/kml-icons/track-directional/track-none.png</href>
+</Icon>
+</IconStyle>
+<LabelStyle>
+<scale>0</scale>
+</LabelStyle>
+</Style>
+<!-- Highlighted track style -->
+<Style id='track_h'>
+<IconStyle>
+<scale>1.2</scale>
+<Icon>
+<href>http://earth.google.com/images/kml-icons/track-directional/track-none.png</href>
+</Icon>
+</IconStyle>
+</Style>
+<StyleMap id='track'>
+<Pair>
+<key>normal</key>
+<styleUrl>#track_n</styleUrl>
+</Pair>
+<Pair>
+<key>highlight</key>
+<styleUrl>#track_h</styleUrl>
+</Pair>
+</StyleMap>
+<!-- Normal waypoint style -->
+<Style id='waypoint_n'>
+<IconStyle>
+<Icon>
+<href>http://maps.google.com/mapfiles/kml/pal4/icon61.png</href>
+</Icon>
+</IconStyle>
+</Style>
+<!-- Highlighted waypoint style -->
+<Style id='waypoint_h'>
+<IconStyle>
+<scale>1.2</scale>
+<Icon>
+<href>http://maps.google.com/mapfiles/kml/pal4/icon61.png</href>
+</Icon>
+</IconStyle>
+</Style>
+<StyleMap id='waypoint'>
+<Pair>
+<key>normal</key>
+<styleUrl>#waypoint_n</styleUrl>
+</Pair>
+<Pair>
+<key>highlight</key>
+<styleUrl>#waypoint_h</styleUrl>
+</Pair>
+</StyleMap>
+<Style id='lineStyle'>
+<LineStyle>
+<color>99ffac59</color>
+<width>6</width>
+</LineStyle>
+</Style>
+<Folder>
+<name>Waypoints</name>
+<Placemark>
+<name>WPT001</name>
+<TimeStamp><when>2017-10-19T10:24:29.000Z</when></TimeStamp>
+<styleUrl>#waypoint</styleUrl>
+<Point>
+<coordinates>121.484533,25.006018,134.9</coordinates>
+</Point>
+</Placemark>
+</Folder>
+<Folder>
+<name>Tracks</name>
+<Folder>
+<name>20171019182429</name>
+<snippet/>
+<description>
+<![CDATA[<table>
+<tr><td><b>Distance</b> 0 mi </td></tr>
+<tr><td><b>Min Alt</b> 0 ft </td></tr>
+<tr><td><b>Max Alt</b> 442.472 ft </td></tr>
+<tr><td><b>Max Speed</b> 0 mph </td></tr>
+<tr><td><b>Avg Speed</b> 0 mph </td></tr>
+<tr><td><b>Start Time</b>Thu Oct 19 2017 18:24:29 GMT+0800 (台北標準時間)</td></tr>
+<tr><td><b>End Time</b>Thu Oct 19 2017 18:24:29 GMT+0800 (台北標準時間)</td></tr>
+</table>]]>
+</description>
+<TimeSpan>
+<begin>Thu Oct 19 2017 18:24:29 GMT+0800 (台北標準時間)</begin>
+<end>Thu Oct 19 2017 18:24:29 GMT+0800 (台北標準時間)</end>
+</TimeSpan>
+<Folder>
+<name>Points</name>
+<Placemark>
+<name>20170926102027-0</name>
+<snippet/>
+<description><![CDATA[
+<table>
+<tr><td>Longitude: 121.484533 </td></tr>
+<tr><td>Latitude: 25.006018 </td></tr>
+<tr><td>Altitude: 442.472 ft </td></tr>
+<tr><td>Speed: NaN mph </td></tr>
+<tr><td>Heading: 0 </td></tr>
+<tr><td>Time: 2017-10-19T10:24:29.000Z </td></tr>
+</table>
+]]></description>
+<LookAt>
+<longitude>121.484533</longitude>
+<latitude>25.006018</latitude>
+<tilt>66</tilt>
+</LookAt>
+<TimeStamp><when>2017-10-19T10:24:29.000Z</when></TimeStamp>
+<styleUrl>#track</styleUrl>
+<Point>
+<coordinates>121.484533,25.006018,134.9</coordinates>
+</Point>
+</Placemark>
+</Folder>
+<Placemark>
+<name>Path</name>
+<styleUrl>#lineStyle</styleUrl>
+<LineString>
+<tessellate>1</tessellate>
+<coordinates>
+121.484533,25.006018,134.9
+</coordinates>
+</LineString>
+</Placemark>
+</Folder>
+</Folder>
+</Document>
+</kml>

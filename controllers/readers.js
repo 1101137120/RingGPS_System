@@ -14,7 +14,7 @@ exports.getReaders = function(req, res,next) {
 	}
 	else
 	{
-		var sql = "select * from reader";
+		var sql = "select * from reader where active = 1";
 		readerInstance.query(sql,function(err, rows, fields) {
 			if(err) 
 			{

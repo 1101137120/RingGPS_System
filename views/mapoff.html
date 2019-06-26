@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Leaflet map</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	
+	<link rel="stylesheet" href="js/dist/leaflet.css" />
+	<script src="js/dist/leaflet.js"></script>
+	<script src="js/jquery-1.9.1.min.js"></script>
+	<script src="js/leaflet-ant-path/dist/leaflet-ant-path.js"></script>
+	
+</head>
+<style>
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+     
+	  #right-panel {
+        font-family: 'Roboto','sans-serif';
+        line-height: 30px;
+        padding-left: 10px;
+      }
+
+      #right-panel select, #right-panel input {
+        font-size: 15px;
+      }
+
+      #right-panel select {
+        width: 100%;
+      }
+
+      #right-panel i {
+        font-size: 12px;
+      }
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      #mainmap {
+        float: left;
+        width: 63%;
+        height: 100%;
+      }
+      #right-panel {
+        float: right;
+        width: 34%;
+        height: 100%;
+      }
+      .panel {
+        height: 100%;
+        overflow: auto;
+      }
+    </style>
+<body>
+
+	<div id="mainmap"></div>
+	<div id="right-panel">
+	<div id="heightest"></div>
+	<div id="speedest"></div>
+	<div id="speed"></div>
+	<div id="height"></div>
+	<div id="DIStotal"></div>
+	<div id="dateS"></div>
+	<div id="dateE"></div>
+	<div id="Timetotal"></div>
+    </div>
+</body>
+
+</html>
+
+<script>
+	var queryString = location.href.substring(location.href.indexOf("?")+1);
+	var data = queryString.split('=');
+	console.log("csvname"+data[1]);
+	$(function () {
+		var mapcon = document.documentElement.clientHeight + 'px';
+		$("#mainmap").css('height', mapcon);
+	});
+	$(window).resize(function () {
+		var rmapcon = document.documentElement.clientHeight + 'px';
+		$("#mainmap").css('height', rmapcon);
+	});
+
+	(function () {
+		$("#mainmap").empty();
+		var csvname=data[1];
+		var _map = null;
+		var heightest =0;
+		var speedest = 0;
+		var locations = Array();
+		var waypts = Array();
+		var speedtotal = 0;
+		var heighttotal = 0;
+		var DIStotal = 0;
+		var dateS = "";
+		var dateE = "";
+		var Timetotal = "";
+		var url_normal = 'http://localhost:3000/mapdata/1818940751/{z}/{x}/{y}';
+		var glayer_normal = new L.TileLayer(url_normal, { minZoom: 3, maxZoom: 15, attribution: '普通地圖' });
+
+		/*var url_marker = 'http://localhost:3000/mapdata/1024577166/{z}/{x}/{y}';
+		var glayer_marker = new L.TileLayer(url_marker, { minZoom: 3, maxZoom: 15, attribution: '卫星地图' });*/
+
+		var url_satelite = 'http://localhost:3000/mapdata/47626774/{z}/{x}/{y}';
+		var glayer_satelite = new L.TileLayer(url_satelite, { minZoom: 3, maxZoom: 15, attribution: '衛星地圖' });
+
+		var latlng = new L.LatLng(25.0676,121.489);
+
+		_map = new L.Map('mainmap', { center: latlng, zoom: 10, layers: [glayer_normal] });
+
+		var baseLayers = {
+			"普通地圖": glayer_normal,
+			"衛星地圖": glayer_satelite
+		};
+		
+		L.control.layers(baseLayers).addTo(_map);
+		$.ajax({
+						 type: "POST",
+						 url: location.protocol+"//"+location.hostname+":3000/map/v1/maptest",
+						 data:{csvname:csvname}
+					}).success(function(msg) {
+					
+
+					var k=0;
+					var y=msg.response.length-2;
+					var d=msg.response.length-3;
+					var istart=msg.response.length-1;
+					DIStotal =msg.response[istart].DISTANCE;
+					dateS =msg.response[istart].DATE;
+					dateE =msg.response[0].DATE;
+					Timetotal = Timetol(dateS,dateE);
+					for(var i=msg.response.length-1;i>=0;i--){
+					
+					if(heightest<msg.response[i].HEIGHT){
+						heightest = msg.response[i].HEIGHT;
+						
+						}
+						
+					if(i!=istart){
+							heighttotal=parseInt(heighttotal)+parseInt(msg.response[i].HEIGHT);
+							//console.log(msg.response[i].HEIGHT+"  heightest"+heighttotal);
+						} 	
+						var total = ssDISTANCE-msg.response[i].DISTANCE;
+						if(y>0){
+						var total1 = msg.response[i].DISTANCE-msg.response[y].DISTANCE;
+						var lattotal = msg.response[y].LATITUDE-msg.response[i].LATITUDE;
+						var lngtotal = msg.response[y].LONGITUDE-msg.response[i].LONGITUDE;
+						console.log("lngtotal"+lngtotal);
+						console.log("lattotal"+lattotal);
+						if(d>0){
+							var total2 = msg.response[i].DISTANCE-msg.response[d].DISTANCE;
+						}
+						}
+						if(total>0.05&&total1>0.05&&total2>0.05||i==istart||i==0){
+							if(Math.abs(lattotal)>0.001&&Math.abs(lngtotal)>0.001||i==istart||i==0){
+						//console.log("total"+total+"total1"+total1);
+						locations[k]={lat:msg.response[i].LATITUDE,lng:msg.response[i].LONGITUDE};
+						
+						console.log("k"+k);
+						if(ssDate&&ssTime&&DDDDF){
+						
+						var speednow=speedcount(msg.response[i].DATE,msg.response[i].TIME,ssDate,ssTime,DDDDF,msg.response[i].DISTANCE);
+						if(speedest<speednow){
+						speedest = speednow;
+						}
+						speedtotal=speedtotal+speednow;
+					
+						//console.log("speedtotal"+speedtotal);
+						}
+						
+						var datetimeE=new Date(msg.response[i].DATE+" "+msg.response[i].TIME);
+						
+						var pathmath = locations.length-2;
+						console.log("pathmath"+pathmath);
+						if(i==istart||i==0)
+						{
+							var myIcon = L.icon({
+								iconUrl: 'img/map.png',
+								iconSize: [,41],
+								iconAnchor: [21, 41]
+								});
+							L.marker(locations[k], {icon: myIcon,draggable: true}).addTo(_map)
+							.bindPopup('時間'+msg.response[i].DATE+" "+msg.response[i].TIME+'<br> 當前速度'+speednow+'km/h')
+							.openPopup();
+							console.log("locations[k]"+locations[k]);
+							if(pathmath>0){
+							L.polyline.antPath([
+								[locations[k].lat,locations[k].lng],
+								[locations[pathmath].lat,locations[pathmath].lng]
+							], {"delay":400,"dashArray":[10,20],"weight":5,"color":"#0000FF","pulseColor":"#FFFFFF","paused":false}).addTo(_map);
+							}
+						}
+						else{
+							L.marker(locations[k],{
+								title:k,
+								pane:"a"
+								}).addTo(_map)
+								.bindPopup('時間'+msg.response[i].DATE+" "+msg.response[i].TIME+'<br> 當前速度'+speednow+'km/h'+'<br> 當前速度'+locations[k].lat+","+locations[k].lng)
+								.openPopup();
+							L.polyline.antPath([
+								[locations[k].lat,locations[k].lng],
+								[locations[pathmath].lat,locations[pathmath].lng]
+							], {"delay":400,"dashArray":[10,20],"weight":5,"color":"#0000FF","pulseColor":"#FFFFFF","paused":false}).addTo(_map);
+						}
+						
+						k=k+1;
+						var ss= {lat:msg.response[i].LATITUDE,lng:msg.response[i].LONGITUDE};
+						
+						var DDDDF=msg.response[i].DISTANCE;
+						var ssDate=msg.response[i].DATE;
+						var ssTime=msg.response[i].TIME;
+							}
+						}
+						
+						
+					
+					var ssDISTANCE=msg.response[i].DISTANCE;
+					y=i-2;
+					d=i-3;
+					
+					}
+					
+					var count = Math.ceil(locations.length/23);
+					var Speed = speedtotal/locations.length;
+					var relheight = msg.response.length-1;
+					var height = heighttotal/relheight;
+					var tol = 0+count;
+					$('#speed').text("平均時速:"+Speed+"km/h");
+					$('#height').text("平均高度:"+height+"m");
+					$('#heightest').text("最高高度:"+heightest+"m");
+					$('#speedest').text("最快時速:"+speedest+"km/h");
+					$('#DIStotal').text("總長:"+DIStotal+"km");
+					$('#dateS').text("起始時間:"+dateS);
+					$('#dateE').text("終止時間:"+dateE);
+					$('#Timetotal').text("總時間:"+Timetotal);
+					
+					});
+		//右键事件
+		_map.on('contextmenu', function (e) {
+			window.prompt("此处坐标：", e.latlng.lat + ',' + e.latlng.lng);
+		});
+	})();
+	
+	function speedcount(Edate,Etime,Sdate,Stime,Edis,Sdis){
+					var dis = Edis-Sdis;
+					//console.log("dis"+dis);
+					var datetimeE=new Date(Edate);
+					var datetimeS=new Date(Sdate);
+					var Date_C = datetimeE.getTime()-datetimeS.getTime();
+					//console.log("Date_C"+Date_C);
+					var leave1=Date_C%(24*3600*1000);
+					var hours=Math.floor(leave1/(3600*1000));  
+					var leave2=leave1%(3600*1000);        
+					var minutes=Math.floor(leave2/(60*1000)) ; 
+					var leave3=leave2%(60*1000);
+					var seconds=Math.round(leave3/1000); 
+					var datemath = parseInt(hours)+parseInt(minutes)/60+parseInt(seconds)/3600;
+					//console.log("datemath"+datemath);
+					var Speed = accDiv(dis,datemath);
+					//console.log("Speed"+Speed);
+					return Speed;
+	  }
+	  
+	  	function Timetol(Stime,Etime){
+					//console.log("dis"+dis);
+					var datetimeE=new Date(Etime);
+					var datetimeS=new Date(Stime);
+					var Date_C = datetimeE.getTime()-datetimeS.getTime();
+					//console.log("Date_C"+Date_C);
+					var leave1=Date_C%(24*3600*1000);
+					var hours=Math.floor(leave1/(3600*1000));  
+					var leave2=leave1%(3600*1000);        
+					var minutes=Math.floor(leave2/(60*1000)) ; 
+					var leave3=leave2%(60*1000);
+					var seconds=Math.round(leave3/1000); 
+					
+					return hours+"小時"+minutes+"分"+seconds+"秒";
+	  }
+	  
+	  function accDiv(arg1,arg2){
+			var t1=0,t2=0,r1,r2;
+			try{t1=arg1.toString().split(".")[1].length}catch(e){}
+			try{t2=arg2.toString().split(".")[1].length}catch(e){}
+			with(Math){
+			r1=Number(arg1.toString().replace(".",""))
+			r2=Number(arg2.toString().replace(".",""))
+		return (r1/r2)*pow(10,t2-t1);
+					}
+			}
+
+</script>

@@ -1,0 +1,6486 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<kml xmlns='http://www.opengis.net/kml/2.2' xmlns:gx='http://www.google.com/kml/ext/2.2'>
+<Document>
+<name>GPS device</name>
+<snippet>Created 週三 十月 25 9:46:19 2017</snippet>
+<LookAt>
+<gx:TimeSpan>
+<begin>2017-10-19T12:01:06.000Z</begin>
+<end>2017-10-20T00:55:44.000Z</end>
+</gx:TimeSpan>
+<longitude>121.455688</longitude>
+<latitude>25.001797</latitude>
+<range>16.12312569269123</range>
+</LookAt>
+<!-- Normal track style -->
+<Style id='track_n'>
+<IconStyle>
+<scale>.5</scale>
+<Icon>
+<href>http://earth.google.com/images/kml-icons/track-directional/track-none.png</href>
+</Icon>
+</IconStyle>
+<LabelStyle>
+<scale>0</scale>
+</LabelStyle>
+</Style>
+<!-- Highlighted track style -->
+<Style id='track_h'>
+<IconStyle>
+<scale>1.2</scale>
+<Icon>
+<href>http://earth.google.com/images/kml-icons/track-directional/track-none.png</href>
+</Icon>
+</IconStyle>
+</Style>
+<StyleMap id='track'>
+<Pair>
+<key>normal</key>
+<styleUrl>#track_n</styleUrl>
+</Pair>
+<Pair>
+<key>highlight</key>
+<styleUrl>#track_h</styleUrl>
+</Pair>
+</StyleMap>
+<!-- Normal waypoint style -->
+<Style id='waypoint_n'>
+<IconStyle>
+<Icon>
+<href>http://maps.google.com/mapfiles/kml/pal4/icon61.png</href>
+</Icon>
+</IconStyle>
+</Style>
+<!-- Highlighted waypoint style -->
+<Style id='waypoint_h'>
+<IconStyle>
+<scale>1.2</scale>
+<Icon>
+<href>http://maps.google.com/mapfiles/kml/pal4/icon61.png</href>
+</Icon>
+</IconStyle>
+</Style>
+<StyleMap id='waypoint'>
+<Pair>
+<key>normal</key>
+<styleUrl>#waypoint_n</styleUrl>
+</Pair>
+<Pair>
+<key>highlight</key>
+<styleUrl>#waypoint_h</styleUrl>
+</Pair>
+</StyleMap>
+<Style id='lineStyle'>
+<LineStyle>
+<color>99ffac59</color>
+<width>6</width>
+</LineStyle>
+</Style>
+<Folder>
+<name>Waypoints</name>
+<Placemark>
+<name>WPT001</name>
+<TimeStamp><when>2017-10-19T12:01:06.000Z</when></TimeStamp>
+<styleUrl>#waypoint</styleUrl>
+<Point>
+<coordinates>121.484005,25.007725,-7.8</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>WPT002</name>
+<TimeStamp><when>2017-10-19T12:04:57.000Z</when></TimeStamp>
+<styleUrl>#waypoint</styleUrl>
+<Point>
+<coordinates>121.48395,25.007823,-5.2</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>WPT003</name>
+<TimeStamp><when>2017-10-19T12:08:38.000Z</when></TimeStamp>
+<styleUrl>#waypoint</styleUrl>
+<Point>
+<coordinates>121.485393,25.006988,134.7</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>WPT004</name>
+<TimeStamp><when>2017-10-19T12:12:02.000Z</when></TimeStamp>
+<styleUrl>#waypoint</styleUrl>
+<Point>
+<coordinates>121.484525,25.007647,44.2</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>WPT005</name>
+<TimeStamp><when>2017-10-19T12:15:56.000Z</when></TimeStamp>
+<styleUrl>#waypoint</styleUrl>
+<Point>
+<coordinates>121.483983,25.007762,9.5</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>WPT006</name>
+<TimeStamp><when>2017-10-19T12:19:32.000Z</when></TimeStamp>
+<styleUrl>#waypoint</styleUrl>
+<Point>
+<coordinates>121.484187,25.007765,14.9</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>WPT007</name>
+<TimeStamp><when>2017-10-19T12:38:35.000Z</when></TimeStamp>
+<styleUrl>#waypoint</styleUrl>
+<Point>
+<coordinates>121.484782,25.00747,134.8</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>WPT008</name>
+<TimeStamp><when>2017-10-19T12:42:01.000Z</when></TimeStamp>
+<styleUrl>#waypoint</styleUrl>
+<Point>
+<coordinates>121.484567,25.007645,92.1</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>WPT009</name>
+<TimeStamp><when>2017-10-19T12:45:12.000Z</when></TimeStamp>
+<styleUrl>#waypoint</styleUrl>
+<Point>
+<coordinates>121.484928,25.00812,93.0</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>WPT010</name>
+<TimeStamp><when>2017-10-19T12:48:27.000Z</when></TimeStamp>
+<styleUrl>#waypoint</styleUrl>
+<Point>
+<coordinates>121.484688,25.007715,54.9</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>WPT011</name>
+<TimeStamp><when>2017-10-19T12:51:57.000Z</when></TimeStamp>
+<styleUrl>#waypoint</styleUrl>
+<Point>
+<coordinates>121.484443,25.00775,78.1</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>WPT012</name>
+<TimeStamp><when>2017-10-19T12:55:05.000Z</when></TimeStamp>
+<styleUrl>#waypoint</styleUrl>
+<Point>
+<coordinates>121.48449,25.007625,50.1</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>WPT013</name>
+<TimeStamp><when>2017-10-19T12:58:27.000Z</when></TimeStamp>
+<styleUrl>#waypoint</styleUrl>
+<Point>
+<coordinates>121.485237,25.00769,112.8</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>WPT014</name>
+<TimeStamp><when>2017-10-19T13:01:43.000Z</when></TimeStamp>
+<styleUrl>#waypoint</styleUrl>
+<Point>
+<coordinates>121.484027,25.007925,-45.2</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>WPT015</name>
+<TimeStamp><when>2017-10-19T13:04:55.000Z</when></TimeStamp>
+<styleUrl>#waypoint</styleUrl>
+<Point>
+<coordinates>121.482343,25.008187,-46.9</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>WPT016</name>
+<TimeStamp><when>2017-10-19T13:08:14.000Z</when></TimeStamp>
+<styleUrl>#waypoint</styleUrl>
+<Point>
+<coordinates>121.484708,25.007938,-2.3</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>WPT017</name>
+<TimeStamp><when>2017-10-19T13:11:27.000Z</when></TimeStamp>
+<styleUrl>#waypoint</styleUrl>
+<Point>
+<coordinates>121.483982,25.008408,-1.8</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>WPT018</name>
+<TimeStamp><when>2017-10-19T13:14:39.000Z</when></TimeStamp>
+<styleUrl>#waypoint</styleUrl>
+<Point>
+<coordinates>121.484348,25.007768,21.1</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>WPT019</name>
+<TimeStamp><when>2017-10-19T13:17:52.000Z</when></TimeStamp>
+<styleUrl>#waypoint</styleUrl>
+<Point>
+<coordinates>121.48437,25.007727,73.2</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>WPT020</name>
+<TimeStamp><when>2017-10-19T13:21:09.000Z</when></TimeStamp>
+<styleUrl>#waypoint</styleUrl>
+<Point>
+<coordinates>121.484005,25.007853,-11.8</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>WPT021</name>
+<TimeStamp><when>2017-10-19T13:24:21.000Z</when></TimeStamp>
+<styleUrl>#waypoint</styleUrl>
+<Point>
+<coordinates>121.484682,25.006148,654.6</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>WPT022</name>
+<TimeStamp><when>2017-10-19T13:28:02.000Z</when></TimeStamp>
+<styleUrl>#waypoint</styleUrl>
+<Point>
+<coordinates>121.484642,25.00767,127.9</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>WPT023</name>
+<TimeStamp><when>2017-10-19T13:31:11.000Z</when></TimeStamp>
+<styleUrl>#waypoint</styleUrl>
+<Point>
+<coordinates>121.48494,25.00748,199.5</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>WPT024</name>
+<TimeStamp><when>2017-10-19T13:34:36.000Z</when></TimeStamp>
+<styleUrl>#waypoint</styleUrl>
+<Point>
+<coordinates>121.486152,25.00637,318.5</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>WPT025</name>
+<TimeStamp><when>2017-10-19T13:38:14.000Z</when></TimeStamp>
+<styleUrl>#waypoint</styleUrl>
+<Point>
+<coordinates>121.484882,25.007723,126.5</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>WPT026</name>
+<TimeStamp><when>2017-10-19T13:41:55.000Z</when></TimeStamp>
+<styleUrl>#waypoint</styleUrl>
+<Point>
+<coordinates>121.484667,25.007732,170.6</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>WPT027</name>
+<TimeStamp><when>2017-10-19T13:45:36.000Z</when></TimeStamp>
+<styleUrl>#waypoint</styleUrl>
+<Point>
+<coordinates>121.484353,25.007855,134.4</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>WPT028</name>
+<TimeStamp><when>2017-10-19T13:49:15.000Z</when></TimeStamp>
+<styleUrl>#waypoint</styleUrl>
+<Point>
+<coordinates>121.484502,25.007653,166.7</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>WPT029</name>
+<TimeStamp><when>2017-10-19T13:53:12.000Z</when></TimeStamp>
+<styleUrl>#waypoint</styleUrl>
+<Point>
+<coordinates>121.484217,25.0076,-9.4</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>WPT030</name>
+<TimeStamp><when>2017-10-19T13:56:33.000Z</when></TimeStamp>
+<styleUrl>#waypoint</styleUrl>
+<Point>
+<coordinates>121.485378,25.007203,126.8</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>WPT031</name>
+<TimeStamp><when>2017-10-19T14:00:03.000Z</when></TimeStamp>
+<styleUrl>#waypoint</styleUrl>
+<Point>
+<coordinates>121.485392,25.007678,153.0</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>WPT032</name>
+<TimeStamp><when>2017-10-19T14:03:13.000Z</when></TimeStamp>
+<styleUrl>#waypoint</styleUrl>
+<Point>
+<coordinates>121.485355,25.007353,134.7</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>WPT033</name>
+<TimeStamp><when>2017-10-19T14:06:58.000Z</when></TimeStamp>
+<styleUrl>#waypoint</styleUrl>
+<Point>
+<coordinates>121.484293,25.008003,16.7</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>WPT034</name>
+<TimeStamp><when>2017-10-19T14:10:48.000Z</when></TimeStamp>
+<styleUrl>#waypoint</styleUrl>
+<Point>
+<coordinates>121.484685,25.008208,103.3</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>WPT035</name>
+<TimeStamp><when>2017-10-19T14:14:03.000Z</when></TimeStamp>
+<styleUrl>#waypoint</styleUrl>
+<Point>
+<coordinates>121.484637,25.008028,89.4</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>WPT036</name>
+<TimeStamp><when>2017-10-19T14:17:15.000Z</when></TimeStamp>
+<styleUrl>#waypoint</styleUrl>
+<Point>
+<coordinates>121.484855,25.007995,82.4</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>WPT037</name>
+<TimeStamp><when>2017-10-19T14:20:38.000Z</when></TimeStamp>
+<styleUrl>#waypoint</styleUrl>
+<Point>
+<coordinates>121.484652,25.007527,42.6</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>WPT038</name>
+<TimeStamp><when>2017-10-19T14:24:10.000Z</when></TimeStamp>
+<styleUrl>#waypoint</styleUrl>
+<Point>
+<coordinates>121.484723,25.007818,92.1</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>WPT039</name>
+<TimeStamp><when>2017-10-19T14:28:25.000Z</when></TimeStamp>
+<styleUrl>#waypoint</styleUrl>
+<Point>
+<coordinates>121.484663,25.008167,106.9</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>WPT040</name>
+<TimeStamp><when>2017-10-19T14:31:59.000Z</when></TimeStamp>
+<styleUrl>#waypoint</styleUrl>
+<Point>
+<coordinates>121.484568,25.008113,117.6</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>WPT041</name>
+<TimeStamp><when>2017-10-19T14:35:24.000Z</when></TimeStamp>
+<styleUrl>#waypoint</styleUrl>
+<Point>
+<coordinates>121.484752,25.008092,121.6</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>WPT042</name>
+<TimeStamp><when>2017-10-19T14:39:56.000Z</when></TimeStamp>
+<styleUrl>#waypoint</styleUrl>
+<Point>
+<coordinates>121.484655,25.007483,28.2</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>WPT043</name>
+<TimeStamp><when>2017-10-19T14:43:08.000Z</when></TimeStamp>
+<styleUrl>#waypoint</styleUrl>
+<Point>
+<coordinates>121.484705,25.007678,52.5</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>WPT044</name>
+<TimeStamp><when>2017-10-19T14:46:25.000Z</when></TimeStamp>
+<styleUrl>#waypoint</styleUrl>
+<Point>
+<coordinates>121.483562,25.007417,-27.5</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>WPT045</name>
+<TimeStamp><when>2017-10-19T14:49:55.000Z</when></TimeStamp>
+<styleUrl>#waypoint</styleUrl>
+<Point>
+<coordinates>121.485427,25.007813,140.9</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>WPT046</name>
+<TimeStamp><when>2017-10-19T14:53:11.000Z</when></TimeStamp>
+<styleUrl>#waypoint</styleUrl>
+<Point>
+<coordinates>121.48483,25.007893,137.9</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>WPT047</name>
+<TimeStamp><when>2017-10-19T14:56:49.000Z</when></TimeStamp>
+<styleUrl>#waypoint</styleUrl>
+<Point>
+<coordinates>121.48467,25.007802,84.9</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>WPT048</name>
+<TimeStamp><when>2017-10-19T15:00:00.000Z</when></TimeStamp>
+<styleUrl>#waypoint</styleUrl>
+<Point>
+<coordinates>121.484247,25.0079,121.5</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>WPT049</name>
+<TimeStamp><when>2017-10-19T15:03:27.000Z</when></TimeStamp>
+<styleUrl>#waypoint</styleUrl>
+<Point>
+<coordinates>121.484545,25.007763,70.6</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>WPT050</name>
+<TimeStamp><when>2017-10-19T15:08:03.000Z</when></TimeStamp>
+<styleUrl>#waypoint</styleUrl>
+<Point>
+<coordinates>121.484728,25.007885,81.7</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>WPT051</name>
+<TimeStamp><when>2017-10-19T15:11:27.000Z</when></TimeStamp>
+<styleUrl>#waypoint</styleUrl>
+<Point>
+<coordinates>121.484705,25.0076,63.2</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>WPT052</name>
+<TimeStamp><when>2017-10-19T15:14:52.000Z</when></TimeStamp>
+<styleUrl>#waypoint</styleUrl>
+<Point>
+<coordinates>121.48469,25.007955,93.2</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>WPT053</name>
+<TimeStamp><when>2017-10-19T15:18:09.000Z</when></TimeStamp>
+<styleUrl>#waypoint</styleUrl>
+<Point>
+<coordinates>121.48466,25.007805,83.1</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>WPT054</name>
+<TimeStamp><when>2017-10-19T15:21:23.000Z</when></TimeStamp>
+<styleUrl>#waypoint</styleUrl>
+<Point>
+<coordinates>121.484758,25.007937,103.5</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>WPT055</name>
+<TimeStamp><when>2017-10-19T15:24:41.000Z</when></TimeStamp>
+<styleUrl>#waypoint</styleUrl>
+<Point>
+<coordinates>121.48466,25.00798,101.3</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>WPT056</name>
+<TimeStamp><when>2017-10-19T15:27:59.000Z</when></TimeStamp>
+<styleUrl>#waypoint</styleUrl>
+<Point>
+<coordinates>121.484545,25.008275,168.1</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>WPT057</name>
+<TimeStamp><when>2017-10-19T15:37:05.000Z</when></TimeStamp>
+<styleUrl>#waypoint</styleUrl>
+<Point>
+<coordinates>121.485477,25.00785,142.9</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>WPT058</name>
+<TimeStamp><when>2017-10-19T15:40:44.000Z</when></TimeStamp>
+<styleUrl>#waypoint</styleUrl>
+<Point>
+<coordinates>121.483965,25.007705,-19.8</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>WPT059</name>
+<TimeStamp><when>2017-10-19T15:43:59.000Z</when></TimeStamp>
+<styleUrl>#waypoint</styleUrl>
+<Point>
+<coordinates>121.483973,25.007867,-2.3</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>WPT060</name>
+<TimeStamp><when>2017-10-19T15:47:19.000Z</when></TimeStamp>
+<styleUrl>#waypoint</styleUrl>
+<Point>
+<coordinates>121.484677,25.00785,85.3</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>WPT061</name>
+<TimeStamp><when>2017-10-19T15:50:37.000Z</when></TimeStamp>
+<styleUrl>#waypoint</styleUrl>
+<Point>
+<coordinates>121.484165,25.007847,11.9</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>WPT062</name>
+<TimeStamp><when>2017-10-19T15:54:14.000Z</when></TimeStamp>
+<styleUrl>#waypoint</styleUrl>
+<Point>
+<coordinates>121.484773,25.008067,128.7</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>WPT063</name>
+<TimeStamp><when>2017-10-19T15:57:55.000Z</when></TimeStamp>
+<styleUrl>#waypoint</styleUrl>
+<Point>
+<coordinates>121.485605,25.007372,162.4</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>WPT064</name>
+<TimeStamp><when>2017-10-19T16:01:06.000Z</when></TimeStamp>
+<styleUrl>#waypoint</styleUrl>
+<Point>
+<coordinates>121.48456,25.006903,165.4</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>WPT065</name>
+<TimeStamp><when>2017-10-19T16:04:20.000Z</when></TimeStamp>
+<styleUrl>#waypoint</styleUrl>
+<Point>
+<coordinates>121.484445,25.007472,81.8</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>WPT066</name>
+<TimeStamp><when>2017-10-19T16:07:37.000Z</when></TimeStamp>
+<styleUrl>#waypoint</styleUrl>
+<Point>
+<coordinates>121.48744,25.006595,339.8</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>WPT067</name>
+<TimeStamp><when>2017-10-19T16:10:50.000Z</when></TimeStamp>
+<styleUrl>#waypoint</styleUrl>
+<Point>
+<coordinates>121.475053,25.00621,-191.7</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>WPT068</name>
+<TimeStamp><when>2017-10-19T16:14:05.000Z</when></TimeStamp>
+<styleUrl>#waypoint</styleUrl>
+<Point>
+<coordinates>121.486685,25.006807,239.7</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>WPT069</name>
+<TimeStamp><when>2017-10-19T16:17:32.000Z</when></TimeStamp>
+<styleUrl>#waypoint</styleUrl>
+<Point>
+<coordinates>121.484567,25.00757,68.1</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>WPT070</name>
+<TimeStamp><when>2017-10-19T16:20:45.000Z</when></TimeStamp>
+<styleUrl>#waypoint</styleUrl>
+<Point>
+<coordinates>121.484447,25.007583,69.7</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>WPT071</name>
+<TimeStamp><when>2017-10-19T16:23:59.000Z</when></TimeStamp>
+<styleUrl>#waypoint</styleUrl>
+<Point>
+<coordinates>121.484685,25.00721,69.6</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>WPT072</name>
+<TimeStamp><when>2017-10-19T16:27:22.000Z</when></TimeStamp>
+<styleUrl>#waypoint</styleUrl>
+<Point>
+<coordinates>121.48478,25.007538,89.7</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>WPT073</name>
+<TimeStamp><when>2017-10-19T16:30:40.000Z</when></TimeStamp>
+<styleUrl>#waypoint</styleUrl>
+<Point>
+<coordinates>121.484597,25.00767,71.9</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>WPT074</name>
+<TimeStamp><when>2017-10-19T16:34:00.000Z</when></TimeStamp>
+<styleUrl>#waypoint</styleUrl>
+<Point>
+<coordinates>121.483798,25.008227,-16.6</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>WPT075</name>
+<TimeStamp><when>2017-10-19T16:37:21.000Z</when></TimeStamp>
+<styleUrl>#waypoint</styleUrl>
+<Point>
+<coordinates>121.484148,25.007975,38.6</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>WPT076</name>
+<TimeStamp><when>2017-10-19T16:40:41.000Z</when></TimeStamp>
+<styleUrl>#waypoint</styleUrl>
+<Point>
+<coordinates>121.484532,25.007703,47.3</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>WPT077</name>
+<TimeStamp><when>2017-10-19T16:44:01.000Z</when></TimeStamp>
+<styleUrl>#waypoint</styleUrl>
+<Point>
+<coordinates>121.48434,25.007723,46.7</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>WPT078</name>
+<TimeStamp><when>2017-10-19T16:47:23.000Z</when></TimeStamp>
+<styleUrl>#waypoint</styleUrl>
+<Point>
+<coordinates>121.485248,25.007265,114.5</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>WPT079</name>
+<TimeStamp><when>2017-10-19T16:50:40.000Z</when></TimeStamp>
+<styleUrl>#waypoint</styleUrl>
+<Point>
+<coordinates>121.483542,25.008128,-38.6</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>WPT080</name>
+<TimeStamp><when>2017-10-19T16:53:57.000Z</when></TimeStamp>
+<styleUrl>#waypoint</styleUrl>
+<Point>
+<coordinates>121.484875,25.007237,47.2</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>WPT081</name>
+<TimeStamp><when>2017-10-19T16:57:15.000Z</when></TimeStamp>
+<styleUrl>#waypoint</styleUrl>
+<Point>
+<coordinates>121.485293,25.007105,67.9</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>WPT082</name>
+<TimeStamp><when>2017-10-19T17:00:27.000Z</when></TimeStamp>
+<styleUrl>#waypoint</styleUrl>
+<Point>
+<coordinates>121.4846,25.007607,71.7</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>WPT083</name>
+<TimeStamp><when>2017-10-19T17:03:39.000Z</when></TimeStamp>
+<styleUrl>#waypoint</styleUrl>
+<Point>
+<coordinates>121.484653,25.007423,19.2</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>WPT084</name>
+<TimeStamp><when>2017-10-19T17:06:51.000Z</when></TimeStamp>
+<styleUrl>#waypoint</styleUrl>
+<Point>
+<coordinates>121.484462,25.007507,18.3</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>WPT085</name>
+<TimeStamp><when>2017-10-19T17:10:03.000Z</when></TimeStamp>
+<styleUrl>#waypoint</styleUrl>
+<Point>
+<coordinates>121.484758,25.007392,8.7</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>WPT086</name>
+<TimeStamp><when>2017-10-19T17:13:22.000Z</when></TimeStamp>
+<styleUrl>#waypoint</styleUrl>
+<Point>
+<coordinates>121.484713,25.00739,15.8</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>WPT087</name>
+<TimeStamp><when>2017-10-19T17:17:02.000Z</when></TimeStamp>
+<styleUrl>#waypoint</styleUrl>
+<Point>
+<coordinates>121.484502,25.008215,62.6</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>WPT088</name>
+<TimeStamp><when>2017-10-19T17:21:28.000Z</when></TimeStamp>
+<styleUrl>#waypoint</styleUrl>
+<Point>
+<coordinates>121.48468,25.008157,77.3</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>WPT089</name>
+<TimeStamp><when>2017-10-19T17:25:46.000Z</when></TimeStamp>
+<styleUrl>#waypoint</styleUrl>
+<Point>
+<coordinates>121.484927,25.00783,130.3</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>WPT090</name>
+<TimeStamp><when>2017-10-19T17:34:59.000Z</when></TimeStamp>
+<styleUrl>#waypoint</styleUrl>
+<Point>
+<coordinates>121.485303,25.007843,77.1</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>WPT091</name>
+<TimeStamp><when>2017-10-19T17:38:46.000Z</when></TimeStamp>
+<styleUrl>#waypoint</styleUrl>
+<Point>
+<coordinates>121.48567,25.007715,39.4</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>WPT092</name>
+<TimeStamp><when>2017-10-19T17:52:49.000Z</when></TimeStamp>
+<styleUrl>#waypoint</styleUrl>
+<Point>
+<coordinates>121.484753,25.007677,-14.9</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>WPT093</name>
+<TimeStamp><when>2017-10-19T17:56:10.000Z</when></TimeStamp>
+<styleUrl>#waypoint</styleUrl>
+<Point>
+<coordinates>121.484822,25.007808,29.6</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>WPT094</name>
+<TimeStamp><when>2017-10-19T17:59:47.000Z</when></TimeStamp>
+<styleUrl>#waypoint</styleUrl>
+<Point>
+<coordinates>121.484522,25.007567,-72.2</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>WPT095</name>
+<TimeStamp><when>2017-10-19T18:04:27.000Z</when></TimeStamp>
+<styleUrl>#waypoint</styleUrl>
+<Point>
+<coordinates>121.484867,25.007683,48.7</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>WPT096</name>
+<TimeStamp><when>2017-10-19T18:08:58.000Z</when></TimeStamp>
+<styleUrl>#waypoint</styleUrl>
+<Point>
+<coordinates>121.484707,25.007688,62.9</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>WPT097</name>
+<TimeStamp><when>2017-10-19T19:03:54.000Z</when></TimeStamp>
+<styleUrl>#waypoint</styleUrl>
+<Point>
+<coordinates>121.487787,25.00633,397.9</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>WPT098</name>
+<TimeStamp><when>2017-10-19T19:28:13.000Z</when></TimeStamp>
+<styleUrl>#waypoint</styleUrl>
+<Point>
+<coordinates>121.48515,25.007295,200.2</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>WPT099</name>
+<TimeStamp><when>2017-10-19T19:37:55.000Z</when></TimeStamp>
+<styleUrl>#waypoint</styleUrl>
+<Point>
+<coordinates>121.484385,25.007762,-22.3</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>WPT100</name>
+<TimeStamp><when>2017-10-19T19:42:28.000Z</when></TimeStamp>
+<styleUrl>#waypoint</styleUrl>
+<Point>
+<coordinates>121.484448,25.007698,-28.2</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>WPT101</name>
+<TimeStamp><when>2017-10-19T19:46:03.000Z</when></TimeStamp>
+<styleUrl>#waypoint</styleUrl>
+<Point>
+<coordinates>121.484208,25.007313,359.4</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>WPT102</name>
+<TimeStamp><when>2017-10-19T19:50:36.000Z</when></TimeStamp>
+<styleUrl>#waypoint</styleUrl>
+<Point>
+<coordinates>121.484567,25.00759,11.5</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>WPT103</name>
+<TimeStamp><when>2017-10-19T19:59:05.000Z</when></TimeStamp>
+<styleUrl>#waypoint</styleUrl>
+<Point>
+<coordinates>121.484228,25.00728,460.4</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>WPT104</name>
+<TimeStamp><when>2017-10-19T20:02:50.000Z</when></TimeStamp>
+<styleUrl>#waypoint</styleUrl>
+<Point>
+<coordinates>121.484647,25.007618,79.7</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>WPT105</name>
+<TimeStamp><when>2017-10-19T20:06:12.000Z</when></TimeStamp>
+<styleUrl>#waypoint</styleUrl>
+<Point>
+<coordinates>121.48448,25.007752,70.9</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>WPT106</name>
+<TimeStamp><when>2017-10-19T20:10:05.000Z</when></TimeStamp>
+<styleUrl>#waypoint</styleUrl>
+<Point>
+<coordinates>121.48434,25.00793,129.5</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>WPT107</name>
+<TimeStamp><when>2017-10-19T20:13:40.000Z</when></TimeStamp>
+<styleUrl>#waypoint</styleUrl>
+<Point>
+<coordinates>121.484383,25.00771,19.2</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>WPT108</name>
+<TimeStamp><when>2017-10-19T20:16:59.000Z</when></TimeStamp>
+<styleUrl>#waypoint</styleUrl>
+<Point>
+<coordinates>121.484802,25.00756,66.7</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>WPT109</name>
+<TimeStamp><when>2017-10-19T20:20:25.000Z</when></TimeStamp>
+<styleUrl>#waypoint</styleUrl>
+<Point>
+<coordinates>121.484665,25.007767,66.7</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>WPT110</name>
+<TimeStamp><when>2017-10-19T20:23:38.000Z</when></TimeStamp>
+<styleUrl>#waypoint</styleUrl>
+<Point>
+<coordinates>121.484233,25.007687,58.6</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>WPT111</name>
+<TimeStamp><when>2017-10-19T20:26:53.000Z</when></TimeStamp>
+<styleUrl>#waypoint</styleUrl>
+<Point>
+<coordinates>121.484305,25.007733,7.0</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>WPT112</name>
+<TimeStamp><when>2017-10-19T20:30:09.000Z</when></TimeStamp>
+<styleUrl>#waypoint</styleUrl>
+<Point>
+<coordinates>121.48441,25.007727,-2.0</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>WPT113</name>
+<TimeStamp><when>2017-10-19T20:33:24.000Z</when></TimeStamp>
+<styleUrl>#waypoint</styleUrl>
+<Point>
+<coordinates>121.48446,25.00764,23.0</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>WPT114</name>
+<TimeStamp><when>2017-10-19T20:36:42.000Z</when></TimeStamp>
+<styleUrl>#waypoint</styleUrl>
+<Point>
+<coordinates>121.484652,25.007813,66.3</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>WPT115</name>
+<TimeStamp><when>2017-10-19T20:39:58.000Z</when></TimeStamp>
+<styleUrl>#waypoint</styleUrl>
+<Point>
+<coordinates>121.483805,25.007718,13.5</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>WPT116</name>
+<TimeStamp><when>2017-10-19T20:43:15.000Z</when></TimeStamp>
+<styleUrl>#waypoint</styleUrl>
+<Point>
+<coordinates>121.484712,25.00799,41.1</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>WPT117</name>
+<TimeStamp><when>2017-10-19T20:46:29.000Z</when></TimeStamp>
+<styleUrl>#waypoint</styleUrl>
+<Point>
+<coordinates>121.484325,25.007752,28.6</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>WPT118</name>
+<TimeStamp><when>2017-10-19T20:49:47.000Z</when></TimeStamp>
+<styleUrl>#waypoint</styleUrl>
+<Point>
+<coordinates>121.484562,25.007837,61.0</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>WPT119</name>
+<TimeStamp><when>2017-10-19T20:53:07.000Z</when></TimeStamp>
+<styleUrl>#waypoint</styleUrl>
+<Point>
+<coordinates>121.484363,25.007847,45.5</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>WPT120</name>
+<TimeStamp><when>2017-10-19T20:56:27.000Z</when></TimeStamp>
+<styleUrl>#waypoint</styleUrl>
+<Point>
+<coordinates>121.48438,25.007963,29.1</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>WPT121</name>
+<TimeStamp><when>2017-10-19T20:59:48.000Z</when></TimeStamp>
+<styleUrl>#waypoint</styleUrl>
+<Point>
+<coordinates>121.484252,25.007983,22.4</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>WPT122</name>
+<TimeStamp><when>2017-10-19T21:03:19.000Z</when></TimeStamp>
+<styleUrl>#waypoint</styleUrl>
+<Point>
+<coordinates>121.484243,25.007943,23.7</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>WPT123</name>
+<TimeStamp><when>2017-10-19T21:06:36.000Z</when></TimeStamp>
+<styleUrl>#waypoint</styleUrl>
+<Point>
+<coordinates>121.484262,25.00785,13.4</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>WPT124</name>
+<TimeStamp><when>2017-10-19T21:09:51.000Z</when></TimeStamp>
+<styleUrl>#waypoint</styleUrl>
+<Point>
+<coordinates>121.484377,25.00801,5.9</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>WPT125</name>
+<TimeStamp><when>2017-10-19T21:13:47.000Z</when></TimeStamp>
+<styleUrl>#waypoint</styleUrl>
+<Point>
+<coordinates>121.484238,25.007783,18.0</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>WPT126</name>
+<TimeStamp><when>2017-10-19T21:17:03.000Z</when></TimeStamp>
+<styleUrl>#waypoint</styleUrl>
+<Point>
+<coordinates>121.48455,25.00778,64.8</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>WPT127</name>
+<TimeStamp><when>2017-10-19T21:20:25.000Z</when></TimeStamp>
+<styleUrl>#waypoint</styleUrl>
+<Point>
+<coordinates>121.484683,25.007727,23.9</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>WPT128</name>
+<TimeStamp><when>2017-10-19T21:23:35.000Z</when></TimeStamp>
+<styleUrl>#waypoint</styleUrl>
+<Point>
+<coordinates>121.483885,25.007755,22.1</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>WPT129</name>
+<TimeStamp><when>2017-10-19T21:26:44.000Z</when></TimeStamp>
+<styleUrl>#waypoint</styleUrl>
+<Point>
+<coordinates>121.484302,25.007698,37.6</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>WPT130</name>
+<TimeStamp><when>2017-10-19T21:30:04.000Z</when></TimeStamp>
+<styleUrl>#waypoint</styleUrl>
+<Point>
+<coordinates>121.484167,25.007728,27.3</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>WPT131</name>
+<TimeStamp><when>2017-10-19T21:33:20.000Z</when></TimeStamp>
+<styleUrl>#waypoint</styleUrl>
+<Point>
+<coordinates>121.484692,25.00782,65.8</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>WPT132</name>
+<TimeStamp><when>2017-10-19T21:36:33.000Z</when></TimeStamp>
+<styleUrl>#waypoint</styleUrl>
+<Point>
+<coordinates>121.484353,25.007658,26.1</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>WPT133</name>
+<TimeStamp><when>2017-10-19T21:39:48.000Z</when></TimeStamp>
+<styleUrl>#waypoint</styleUrl>
+<Point>
+<coordinates>121.483503,25.00758,28.1</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>WPT134</name>
+<TimeStamp><when>2017-10-19T21:43:02.000Z</when></TimeStamp>
+<styleUrl>#waypoint</styleUrl>
+<Point>
+<coordinates>121.484752,25.007728,29.1</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>WPT135</name>
+<TimeStamp><when>2017-10-19T21:46:18.000Z</when></TimeStamp>
+<styleUrl>#waypoint</styleUrl>
+<Point>
+<coordinates>121.485417,25.007133,38.5</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>WPT136</name>
+<TimeStamp><when>2017-10-19T21:49:32.000Z</when></TimeStamp>
+<styleUrl>#waypoint</styleUrl>
+<Point>
+<coordinates>121.485,25.007553,67.3</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>WPT137</name>
+<TimeStamp><when>2017-10-19T21:53:11.000Z</when></TimeStamp>
+<styleUrl>#waypoint</styleUrl>
+<Point>
+<coordinates>121.48409,25.007887,126.3</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>WPT138</name>
+<TimeStamp><when>2017-10-19T21:56:32.000Z</when></TimeStamp>
+<styleUrl>#waypoint</styleUrl>
+<Point>
+<coordinates>121.481917,25.008648,208.8</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>WPT139</name>
+<TimeStamp><when>2017-10-19T21:59:42.000Z</when></TimeStamp>
+<styleUrl>#waypoint</styleUrl>
+<Point>
+<coordinates>121.485448,25.007272,31.3</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>WPT140</name>
+<TimeStamp><when>2017-10-19T22:02:58.000Z</when></TimeStamp>
+<styleUrl>#waypoint</styleUrl>
+<Point>
+<coordinates>121.483892,25.007932,121.5</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>WPT141</name>
+<TimeStamp><when>2017-10-19T22:06:08.000Z</when></TimeStamp>
+<styleUrl>#waypoint</styleUrl>
+<Point>
+<coordinates>121.484627,25.007528,49.4</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>WPT142</name>
+<TimeStamp><when>2017-10-19T22:09:18.000Z</when></TimeStamp>
+<styleUrl>#waypoint</styleUrl>
+<Point>
+<coordinates>121.485037,25.007352,41.3</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>WPT143</name>
+<TimeStamp><when>2017-10-19T22:12:31.000Z</when></TimeStamp>
+<styleUrl>#waypoint</styleUrl>
+<Point>
+<coordinates>121.486088,25.006932,18.8</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>WPT144</name>
+<TimeStamp><when>2017-10-19T22:15:44.000Z</when></TimeStamp>
+<styleUrl>#waypoint</styleUrl>
+<Point>
+<coordinates>121.485467,25.007288,56.2</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>WPT145</name>
+<TimeStamp><when>2017-10-19T22:18:54.000Z</when></TimeStamp>
+<styleUrl>#waypoint</styleUrl>
+<Point>
+<coordinates>121.485337,25.006967,57.8</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>WPT146</name>
+<TimeStamp><when>2017-10-19T22:21:59.000Z</when></TimeStamp>
+<styleUrl>#waypoint</styleUrl>
+<Point>
+<coordinates>121.484635,25.007655,8.5</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>WPT147</name>
+<TimeStamp><when>2017-10-19T22:25:05.000Z</when></TimeStamp>
+<styleUrl>#waypoint</styleUrl>
+<Point>
+<coordinates>121.48445,25.007615,90.7</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>WPT148</name>
+<TimeStamp><when>2017-10-19T22:28:13.000Z</when></TimeStamp>
+<styleUrl>#waypoint</styleUrl>
+<Point>
+<coordinates>121.483925,25.007747,11.5</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>WPT149</name>
+<TimeStamp><when>2017-10-19T22:31:22.000Z</when></TimeStamp>
+<styleUrl>#waypoint</styleUrl>
+<Point>
+<coordinates>121.48408,25.007805,-39.6</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>WPT150</name>
+<TimeStamp><when>2017-10-19T22:34:38.000Z</when></TimeStamp>
+<styleUrl>#waypoint</styleUrl>
+<Point>
+<coordinates>121.484292,25.007708,41.9</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>WPT151</name>
+<TimeStamp><when>2017-10-19T22:38:00.000Z</when></TimeStamp>
+<styleUrl>#waypoint</styleUrl>
+<Point>
+<coordinates>121.483945,25.007908,43.0</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>WPT152</name>
+<TimeStamp><when>2017-10-19T22:41:24.000Z</when></TimeStamp>
+<styleUrl>#waypoint</styleUrl>
+<Point>
+<coordinates>121.483965,25.007527,-16.5</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>WPT153</name>
+<TimeStamp><when>2017-10-19T22:44:52.000Z</when></TimeStamp>
+<styleUrl>#waypoint</styleUrl>
+<Point>
+<coordinates>121.482982,25.00768,-82.0</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>WPT154</name>
+<TimeStamp><when>2017-10-19T22:48:14.000Z</when></TimeStamp>
+<styleUrl>#waypoint</styleUrl>
+<Point>
+<coordinates>121.4836,25.007678,-22.6</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>WPT155</name>
+<TimeStamp><when>2017-10-19T22:51:29.000Z</when></TimeStamp>
+<styleUrl>#waypoint</styleUrl>
+<Point>
+<coordinates>121.48467,25.007438,30.8</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>WPT156</name>
+<TimeStamp><when>2017-10-19T22:54:39.000Z</when></TimeStamp>
+<styleUrl>#waypoint</styleUrl>
+<Point>
+<coordinates>121.484117,25.007978,35.6</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>WPT157</name>
+<TimeStamp><when>2017-10-19T22:57:58.000Z</when></TimeStamp>
+<styleUrl>#waypoint</styleUrl>
+<Point>
+<coordinates>121.485017,25.007527,57.4</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>WPT158</name>
+<TimeStamp><when>2017-10-19T23:01:11.000Z</when></TimeStamp>
+<styleUrl>#waypoint</styleUrl>
+<Point>
+<coordinates>121.484923,25.007572,57.7</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>WPT159</name>
+<TimeStamp><when>2017-10-19T23:04:39.000Z</when></TimeStamp>
+<styleUrl>#waypoint</styleUrl>
+<Point>
+<coordinates>121.483768,25.00796,13.3</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>WPT160</name>
+<TimeStamp><when>2017-10-19T23:07:48.000Z</when></TimeStamp>
+<styleUrl>#waypoint</styleUrl>
+<Point>
+<coordinates>121.484502,25.007625,0.3</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>WPT161</name>
+<TimeStamp><when>2017-10-19T23:11:03.000Z</when></TimeStamp>
+<styleUrl>#waypoint</styleUrl>
+<Point>
+<coordinates>121.48376,25.007745,-15.2</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>WPT162</name>
+<TimeStamp><when>2017-10-19T23:14:12.000Z</when></TimeStamp>
+<styleUrl>#waypoint</styleUrl>
+<Point>
+<coordinates>121.483198,25.008097,-14.3</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>WPT163</name>
+<TimeStamp><when>2017-10-19T23:17:34.000Z</when></TimeStamp>
+<styleUrl>#waypoint</styleUrl>
+<Point>
+<coordinates>121.485313,25.007422,111.4</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>WPT164</name>
+<TimeStamp><when>2017-10-19T23:20:46.000Z</when></TimeStamp>
+<styleUrl>#waypoint</styleUrl>
+<Point>
+<coordinates>121.485062,25.007412,113.4</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>WPT165</name>
+<TimeStamp><when>2017-10-19T23:24:02.000Z</when></TimeStamp>
+<styleUrl>#waypoint</styleUrl>
+<Point>
+<coordinates>121.483893,25.007903,-34.8</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>WPT166</name>
+<TimeStamp><when>2017-10-19T23:27:23.000Z</when></TimeStamp>
+<styleUrl>#waypoint</styleUrl>
+<Point>
+<coordinates>121.483878,25.007708,-28.8</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>WPT167</name>
+<TimeStamp><when>2017-10-19T23:30:32.000Z</when></TimeStamp>
+<styleUrl>#waypoint</styleUrl>
+<Point>
+<coordinates>121.484193,25.007503,-27.4</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>WPT168</name>
+<TimeStamp><when>2017-10-19T23:34:05.000Z</when></TimeStamp>
+<styleUrl>#waypoint</styleUrl>
+<Point>
+<coordinates>121.485362,25.007722,113.5</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>WPT169</name>
+<TimeStamp><when>2017-10-19T23:37:29.000Z</when></TimeStamp>
+<styleUrl>#waypoint</styleUrl>
+<Point>
+<coordinates>121.483615,25.007833,-25.1</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>WPT170</name>
+<TimeStamp><when>2017-10-19T23:40:55.000Z</when></TimeStamp>
+<styleUrl>#waypoint</styleUrl>
+<Point>
+<coordinates>121.485317,25.007513,107.7</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>WPT171</name>
+<TimeStamp><when>2017-10-19T23:44:32.000Z</when></TimeStamp>
+<styleUrl>#waypoint</styleUrl>
+<Point>
+<coordinates>121.484593,25.007738,60.4</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>WPT172</name>
+<TimeStamp><when>2017-10-19T23:47:46.000Z</when></TimeStamp>
+<styleUrl>#waypoint</styleUrl>
+<Point>
+<coordinates>121.484453,25.00774,38.6</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>WPT173</name>
+<TimeStamp><when>2017-10-19T23:51:02.000Z</when></TimeStamp>
+<styleUrl>#waypoint</styleUrl>
+<Point>
+<coordinates>121.484557,25.00776,45.0</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>WPT174</name>
+<TimeStamp><when>2017-10-19T23:54:18.000Z</when></TimeStamp>
+<styleUrl>#waypoint</styleUrl>
+<Point>
+<coordinates>121.484078,25.007745,34.7</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>WPT175</name>
+<TimeStamp><when>2017-10-19T23:57:35.000Z</when></TimeStamp>
+<styleUrl>#waypoint</styleUrl>
+<Point>
+<coordinates>121.484475,25.007303,40.0</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>WPT176</name>
+<TimeStamp><when>2017-10-20T00:00:45.000Z</when></TimeStamp>
+<styleUrl>#waypoint</styleUrl>
+<Point>
+<coordinates>121.484368,25.007537,44.9</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>WPT177</name>
+<TimeStamp><when>2017-10-20T00:03:54.000Z</when></TimeStamp>
+<styleUrl>#waypoint</styleUrl>
+<Point>
+<coordinates>121.484787,25.007425,49.8</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>WPT178</name>
+<TimeStamp><when>2017-10-20T00:07:12.000Z</when></TimeStamp>
+<styleUrl>#waypoint</styleUrl>
+<Point>
+<coordinates>121.483462,25.007765,23.3</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>WPT179</name>
+<TimeStamp><when>2017-10-20T00:10:25.000Z</when></TimeStamp>
+<styleUrl>#waypoint</styleUrl>
+<Point>
+<coordinates>121.484203,25.007617,14.7</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>WPT180</name>
+<TimeStamp><when>2017-10-20T00:13:43.000Z</when></TimeStamp>
+<styleUrl>#waypoint</styleUrl>
+<Point>
+<coordinates>121.484163,25.007812,6.9</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>WPT181</name>
+<TimeStamp><when>2017-10-20T00:16:50.000Z</when></TimeStamp>
+<styleUrl>#waypoint</styleUrl>
+<Point>
+<coordinates>121.48519,25.007637,70.3</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>WPT182</name>
+<TimeStamp><when>2017-10-20T00:19:59.000Z</when></TimeStamp>
+<styleUrl>#waypoint</styleUrl>
+<Point>
+<coordinates>121.483895,25.007767,-15.4</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>WPT183</name>
+<TimeStamp><when>2017-10-20T00:23:11.000Z</when></TimeStamp>
+<styleUrl>#waypoint</styleUrl>
+<Point>
+<coordinates>121.48328,25.00775,-47.0</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>WPT184</name>
+<TimeStamp><when>2017-10-20T00:26:16.000Z</when></TimeStamp>
+<styleUrl>#waypoint</styleUrl>
+<Point>
+<coordinates>121.484395,25.007458,35.8</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>WPT185</name>
+<TimeStamp><when>2017-10-20T00:29:22.000Z</when></TimeStamp>
+<styleUrl>#waypoint</styleUrl>
+<Point>
+<coordinates>121.484747,25.007753,56.5</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>WPT186</name>
+<TimeStamp><when>2017-10-20T00:32:40.000Z</when></TimeStamp>
+<styleUrl>#waypoint</styleUrl>
+<Point>
+<coordinates>121.484572,25.00779,23.1</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>WPT187</name>
+<TimeStamp><when>2017-10-20T00:35:55.000Z</when></TimeStamp>
+<styleUrl>#waypoint</styleUrl>
+<Point>
+<coordinates>121.484425,25.00775,32.5</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>WPT188</name>
+<TimeStamp><when>2017-10-20T00:39:18.000Z</when></TimeStamp>
+<styleUrl>#waypoint</styleUrl>
+<Point>
+<coordinates>121.485655,25.006288,44.3</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>WPT189</name>
+<TimeStamp><when>2017-10-20T00:42:43.000Z</when></TimeStamp>
+<styleUrl>#waypoint</styleUrl>
+<Point>
+<coordinates>121.484577,25.00788,68.3</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>WPT190</name>
+<TimeStamp><when>2017-10-20T00:45:59.000Z</when></TimeStamp>
+<styleUrl>#waypoint</styleUrl>
+<Point>
+<coordinates>121.484168,25.007585,27.9</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>WPT191</name>
+<TimeStamp><when>2017-10-20T00:49:21.000Z</when></TimeStamp>
+<styleUrl>#waypoint</styleUrl>
+<Point>
+<coordinates>121.48351,25.007717,-50.7</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>WPT192</name>
+<TimeStamp><when>2017-10-20T00:52:33.000Z</when></TimeStamp>
+<styleUrl>#waypoint</styleUrl>
+<Point>
+<coordinates>121.484857,25.00772,75.7</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>WPT193</name>
+<TimeStamp><when>2017-10-20T00:55:44.000Z</when></TimeStamp>
+<styleUrl>#waypoint</styleUrl>
+<Point>
+<coordinates>121.484253,25.008067,35.9</coordinates>
+</Point>
+</Placemark>
+</Folder>
+<Folder>
+<name>Tracks</name>
+<Folder>
+<name>20171019200106</name>
+<snippet/>
+<description>
+<![CDATA[<table>
+<tr><td><b>Distance</b> 9.996337929468561 mi </td></tr>
+<tr><td><b>Min Alt</b> -628.776 ft </td></tr>
+<tr><td><b>Max Alt</b> 2147.0879999999997 ft </td></tr>
+<tr><td><b>Max Speed</b> 14.460475287078703 mph </td></tr>
+<tr><td><b>Avg Speed</b> 0 mph </td></tr>
+<tr><td><b>Start Time</b>Thu Oct 19 2017 20:01:06 GMT+0800 (台北標準時間)</td></tr>
+<tr><td><b>End Time</b>Fri Oct 20 2017 08:55:44 GMT+0800 (台北標準時間)</td></tr>
+</table>]]>
+</description>
+<TimeSpan>
+<begin>Thu Oct 19 2017 20:01:06 GMT+0800 (台北標準時間)</begin>
+<end>Fri Oct 20 2017 08:55:44 GMT+0800 (台北標準時間)</end>
+</TimeSpan>
+<Folder>
+<name>Points</name>
+<Placemark>
+<name>20170926102027-0</name>
+<snippet/>
+<description><![CDATA[
+<table>
+<tr><td>Longitude: 121.484253 </td></tr>
+<tr><td>Latitude: 25.008067 </td></tr>
+<tr><td>Altitude: 117.752 ft </td></tr>
+<tr><td>Speed: 0.8430846947614512 mph </td></tr>
+<tr><td>Heading: 0 </td></tr>
+<tr><td>Time: 2017-10-20T00:55:44.000Z </td></tr>
+</table>
+]]></description>
+<LookAt>
+<longitude>121.484253</longitude>
+<latitude>25.008067</latitude>
+<tilt>66</tilt>
+</LookAt>
+<TimeStamp><when>2017-10-20T00:55:44.000Z</when></TimeStamp>
+<styleUrl>#track</styleUrl>
+<Point>
+<coordinates>121.484253,25.008067,35.9</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>20170926102027-1</name>
+<snippet/>
+<description><![CDATA[
+<table>
+<tr><td>Longitude: 121.484857 </td></tr>
+<tr><td>Latitude: 25.00772 </td></tr>
+<tr><td>Altitude: 248.296 ft </td></tr>
+<tr><td>Speed: 1.5797250508258307 mph </td></tr>
+<tr><td>Heading: 1 </td></tr>
+<tr><td>Time: 2017-10-20T00:52:33.000Z </td></tr>
+</table>
+]]></description>
+<LookAt>
+<longitude>121.484857</longitude>
+<latitude>25.00772</latitude>
+<tilt>66</tilt>
+</LookAt>
+<TimeStamp><when>2017-10-20T00:52:33.000Z</when></TimeStamp>
+<styleUrl>#track</styleUrl>
+<Point>
+<coordinates>121.484857,25.00772,75.7</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>20170926102027-2</name>
+<snippet/>
+<description><![CDATA[
+<table>
+<tr><td>Longitude: 121.48351 </td></tr>
+<tr><td>Latitude: 25.007717 </td></tr>
+<tr><td>Altitude: -166.296 ft </td></tr>
+<tr><td>Speed: 0.7512360073362379 mph </td></tr>
+<tr><td>Heading: 2 </td></tr>
+<tr><td>Time: 2017-10-20T00:49:21.000Z </td></tr>
+</table>
+]]></description>
+<LookAt>
+<longitude>121.48351</longitude>
+<latitude>25.007717</latitude>
+<tilt>66</tilt>
+</LookAt>
+<TimeStamp><when>2017-10-20T00:49:21.000Z</when></TimeStamp>
+<styleUrl>#track</styleUrl>
+<Point>
+<coordinates>121.48351,25.007717,-50.7</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>20170926102027-3</name>
+<snippet/>
+<description><![CDATA[
+<table>
+<tr><td>Longitude: 121.484168 </td></tr>
+<tr><td>Latitude: 25.007585 </td></tr>
+<tr><td>Altitude: 91.51199999999999 ft </td></tr>
+<tr><td>Speed: 0.6005258027235296 mph </td></tr>
+<tr><td>Heading: 3 </td></tr>
+<tr><td>Time: 2017-10-20T00:45:59.000Z </td></tr>
+</table>
+]]></description>
+<LookAt>
+<longitude>121.484168</longitude>
+<latitude>25.007585</latitude>
+<tilt>66</tilt>
+</LookAt>
+<TimeStamp><when>2017-10-20T00:45:59.000Z</when></TimeStamp>
+<styleUrl>#track</styleUrl>
+<Point>
+<coordinates>121.484168,25.007585,27.9</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>20170926102027-4</name>
+<snippet/>
+<description><![CDATA[
+<table>
+<tr><td>Longitude: 121.484577 </td></tr>
+<tr><td>Latitude: 25.00788 </td></tr>
+<tr><td>Altitude: 224.02399999999997 ft </td></tr>
+<tr><td>Speed: 2.263886831791873 mph </td></tr>
+<tr><td>Heading: 4 </td></tr>
+<tr><td>Time: 2017-10-20T00:42:43.000Z </td></tr>
+</table>
+]]></description>
+<LookAt>
+<longitude>121.484577</longitude>
+<latitude>25.00788</latitude>
+<tilt>66</tilt>
+</LookAt>
+<TimeStamp><when>2017-10-20T00:42:43.000Z</when></TimeStamp>
+<styleUrl>#track</styleUrl>
+<Point>
+<coordinates>121.484577,25.00788,68.3</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>20170926102027-5</name>
+<snippet/>
+<description><![CDATA[
+<table>
+<tr><td>Longitude: 121.485655 </td></tr>
+<tr><td>Latitude: 25.006288 </td></tr>
+<tr><td>Altitude: 145.30399999999997 ft </td></tr>
+<tr><td>Speed: 2.2502303987576324 mph </td></tr>
+<tr><td>Heading: 5 </td></tr>
+<tr><td>Time: 2017-10-20T00:39:18.000Z </td></tr>
+</table>
+]]></description>
+<LookAt>
+<longitude>121.485655</longitude>
+<latitude>25.006288</latitude>
+<tilt>66</tilt>
+</LookAt>
+<TimeStamp><when>2017-10-20T00:39:18.000Z</when></TimeStamp>
+<styleUrl>#track</styleUrl>
+<Point>
+<coordinates>121.485655,25.006288,44.3</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>20170926102027-6</name>
+<snippet/>
+<description><![CDATA[
+<table>
+<tr><td>Longitude: 121.484425 </td></tr>
+<tr><td>Latitude: 25.00775 </td></tr>
+<tr><td>Altitude: 106.6 ft </td></tr>
+<tr><td>Speed: 0.1772313120096663 mph </td></tr>
+<tr><td>Heading: 6 </td></tr>
+<tr><td>Time: 2017-10-20T00:35:55.000Z </td></tr>
+</table>
+]]></description>
+<LookAt>
+<longitude>121.484425</longitude>
+<latitude>25.00775</latitude>
+<tilt>66</tilt>
+</LookAt>
+<TimeStamp><when>2017-10-20T00:35:55.000Z</when></TimeStamp>
+<styleUrl>#track</styleUrl>
+<Point>
+<coordinates>121.484425,25.00775,32.5</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>20170926102027-7</name>
+<snippet/>
+<description><![CDATA[
+<table>
+<tr><td>Longitude: 121.484572 </td></tr>
+<tr><td>Latitude: 25.00779 </td></tr>
+<tr><td>Altitude: 75.768 ft </td></tr>
+<tr><td>Speed: 0.20435966491827373 mph </td></tr>
+<tr><td>Heading: 7 </td></tr>
+<tr><td>Time: 2017-10-20T00:32:40.000Z </td></tr>
+</table>
+]]></description>
+<LookAt>
+<longitude>121.484572</longitude>
+<latitude>25.00779</latitude>
+<tilt>66</tilt>
+</LookAt>
+<TimeStamp><when>2017-10-20T00:32:40.000Z</when></TimeStamp>
+<styleUrl>#track</styleUrl>
+<Point>
+<coordinates>121.484572,25.00779,23.1</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>20170926102027-8</name>
+<snippet/>
+<description><![CDATA[
+<table>
+<tr><td>Longitude: 121.484747 </td></tr>
+<tr><td>Latitude: 25.007753 </td></tr>
+<tr><td>Altitude: 185.32 ft </td></tr>
+<tr><td>Speed: 0.5804138718906496 mph </td></tr>
+<tr><td>Heading: 8 </td></tr>
+<tr><td>Time: 2017-10-20T00:29:22.000Z </td></tr>
+</table>
+]]></description>
+<LookAt>
+<longitude>121.484747</longitude>
+<latitude>25.007753</latitude>
+<tilt>66</tilt>
+</LookAt>
+<TimeStamp><when>2017-10-20T00:29:22.000Z</when></TimeStamp>
+<styleUrl>#track</styleUrl>
+<Point>
+<coordinates>121.484747,25.007753,56.5</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>20170926102027-9</name>
+<snippet/>
+<description><![CDATA[
+<table>
+<tr><td>Longitude: 121.484395 </td></tr>
+<tr><td>Latitude: 25.007458 </td></tr>
+<tr><td>Altitude: 117.42399999999998 ft </td></tr>
+<tr><td>Speed: 1.4126450593369726 mph </td></tr>
+<tr><td>Heading: 9 </td></tr>
+<tr><td>Time: 2017-10-20T00:26:16.000Z </td></tr>
+</table>
+]]></description>
+<LookAt>
+<longitude>121.484395</longitude>
+<latitude>25.007458</latitude>
+<tilt>66</tilt>
+</LookAt>
+<TimeStamp><when>2017-10-20T00:26:16.000Z</when></TimeStamp>
+<styleUrl>#track</styleUrl>
+<Point>
+<coordinates>121.484395,25.007458,35.8</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>20170926102027-10</name>
+<snippet/>
+<description><![CDATA[
+<table>
+<tr><td>Longitude: 121.48328 </td></tr>
+<tr><td>Latitude: 25.00775 </td></tr>
+<tr><td>Altitude: -154.16 ft </td></tr>
+<tr><td>Speed: 0.7215883342122817 mph </td></tr>
+<tr><td>Heading: 10 </td></tr>
+<tr><td>Time: 2017-10-20T00:23:11.000Z </td></tr>
+</table>
+]]></description>
+<LookAt>
+<longitude>121.48328</longitude>
+<latitude>25.00775</latitude>
+<tilt>66</tilt>
+</LookAt>
+<TimeStamp><when>2017-10-20T00:23:11.000Z</when></TimeStamp>
+<styleUrl>#track</styleUrl>
+<Point>
+<coordinates>121.48328,25.00775,-47.0</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>20170926102027-11</name>
+<snippet/>
+<description><![CDATA[
+<table>
+<tr><td>Longitude: 121.483895 </td></tr>
+<tr><td>Latitude: 25.007767 </td></tr>
+<tr><td>Altitude: -50.512 ft </td></tr>
+<tr><td>Speed: 1.5522800159846362 mph </td></tr>
+<tr><td>Heading: 11 </td></tr>
+<tr><td>Time: 2017-10-20T00:19:59.000Z </td></tr>
+</table>
+]]></description>
+<LookAt>
+<longitude>121.483895</longitude>
+<latitude>25.007767</latitude>
+<tilt>66</tilt>
+</LookAt>
+<TimeStamp><when>2017-10-20T00:19:59.000Z</when></TimeStamp>
+<styleUrl>#track</styleUrl>
+<Point>
+<coordinates>121.483895,25.007767,-15.4</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>20170926102027-12</name>
+<snippet/>
+<description><![CDATA[
+<table>
+<tr><td>Longitude: 121.48519 </td></tr>
+<tr><td>Latitude: 25.007637 </td></tr>
+<tr><td>Altitude: 230.58399999999997 ft </td></tr>
+<tr><td>Speed: 1.2583083328901865 mph </td></tr>
+<tr><td>Heading: 12 </td></tr>
+<tr><td>Time: 2017-10-20T00:16:50.000Z </td></tr>
+</table>
+]]></description>
+<LookAt>
+<longitude>121.48519</longitude>
+<latitude>25.007637</latitude>
+<tilt>66</tilt>
+</LookAt>
+<TimeStamp><when>2017-10-20T00:16:50.000Z</when></TimeStamp>
+<styleUrl>#track</styleUrl>
+<Point>
+<coordinates>121.48519,25.007637,70.3</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>20170926102027-13</name>
+<snippet/>
+<description><![CDATA[
+<table>
+<tr><td>Longitude: 121.484163 </td></tr>
+<tr><td>Latitude: 25.007812 </td></tr>
+<tr><td>Altitude: 22.632 ft </td></tr>
+<tr><td>Speed: 0.2488927396010205 mph </td></tr>
+<tr><td>Heading: 13 </td></tr>
+<tr><td>Time: 2017-10-20T00:13:43.000Z </td></tr>
+</table>
+]]></description>
+<LookAt>
+<longitude>121.484163</longitude>
+<latitude>25.007812</latitude>
+<tilt>66</tilt>
+</LookAt>
+<TimeStamp><when>2017-10-20T00:13:43.000Z</when></TimeStamp>
+<styleUrl>#track</styleUrl>
+<Point>
+<coordinates>121.484163,25.007812,6.9</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>20170926102027-14</name>
+<snippet/>
+<description><![CDATA[
+<table>
+<tr><td>Longitude: 121.484203 </td></tr>
+<tr><td>Latitude: 25.007617 </td></tr>
+<tr><td>Altitude: 48.215999999999994 ft </td></tr>
+<tr><td>Speed: 0.88526652706605 mph </td></tr>
+<tr><td>Heading: 14 </td></tr>
+<tr><td>Time: 2017-10-20T00:10:25.000Z </td></tr>
+</table>
+]]></description>
+<LookAt>
+<longitude>121.484203</longitude>
+<latitude>25.007617</latitude>
+<tilt>66</tilt>
+</LookAt>
+<TimeStamp><when>2017-10-20T00:10:25.000Z</when></TimeStamp>
+<styleUrl>#track</styleUrl>
+<Point>
+<coordinates>121.484203,25.007617,14.7</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>20170926102027-15</name>
+<snippet/>
+<description><![CDATA[
+<table>
+<tr><td>Longitude: 121.483462 </td></tr>
+<tr><td>Latitude: 25.007765 </td></tr>
+<tr><td>Altitude: 76.42399999999999 ft </td></tr>
+<tr><td>Speed: 1.5660716152699166 mph </td></tr>
+<tr><td>Heading: 15 </td></tr>
+<tr><td>Time: 2017-10-20T00:07:12.000Z </td></tr>
+</table>
+]]></description>
+<LookAt>
+<longitude>121.483462</longitude>
+<latitude>25.007765</latitude>
+<tilt>66</tilt>
+</LookAt>
+<TimeStamp><when>2017-10-20T00:07:12.000Z</when></TimeStamp>
+<styleUrl>#track</styleUrl>
+<Point>
+<coordinates>121.483462,25.007765,23.3</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>20170926102027-16</name>
+<snippet/>
+<description><![CDATA[
+<table>
+<tr><td>Longitude: 121.484787 </td></tr>
+<tr><td>Latitude: 25.007425 </td></tr>
+<tr><td>Altitude: 163.344 ft </td></tr>
+<tr><td>Speed: 0.5204526997345196 mph </td></tr>
+<tr><td>Heading: 16 </td></tr>
+<tr><td>Time: 2017-10-20T00:03:54.000Z </td></tr>
+</table>
+]]></description>
+<LookAt>
+<longitude>121.484787</longitude>
+<latitude>25.007425</latitude>
+<tilt>66</tilt>
+</LookAt>
+<TimeStamp><when>2017-10-20T00:03:54.000Z</when></TimeStamp>
+<styleUrl>#track</styleUrl>
+<Point>
+<coordinates>121.484787,25.007425,49.8</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>20170926102027-17</name>
+<snippet/>
+<description><![CDATA[
+<table>
+<tr><td>Longitude: 121.484368 </td></tr>
+<tr><td>Latitude: 25.007537 </td></tr>
+<tr><td>Altitude: 147.272 ft </td></tr>
+<tr><td>Speed: 0.33123833994549107 mph </td></tr>
+<tr><td>Heading: 17 </td></tr>
+<tr><td>Time: 2017-10-20T00:00:45.000Z </td></tr>
+</table>
+]]></description>
+<LookAt>
+<longitude>121.484368</longitude>
+<latitude>25.007537</latitude>
+<tilt>66</tilt>
+</LookAt>
+<TimeStamp><when>2017-10-20T00:00:45.000Z</when></TimeStamp>
+<styleUrl>#track</styleUrl>
+<Point>
+<coordinates>121.484368,25.007537,44.9</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>20170926102027-18</name>
+<snippet/>
+<description><![CDATA[
+<table>
+<tr><td>Longitude: 121.484475 </td></tr>
+<tr><td>Latitude: 25.007303 </td></tr>
+<tr><td>Altitude: 131.2 ft </td></tr>
+<tr><td>Speed: 0.7188065051147463 mph </td></tr>
+<tr><td>Heading: 18 </td></tr>
+<tr><td>Time: 2017-10-19T23:57:35.000Z </td></tr>
+</table>
+]]></description>
+<LookAt>
+<longitude>121.484475</longitude>
+<latitude>25.007303</latitude>
+<tilt>66</tilt>
+</LookAt>
+<TimeStamp><when>2017-10-19T23:57:35.000Z</when></TimeStamp>
+<styleUrl>#track</styleUrl>
+<Point>
+<coordinates>121.484475,25.007303,40.0</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>20170926102027-19</name>
+<snippet/>
+<description><![CDATA[
+<table>
+<tr><td>Longitude: 121.484078 </td></tr>
+<tr><td>Latitude: 25.007745 </td></tr>
+<tr><td>Altitude: 113.816 ft </td></tr>
+<tr><td>Speed: 0.5506203699634148 mph </td></tr>
+<tr><td>Heading: 19 </td></tr>
+<tr><td>Time: 2017-10-19T23:54:18.000Z </td></tr>
+</table>
+]]></description>
+<LookAt>
+<longitude>121.484078</longitude>
+<latitude>25.007745</latitude>
+<tilt>66</tilt>
+</LookAt>
+<TimeStamp><when>2017-10-19T23:54:18.000Z</when></TimeStamp>
+<styleUrl>#track</styleUrl>
+<Point>
+<coordinates>121.484078,25.007745,34.7</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>20170926102027-20</name>
+<snippet/>
+<description><![CDATA[
+<table>
+<tr><td>Longitude: 121.484557 </td></tr>
+<tr><td>Latitude: 25.00776 </td></tr>
+<tr><td>Altitude: 147.6 ft </td></tr>
+<tr><td>Speed: 0.12213924999379842 mph </td></tr>
+<tr><td>Heading: 20 </td></tr>
+<tr><td>Time: 2017-10-19T23:51:02.000Z </td></tr>
+</table>
+]]></description>
+<LookAt>
+<longitude>121.484557</longitude>
+<latitude>25.00776</latitude>
+<tilt>66</tilt>
+</LookAt>
+<TimeStamp><when>2017-10-19T23:51:02.000Z</when></TimeStamp>
+<styleUrl>#track</styleUrl>
+<Point>
+<coordinates>121.484557,25.00776,45.0</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>20170926102027-21</name>
+<snippet/>
+<description><![CDATA[
+<table>
+<tr><td>Longitude: 121.484453 </td></tr>
+<tr><td>Latitude: 25.00774 </td></tr>
+<tr><td>Altitude: 126.608 ft </td></tr>
+<tr><td>Speed: 0.1625152094301906 mph </td></tr>
+<tr><td>Heading: 21 </td></tr>
+<tr><td>Time: 2017-10-19T23:47:46.000Z </td></tr>
+</table>
+]]></description>
+<LookAt>
+<longitude>121.484453</longitude>
+<latitude>25.00774</latitude>
+<tilt>66</tilt>
+</LookAt>
+<TimeStamp><when>2017-10-19T23:47:46.000Z</when></TimeStamp>
+<styleUrl>#track</styleUrl>
+<Point>
+<coordinates>121.484453,25.00774,38.6</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>20170926102027-22</name>
+<snippet/>
+<description><![CDATA[
+<table>
+<tr><td>Longitude: 121.484593 </td></tr>
+<tr><td>Latitude: 25.007738 </td></tr>
+<tr><td>Altitude: 198.112 ft </td></tr>
+<tr><td>Speed: 0.794209895387296 mph </td></tr>
+<tr><td>Heading: 22 </td></tr>
+<tr><td>Time: 2017-10-19T23:44:32.000Z </td></tr>
+</table>
+]]></description>
+<LookAt>
+<longitude>121.484593</longitude>
+<latitude>25.007738</latitude>
+<tilt>66</tilt>
+</LookAt>
+<TimeStamp><when>2017-10-19T23:44:32.000Z</when></TimeStamp>
+<styleUrl>#track</styleUrl>
+<Point>
+<coordinates>121.484593,25.007738,60.4</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>20170926102027-23</name>
+<snippet/>
+<description><![CDATA[
+<table>
+<tr><td>Longitude: 121.485317 </td></tr>
+<tr><td>Latitude: 25.007513 </td></tr>
+<tr><td>Altitude: 353.256 ft </td></tr>
+<tr><td>Speed: 1.90001504612408 mph </td></tr>
+<tr><td>Heading: 23 </td></tr>
+<tr><td>Time: 2017-10-19T23:40:55.000Z </td></tr>
+</table>
+]]></description>
+<LookAt>
+<longitude>121.485317</longitude>
+<latitude>25.007513</latitude>
+<tilt>66</tilt>
+</LookAt>
+<TimeStamp><when>2017-10-19T23:40:55.000Z</when></TimeStamp>
+<styleUrl>#track</styleUrl>
+<Point>
+<coordinates>121.485317,25.007513,107.7</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>20170926102027-24</name>
+<snippet/>
+<description><![CDATA[
+<table>
+<tr><td>Longitude: 121.483615 </td></tr>
+<tr><td>Latitude: 25.007833 </td></tr>
+<tr><td>Altitude: -82.328 ft </td></tr>
+<tr><td>Speed: 1.933041234542999 mph </td></tr>
+<tr><td>Heading: 24 </td></tr>
+<tr><td>Time: 2017-10-19T23:37:29.000Z </td></tr>
+</table>
+]]></description>
+<LookAt>
+<longitude>121.483615</longitude>
+<latitude>25.007833</latitude>
+<tilt>66</tilt>
+</LookAt>
+<TimeStamp><when>2017-10-19T23:37:29.000Z</when></TimeStamp>
+<styleUrl>#track</styleUrl>
+<Point>
+<coordinates>121.483615,25.007833,-25.1</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>20170926102027-25</name>
+<snippet/>
+<description><![CDATA[
+<table>
+<tr><td>Longitude: 121.485362 </td></tr>
+<tr><td>Latitude: 25.007722 </td></tr>
+<tr><td>Altitude: 372.28 ft </td></tr>
+<tr><td>Speed: 1.2619310657761729 mph </td></tr>
+<tr><td>Heading: 25 </td></tr>
+<tr><td>Time: 2017-10-19T23:34:05.000Z </td></tr>
+</table>
+]]></description>
+<LookAt>
+<longitude>121.485362</longitude>
+<latitude>25.007722</latitude>
+<tilt>66</tilt>
+</LookAt>
+<TimeStamp><when>2017-10-19T23:34:05.000Z</when></TimeStamp>
+<styleUrl>#track</styleUrl>
+<Point>
+<coordinates>121.485362,25.007722,113.5</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>20170926102027-26</name>
+<snippet/>
+<description><![CDATA[
+<table>
+<tr><td>Longitude: 121.484193 </td></tr>
+<tr><td>Latitude: 25.007503 </td></tr>
+<tr><td>Altitude: -89.87199999999999 ft </td></tr>
+<tr><td>Speed: 0.46202791083593514 mph </td></tr>
+<tr><td>Heading: 26 </td></tr>
+<tr><td>Time: 2017-10-19T23:30:32.000Z </td></tr>
+</table>
+]]></description>
+<LookAt>
+<longitude>121.484193</longitude>
+<latitude>25.007503</latitude>
+<tilt>66</tilt>
+</LookAt>
+<TimeStamp><when>2017-10-19T23:30:32.000Z</when></TimeStamp>
+<styleUrl>#track</styleUrl>
+<Point>
+<coordinates>121.484193,25.007503,-27.4</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>20170926102027-27</name>
+<snippet/>
+<description><![CDATA[
+<table>
+<tr><td>Longitude: 121.483878 </td></tr>
+<tr><td>Latitude: 25.007708 </td></tr>
+<tr><td>Altitude: -94.464 ft </td></tr>
+<tr><td>Speed: 0.2416332359660507 mph </td></tr>
+<tr><td>Heading: 27 </td></tr>
+<tr><td>Time: 2017-10-19T23:27:23.000Z </td></tr>
+</table>
+]]></description>
+<LookAt>
+<longitude>121.483878</longitude>
+<latitude>25.007708</latitude>
+<tilt>66</tilt>
+</LookAt>
+<TimeStamp><when>2017-10-19T23:27:23.000Z</when></TimeStamp>
+<styleUrl>#track</styleUrl>
+<Point>
+<coordinates>121.483878,25.007708,-28.8</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>20170926102027-28</name>
+<snippet/>
+<description><![CDATA[
+<table>
+<tr><td>Longitude: 121.483893 </td></tr>
+<tr><td>Latitude: 25.007903 </td></tr>
+<tr><td>Altitude: -114.14399999999998 ft </td></tr>
+<tr><td>Speed: 1.4802159722972317 mph </td></tr>
+<tr><td>Heading: 28 </td></tr>
+<tr><td>Time: 2017-10-19T23:24:02.000Z </td></tr>
+</table>
+]]></description>
+<LookAt>
+<longitude>121.483893</longitude>
+<latitude>25.007903</latitude>
+<tilt>66</tilt>
+</LookAt>
+<TimeStamp><when>2017-10-19T23:24:02.000Z</when></TimeStamp>
+<styleUrl>#track</styleUrl>
+<Point>
+<coordinates>121.483893,25.007903,-34.8</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>20170926102027-29</name>
+<snippet/>
+<description><![CDATA[
+<table>
+<tr><td>Longitude: 121.485062 </td></tr>
+<tr><td>Latitude: 25.007412 </td></tr>
+<tr><td>Altitude: 371.952 ft </td></tr>
+<tr><td>Speed: 0.29465013904032794 mph </td></tr>
+<tr><td>Heading: 29 </td></tr>
+<tr><td>Time: 2017-10-19T23:20:46.000Z </td></tr>
+</table>
+]]></description>
+<LookAt>
+<longitude>121.485062</longitude>
+<latitude>25.007412</latitude>
+<tilt>66</tilt>
+</LookAt>
+<TimeStamp><when>2017-10-19T23:20:46.000Z</when></TimeStamp>
+<styleUrl>#track</styleUrl>
+<Point>
+<coordinates>121.485062,25.007412,113.4</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>20170926102027-30</name>
+<snippet/>
+<description><![CDATA[
+<table>
+<tr><td>Longitude: 121.485313 </td></tr>
+<tr><td>Latitude: 25.007422 </td></tr>
+<tr><td>Altitude: 365.392 ft </td></tr>
+<tr><td>Speed: 2.499537296264466 mph </td></tr>
+<tr><td>Heading: 30 </td></tr>
+<tr><td>Time: 2017-10-19T23:17:34.000Z </td></tr>
+</table>
+]]></description>
+<LookAt>
+<longitude>121.485313</longitude>
+<latitude>25.007422</latitude>
+<tilt>66</tilt>
+</LookAt>
+<TimeStamp><when>2017-10-19T23:17:34.000Z</when></TimeStamp>
+<styleUrl>#track</styleUrl>
+<Point>
+<coordinates>121.485313,25.007422,111.4</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>20170926102027-31</name>
+<snippet/>
+<description><![CDATA[
+<table>
+<tr><td>Longitude: 121.483198 </td></tr>
+<tr><td>Latitude: 25.008097 </td></tr>
+<tr><td>Altitude: -46.903999999999996 ft </td></tr>
+<tr><td>Speed: 0.813906697980492 mph </td></tr>
+<tr><td>Heading: 31 </td></tr>
+<tr><td>Time: 2017-10-19T23:14:12.000Z </td></tr>
+</table>
+]]></description>
+<LookAt>
+<longitude>121.483198</longitude>
+<latitude>25.008097</latitude>
+<tilt>66</tilt>
+</LookAt>
+<TimeStamp><when>2017-10-19T23:14:12.000Z</when></TimeStamp>
+<styleUrl>#track</styleUrl>
+<Point>
+<coordinates>121.483198,25.008097,-14.3</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>20170926102027-32</name>
+<snippet/>
+<description><![CDATA[
+<table>
+<tr><td>Longitude: 121.48376 </td></tr>
+<tr><td>Latitude: 25.007745 </td></tr>
+<tr><td>Altitude: -49.855999999999995 ft </td></tr>
+<tr><td>Speed: 0.8703435659951638 mph </td></tr>
+<tr><td>Heading: 32 </td></tr>
+<tr><td>Time: 2017-10-19T23:11:03.000Z </td></tr>
+</table>
+]]></description>
+<LookAt>
+<longitude>121.48376</longitude>
+<latitude>25.007745</latitude>
+<tilt>66</tilt>
+</LookAt>
+<TimeStamp><when>2017-10-19T23:11:03.000Z</when></TimeStamp>
+<styleUrl>#track</styleUrl>
+<Point>
+<coordinates>121.48376,25.007745,-15.2</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>20170926102027-33</name>
+<snippet/>
+<description><![CDATA[
+<table>
+<tr><td>Longitude: 121.484502 </td></tr>
+<tr><td>Latitude: 25.007625 </td></tr>
+<tr><td>Altitude: 0.9839999999999999 ft </td></tr>
+<tr><td>Speed: 0.9791124300920703 mph </td></tr>
+<tr><td>Heading: 33 </td></tr>
+<tr><td>Time: 2017-10-19T23:07:48.000Z </td></tr>
+</table>
+]]></description>
+<LookAt>
+<longitude>121.484502</longitude>
+<latitude>25.007625</latitude>
+<tilt>66</tilt>
+</LookAt>
+<TimeStamp><when>2017-10-19T23:07:48.000Z</when></TimeStamp>
+<styleUrl>#track</styleUrl>
+<Point>
+<coordinates>121.484502,25.007625,0.3</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>20170926102027-34</name>
+<snippet/>
+<description><![CDATA[
+<table>
+<tr><td>Longitude: 121.483768 </td></tr>
+<tr><td>Latitude: 25.00796 </td></tr>
+<tr><td>Altitude: 43.624 ft </td></tr>
+<tr><td>Speed: 1.3334904216010068 mph </td></tr>
+<tr><td>Heading: 34 </td></tr>
+<tr><td>Time: 2017-10-19T23:04:39.000Z </td></tr>
+</table>
+]]></description>
+<LookAt>
+<longitude>121.483768</longitude>
+<latitude>25.00796</latitude>
+<tilt>66</tilt>
+</LookAt>
+<TimeStamp><when>2017-10-19T23:04:39.000Z</when></TimeStamp>
+<styleUrl>#track</styleUrl>
+<Point>
+<coordinates>121.483768,25.00796,13.3</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>20170926102027-35</name>
+<snippet/>
+<description><![CDATA[
+<table>
+<tr><td>Longitude: 121.484923 </td></tr>
+<tr><td>Latitude: 25.007572 </td></tr>
+<tr><td>Altitude: 189.256 ft </td></tr>
+<tr><td>Speed: 0.12403023222432376 mph </td></tr>
+<tr><td>Heading: 35 </td></tr>
+<tr><td>Time: 2017-10-19T23:01:11.000Z </td></tr>
+</table>
+]]></description>
+<LookAt>
+<longitude>121.484923</longitude>
+<latitude>25.007572</latitude>
+<tilt>66</tilt>
+</LookAt>
+<TimeStamp><when>2017-10-19T23:01:11.000Z</when></TimeStamp>
+<styleUrl>#track</styleUrl>
+<Point>
+<coordinates>121.484923,25.007572,57.7</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>20170926102027-36</name>
+<snippet/>
+<description><![CDATA[
+<table>
+<tr><td>Longitude: 121.485017 </td></tr>
+<tr><td>Latitude: 25.007527 </td></tr>
+<tr><td>Altitude: 188.272 ft </td></tr>
+<tr><td>Speed: 1.1636804570060977 mph </td></tr>
+<tr><td>Heading: 36 </td></tr>
+<tr><td>Time: 2017-10-19T22:57:58.000Z </td></tr>
+</table>
+]]></description>
+<LookAt>
+<longitude>121.485017</longitude>
+<latitude>25.007527</latitude>
+<tilt>66</tilt>
+</LookAt>
+<TimeStamp><when>2017-10-19T22:57:58.000Z</when></TimeStamp>
+<styleUrl>#track</styleUrl>
+<Point>
+<coordinates>121.485017,25.007527,57.4</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>20170926102027-37</name>
+<snippet/>
+<description><![CDATA[
+<table>
+<tr><td>Longitude: 121.484117 </td></tr>
+<tr><td>Latitude: 25.007978 </td></tr>
+<tr><td>Altitude: 116.768 ft </td></tr>
+<tr><td>Speed: 0.9634184449593568 mph </td></tr>
+<tr><td>Heading: 37 </td></tr>
+<tr><td>Time: 2017-10-19T22:54:39.000Z </td></tr>
+</table>
+]]></description>
+<LookAt>
+<longitude>121.484117</longitude>
+<latitude>25.007978</latitude>
+<tilt>66</tilt>
+</LookAt>
+<TimeStamp><when>2017-10-19T22:54:39.000Z</when></TimeStamp>
+<styleUrl>#track</styleUrl>
+<Point>
+<coordinates>121.484117,25.007978,35.6</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>20170926102027-38</name>
+<snippet/>
+<description><![CDATA[
+<table>
+<tr><td>Longitude: 121.48467 </td></tr>
+<tr><td>Latitude: 25.007438 </td></tr>
+<tr><td>Altitude: 101.024 ft </td></tr>
+<tr><td>Speed: 1.272840189384771 mph </td></tr>
+<tr><td>Heading: 38 </td></tr>
+<tr><td>Time: 2017-10-19T22:51:29.000Z </td></tr>
+</table>
+]]></description>
+<LookAt>
+<longitude>121.48467</longitude>
+<latitude>25.007438</latitude>
+<tilt>66</tilt>
+</LookAt>
+<TimeStamp><when>2017-10-19T22:51:29.000Z</when></TimeStamp>
+<styleUrl>#track</styleUrl>
+<Point>
+<coordinates>121.48467,25.007438,30.8</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>20170926102027-39</name>
+<snippet/>
+<description><![CDATA[
+<table>
+<tr><td>Longitude: 121.4836 </td></tr>
+<tr><td>Latitude: 25.007678 </td></tr>
+<tr><td>Altitude: -74.128 ft </td></tr>
+<tr><td>Speed: 0.688896282208663 mph </td></tr>
+<tr><td>Heading: 39 </td></tr>
+<tr><td>Time: 2017-10-19T22:48:14.000Z </td></tr>
+</table>
+]]></description>
+<LookAt>
+<longitude>121.4836</longitude>
+<latitude>25.007678</latitude>
+<tilt>66</tilt>
+</LookAt>
+<TimeStamp><when>2017-10-19T22:48:14.000Z</when></TimeStamp>
+<styleUrl>#track</styleUrl>
+<Point>
+<coordinates>121.4836,25.007678,-22.6</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>20170926102027-40</name>
+<snippet/>
+<description><![CDATA[
+<table>
+<tr><td>Longitude: 121.482982 </td></tr>
+<tr><td>Latitude: 25.00768 </td></tr>
+<tr><td>Altitude: -268.96 ft </td></tr>
+<tr><td>Speed: 1.0797344626684602 mph </td></tr>
+<tr><td>Heading: 40 </td></tr>
+<tr><td>Time: 2017-10-19T22:44:52.000Z </td></tr>
+</table>
+]]></description>
+<LookAt>
+<longitude>121.482982</longitude>
+<latitude>25.00768</latitude>
+<tilt>66</tilt>
+</LookAt>
+<TimeStamp><when>2017-10-19T22:44:52.000Z</when></TimeStamp>
+<styleUrl>#track</styleUrl>
+<Point>
+<coordinates>121.482982,25.00768,-82.0</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>20170926102027-41</name>
+<snippet/>
+<description><![CDATA[
+<table>
+<tr><td>Longitude: 121.483965 </td></tr>
+<tr><td>Latitude: 25.007527 </td></tr>
+<tr><td>Altitude: -54.12 ft </td></tr>
+<tr><td>Speed: 0.46456991699430406 mph </td></tr>
+<tr><td>Heading: 41 </td></tr>
+<tr><td>Time: 2017-10-19T22:41:24.000Z </td></tr>
+</table>
+]]></description>
+<LookAt>
+<longitude>121.483965</longitude>
+<latitude>25.007527</latitude>
+<tilt>66</tilt>
+</LookAt>
+<TimeStamp><when>2017-10-19T22:41:24.000Z</when></TimeStamp>
+<styleUrl>#track</styleUrl>
+<Point>
+<coordinates>121.483965,25.007527,-16.5</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>20170926102027-42</name>
+<snippet/>
+<description><![CDATA[
+<table>
+<tr><td>Longitude: 121.483945 </td></tr>
+<tr><td>Latitude: 25.007908 </td></tr>
+<tr><td>Altitude: 141.04 ft </td></tr>
+<tr><td>Speed: 0.4584062330566685 mph </td></tr>
+<tr><td>Heading: 42 </td></tr>
+<tr><td>Time: 2017-10-19T22:38:00.000Z </td></tr>
+</table>
+]]></description>
+<LookAt>
+<longitude>121.483945</longitude>
+<latitude>25.007908</latitude>
+<tilt>66</tilt>
+</LookAt>
+<TimeStamp><when>2017-10-19T22:38:00.000Z</when></TimeStamp>
+<styleUrl>#track</styleUrl>
+<Point>
+<coordinates>121.483945,25.007908,43.0</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>20170926102027-43</name>
+<snippet/>
+<description><![CDATA[
+<table>
+<tr><td>Longitude: 121.484292 </td></tr>
+<tr><td>Latitude: 25.007708 </td></tr>
+<tr><td>Altitude: 137.432 ft </td></tr>
+<tr><td>Speed: 0.272834058117536 mph </td></tr>
+<tr><td>Heading: 43 </td></tr>
+<tr><td>Time: 2017-10-19T22:34:38.000Z </td></tr>
+</table>
+]]></description>
+<LookAt>
+<longitude>121.484292</longitude>
+<latitude>25.007708</latitude>
+<tilt>66</tilt>
+</LookAt>
+<TimeStamp><when>2017-10-19T22:34:38.000Z</when></TimeStamp>
+<styleUrl>#track</styleUrl>
+<Point>
+<coordinates>121.484292,25.007708,41.9</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>20170926102027-44</name>
+<snippet/>
+<description><![CDATA[
+<table>
+<tr><td>Longitude: 121.48408 </td></tr>
+<tr><td>Latitude: 25.007805 </td></tr>
+<tr><td>Altitude: -129.888 ft </td></tr>
+<tr><td>Speed: 0.19978697436923668 mph </td></tr>
+<tr><td>Heading: 44 </td></tr>
+<tr><td>Time: 2017-10-19T22:31:22.000Z </td></tr>
+</table>
+]]></description>
+<LookAt>
+<longitude>121.48408</longitude>
+<latitude>25.007805</latitude>
+<tilt>66</tilt>
+</LookAt>
+<TimeStamp><when>2017-10-19T22:31:22.000Z</when></TimeStamp>
+<styleUrl>#track</styleUrl>
+<Point>
+<coordinates>121.48408,25.007805,-39.6</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>20170926102027-45</name>
+<snippet/>
+<description><![CDATA[
+<table>
+<tr><td>Longitude: 121.483925 </td></tr>
+<tr><td>Latitude: 25.007747 </td></tr>
+<tr><td>Altitude: 37.72 ft </td></tr>
+<tr><td>Speed: 0.6525557141042749 mph </td></tr>
+<tr><td>Heading: 45 </td></tr>
+<tr><td>Time: 2017-10-19T22:28:13.000Z </td></tr>
+</table>
+]]></description>
+<LookAt>
+<longitude>121.483925</longitude>
+<latitude>25.007747</latitude>
+<tilt>66</tilt>
+</LookAt>
+<TimeStamp><when>2017-10-19T22:28:13.000Z</when></TimeStamp>
+<styleUrl>#track</styleUrl>
+<Point>
+<coordinates>121.483925,25.007747,11.5</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>20170926102027-46</name>
+<snippet/>
+<description><![CDATA[
+<table>
+<tr><td>Longitude: 121.48445 </td></tr>
+<tr><td>Latitude: 25.007615 </td></tr>
+<tr><td>Altitude: 297.496 ft </td></tr>
+<tr><td>Speed: 0.23024719406298286 mph </td></tr>
+<tr><td>Heading: 46 </td></tr>
+<tr><td>Time: 2017-10-19T22:25:05.000Z </td></tr>
+</table>
+]]></description>
+<LookAt>
+<longitude>121.48445</longitude>
+<latitude>25.007615</latitude>
+<tilt>66</tilt>
+</LookAt>
+<TimeStamp><when>2017-10-19T22:25:05.000Z</when></TimeStamp>
+<styleUrl>#track</styleUrl>
+<Point>
+<coordinates>121.48445,25.007615,90.7</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>20170926102027-47</name>
+<snippet/>
+<description><![CDATA[
+<table>
+<tr><td>Longitude: 121.484635 </td></tr>
+<tr><td>Latitude: 25.007655 </td></tr>
+<tr><td>Altitude: 27.88 ft </td></tr>
+<tr><td>Speed: 1.2585231380058353 mph </td></tr>
+<tr><td>Heading: 47 </td></tr>
+<tr><td>Time: 2017-10-19T22:21:59.000Z </td></tr>
+</table>
+]]></description>
+<LookAt>
+<longitude>121.484635</longitude>
+<latitude>25.007655</latitude>
+<tilt>66</tilt>
+</LookAt>
+<TimeStamp><when>2017-10-19T22:21:59.000Z</when></TimeStamp>
+<styleUrl>#track</styleUrl>
+<Point>
+<coordinates>121.484635,25.007655,8.5</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>20170926102027-48</name>
+<snippet/>
+<description><![CDATA[
+<table>
+<tr><td>Longitude: 121.485337 </td></tr>
+<tr><td>Latitude: 25.006967 </td></tr>
+<tr><td>Altitude: 189.58399999999997 ft </td></tr>
+<tr><td>Speed: 0.4471548629060675 mph </td></tr>
+<tr><td>Heading: 48 </td></tr>
+<tr><td>Time: 2017-10-19T22:18:54.000Z </td></tr>
+</table>
+]]></description>
+<LookAt>
+<longitude>121.485337</longitude>
+<latitude>25.006967</latitude>
+<tilt>66</tilt>
+</LookAt>
+<TimeStamp><when>2017-10-19T22:18:54.000Z</when></TimeStamp>
+<styleUrl>#track</styleUrl>
+<Point>
+<coordinates>121.485337,25.006967,57.8</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>20170926102027-49</name>
+<snippet/>
+<description><![CDATA[
+<table>
+<tr><td>Longitude: 121.485467 </td></tr>
+<tr><td>Latitude: 25.007288 </td></tr>
+<tr><td>Altitude: 184.33599999999998 ft </td></tr>
+<tr><td>Speed: 0.857307307918776 mph </td></tr>
+<tr><td>Heading: 49 </td></tr>
+<tr><td>Time: 2017-10-19T22:15:44.000Z </td></tr>
+</table>
+]]></description>
+<LookAt>
+<longitude>121.485467</longitude>
+<latitude>25.007288</latitude>
+<tilt>66</tilt>
+</LookAt>
+<TimeStamp><when>2017-10-19T22:15:44.000Z</when></TimeStamp>
+<styleUrl>#track</styleUrl>
+<Point>
+<coordinates>121.485467,25.007288,56.2</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>20170926102027-50</name>
+<snippet/>
+<description><![CDATA[
+<table>
+<tr><td>Longitude: 121.486088 </td></tr>
+<tr><td>Latitude: 25.006932 </td></tr>
+<tr><td>Altitude: 61.664 ft </td></tr>
+<tr><td>Speed: 1.3401208969519616 mph </td></tr>
+<tr><td>Heading: 50 </td></tr>
+<tr><td>Time: 2017-10-19T22:12:31.000Z </td></tr>
+</table>
+]]></description>
+<LookAt>
+<longitude>121.486088</longitude>
+<latitude>25.006932</latitude>
+<tilt>66</tilt>
+</LookAt>
+<TimeStamp><when>2017-10-19T22:12:31.000Z</when></TimeStamp>
+<styleUrl>#track</styleUrl>
+<Point>
+<coordinates>121.486088,25.006932,18.8</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>20170926102027-51</name>
+<snippet/>
+<description><![CDATA[
+<table>
+<tr><td>Longitude: 121.485037 </td></tr>
+<tr><td>Latitude: 25.007352 </td></tr>
+<tr><td>Altitude: 135.46399999999997 ft </td></tr>
+<tr><td>Speed: 0.5376514959739844 mph </td></tr>
+<tr><td>Heading: 51 </td></tr>
+<tr><td>Time: 2017-10-19T22:09:18.000Z </td></tr>
+</table>
+]]></description>
+<LookAt>
+<longitude>121.485037</longitude>
+<latitude>25.007352</latitude>
+<tilt>66</tilt>
+</LookAt>
+<TimeStamp><when>2017-10-19T22:09:18.000Z</when></TimeStamp>
+<styleUrl>#track</styleUrl>
+<Point>
+<coordinates>121.485037,25.007352,41.3</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>20170926102027-52</name>
+<snippet/>
+<description><![CDATA[
+<table>
+<tr><td>Longitude: 121.484627 </td></tr>
+<tr><td>Latitude: 25.007528 </td></tr>
+<tr><td>Altitude: 162.03199999999998 ft </td></tr>
+<tr><td>Speed: 1.0187544552335583 mph </td></tr>
+<tr><td>Heading: 52 </td></tr>
+<tr><td>Time: 2017-10-19T22:06:08.000Z </td></tr>
+</table>
+]]></description>
+<LookAt>
+<longitude>121.484627</longitude>
+<latitude>25.007528</latitude>
+<tilt>66</tilt>
+</LookAt>
+<TimeStamp><when>2017-10-19T22:06:08.000Z</when></TimeStamp>
+<styleUrl>#track</styleUrl>
+<Point>
+<coordinates>121.484627,25.007528,49.4</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>20170926102027-53</name>
+<snippet/>
+<description><![CDATA[
+<table>
+<tr><td>Longitude: 121.483892 </td></tr>
+<tr><td>Latitude: 25.007932 </td></tr>
+<tr><td>Altitude: 398.52 ft </td></tr>
+<tr><td>Speed: 1.9736994169495279 mph </td></tr>
+<tr><td>Heading: 53 </td></tr>
+<tr><td>Time: 2017-10-19T22:02:58.000Z </td></tr>
+</table>
+]]></description>
+<LookAt>
+<longitude>121.483892</longitude>
+<latitude>25.007932</latitude>
+<tilt>66</tilt>
+</LookAt>
+<TimeStamp><when>2017-10-19T22:02:58.000Z</when></TimeStamp>
+<styleUrl>#track</styleUrl>
+<Point>
+<coordinates>121.483892,25.007932,121.5</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>20170926102027-54</name>
+<snippet/>
+<description><![CDATA[
+<table>
+<tr><td>Longitude: 121.485448 </td></tr>
+<tr><td>Latitude: 25.007272 </td></tr>
+<tr><td>Altitude: 102.664 ft </td></tr>
+<tr><td>Speed: 4.55510792030915 mph </td></tr>
+<tr><td>Heading: 54 </td></tr>
+<tr><td>Time: 2017-10-19T21:59:42.000Z </td></tr>
+</table>
+]]></description>
+<LookAt>
+<longitude>121.485448</longitude>
+<latitude>25.007272</latitude>
+<tilt>66</tilt>
+</LookAt>
+<TimeStamp><when>2017-10-19T21:59:42.000Z</when></TimeStamp>
+<styleUrl>#track</styleUrl>
+<Point>
+<coordinates>121.485448,25.007272,31.3</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>20170926102027-55</name>
+<snippet/>
+<description><![CDATA[
+<table>
+<tr><td>Longitude: 121.481917 </td></tr>
+<tr><td>Latitude: 25.008648 </td></tr>
+<tr><td>Altitude: 684.864 ft </td></tr>
+<tr><td>Speed: 2.609747944557656 mph </td></tr>
+<tr><td>Heading: 55 </td></tr>
+<tr><td>Time: 2017-10-19T21:56:32.000Z </td></tr>
+</table>
+]]></description>
+<LookAt>
+<longitude>121.481917</longitude>
+<latitude>25.008648</latitude>
+<tilt>66</tilt>
+</LookAt>
+<TimeStamp><when>2017-10-19T21:56:32.000Z</when></TimeStamp>
+<styleUrl>#track</styleUrl>
+<Point>
+<coordinates>121.481917,25.008648,208.8</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>20170926102027-56</name>
+<snippet/>
+<description><![CDATA[
+<table>
+<tr><td>Longitude: 121.48409 </td></tr>
+<tr><td>Latitude: 25.007887 </td></tr>
+<tr><td>Altitude: 414.26399999999995 ft </td></tr>
+<tr><td>Speed: 1.0094678283649894 mph </td></tr>
+<tr><td>Heading: 56 </td></tr>
+<tr><td>Time: 2017-10-19T21:53:11.000Z </td></tr>
+</table>
+]]></description>
+<LookAt>
+<longitude>121.48409</longitude>
+<latitude>25.007887</latitude>
+<tilt>66</tilt>
+</LookAt>
+<TimeStamp><when>2017-10-19T21:53:11.000Z</when></TimeStamp>
+<styleUrl>#track</styleUrl>
+<Point>
+<coordinates>121.48409,25.007887,126.3</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>20170926102027-57</name>
+<snippet/>
+<description><![CDATA[
+<table>
+<tr><td>Longitude: 121.485 </td></tr>
+<tr><td>Latitude: 25.007553 </td></tr>
+<tr><td>Altitude: 220.74399999999997 ft </td></tr>
+<tr><td>Speed: 0.7236104378473495 mph </td></tr>
+<tr><td>Heading: 57 </td></tr>
+<tr><td>Time: 2017-10-19T21:49:32.000Z </td></tr>
+</table>
+]]></description>
+<LookAt>
+<longitude>121.485</longitude>
+<latitude>25.007553</latitude>
+<tilt>66</tilt>
+</LookAt>
+<TimeStamp><when>2017-10-19T21:49:32.000Z</when></TimeStamp>
+<styleUrl>#track</styleUrl>
+<Point>
+<coordinates>121.485,25.007553,67.3</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>20170926102027-58</name>
+<snippet/>
+<description><![CDATA[
+<table>
+<tr><td>Longitude: 121.485417 </td></tr>
+<tr><td>Latitude: 25.007133 </td></tr>
+<tr><td>Altitude: 126.27999999999999 ft </td></tr>
+<tr><td>Speed: 1.0735842024700144 mph </td></tr>
+<tr><td>Heading: 58 </td></tr>
+<tr><td>Time: 2017-10-19T21:46:18.000Z </td></tr>
+</table>
+]]></description>
+<LookAt>
+<longitude>121.485417</longitude>
+<latitude>25.007133</latitude>
+<tilt>66</tilt>
+</LookAt>
+<TimeStamp><when>2017-10-19T21:46:18.000Z</when></TimeStamp>
+<styleUrl>#track</styleUrl>
+<Point>
+<coordinates>121.485417,25.007133,38.5</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>20170926102027-59</name>
+<snippet/>
+<description><![CDATA[
+<table>
+<tr><td>Longitude: 121.484752 </td></tr>
+<tr><td>Latitude: 25.007728 </td></tr>
+<tr><td>Altitude: 95.448 ft </td></tr>
+<tr><td>Speed: 1.462028346116467 mph </td></tr>
+<tr><td>Heading: 59 </td></tr>
+<tr><td>Time: 2017-10-19T21:43:02.000Z </td></tr>
+</table>
+]]></description>
+<LookAt>
+<longitude>121.484752</longitude>
+<latitude>25.007728</latitude>
+<tilt>66</tilt>
+</LookAt>
+<TimeStamp><when>2017-10-19T21:43:02.000Z</when></TimeStamp>
+<styleUrl>#track</styleUrl>
+<Point>
+<coordinates>121.484752,25.007728,29.1</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>20170926102027-60</name>
+<snippet/>
+<description><![CDATA[
+<table>
+<tr><td>Longitude: 121.483503 </td></tr>
+<tr><td>Latitude: 25.00758 </td></tr>
+<tr><td>Altitude: 92.16799999999999 ft </td></tr>
+<tr><td>Speed: 0.9865374622747601 mph </td></tr>
+<tr><td>Heading: 60 </td></tr>
+<tr><td>Time: 2017-10-19T21:39:48.000Z </td></tr>
+</table>
+]]></description>
+<LookAt>
+<longitude>121.483503</longitude>
+<latitude>25.00758</latitude>
+<tilt>66</tilt>
+</LookAt>
+<TimeStamp><when>2017-10-19T21:39:48.000Z</when></TimeStamp>
+<styleUrl>#track</styleUrl>
+<Point>
+<coordinates>121.483503,25.00758,28.1</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>20170926102027-61</name>
+<snippet/>
+<description><![CDATA[
+<table>
+<tr><td>Longitude: 121.484353 </td></tr>
+<tr><td>Latitude: 25.007658 </td></tr>
+<tr><td>Altitude: 85.608 ft </td></tr>
+<tr><td>Speed: 0.447127380390383 mph </td></tr>
+<tr><td>Heading: 61 </td></tr>
+<tr><td>Time: 2017-10-19T21:36:33.000Z </td></tr>
+</table>
+]]></description>
+<LookAt>
+<longitude>121.484353</longitude>
+<latitude>25.007658</latitude>
+<tilt>66</tilt>
+</LookAt>
+<TimeStamp><when>2017-10-19T21:36:33.000Z</when></TimeStamp>
+<styleUrl>#track</styleUrl>
+<Point>
+<coordinates>121.484353,25.007658,26.1</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>20170926102027-62</name>
+<snippet/>
+<description><![CDATA[
+<table>
+<tr><td>Longitude: 121.484692 </td></tr>
+<tr><td>Latitude: 25.00782 </td></tr>
+<tr><td>Altitude: 215.82399999999998 ft </td></tr>
+<tr><td>Speed: 0.6143105635451508 mph </td></tr>
+<tr><td>Heading: 62 </td></tr>
+<tr><td>Time: 2017-10-19T21:33:20.000Z </td></tr>
+</table>
+]]></description>
+<LookAt>
+<longitude>121.484692</longitude>
+<latitude>25.00782</latitude>
+<tilt>66</tilt>
+</LookAt>
+<TimeStamp><when>2017-10-19T21:33:20.000Z</when></TimeStamp>
+<styleUrl>#track</styleUrl>
+<Point>
+<coordinates>121.484692,25.00782,65.8</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>20170926102027-63</name>
+<snippet/>
+<description><![CDATA[
+<table>
+<tr><td>Longitude: 121.484167 </td></tr>
+<tr><td>Latitude: 25.007728 </td></tr>
+<tr><td>Altitude: 89.544 ft </td></tr>
+<tr><td>Speed: 0.15649368209116118 mph </td></tr>
+<tr><td>Heading: 63 </td></tr>
+<tr><td>Time: 2017-10-19T21:30:04.000Z </td></tr>
+</table>
+]]></description>
+<LookAt>
+<longitude>121.484167</longitude>
+<latitude>25.007728</latitude>
+<tilt>66</tilt>
+</LookAt>
+<TimeStamp><when>2017-10-19T21:30:04.000Z</when></TimeStamp>
+<styleUrl>#track</styleUrl>
+<Point>
+<coordinates>121.484167,25.007728,27.3</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>20170926102027-64</name>
+<snippet/>
+<description><![CDATA[
+<table>
+<tr><td>Longitude: 121.484302 </td></tr>
+<tr><td>Latitude: 25.007698 </td></tr>
+<tr><td>Altitude: 123.328 ft </td></tr>
+<tr><td>Speed: 0.5024267878570128 mph </td></tr>
+<tr><td>Heading: 64 </td></tr>
+<tr><td>Time: 2017-10-19T21:26:44.000Z </td></tr>
+</table>
+]]></description>
+<LookAt>
+<longitude>121.484302</longitude>
+<latitude>25.007698</latitude>
+<tilt>66</tilt>
+</LookAt>
+<TimeStamp><when>2017-10-19T21:26:44.000Z</when></TimeStamp>
+<styleUrl>#track</styleUrl>
+<Point>
+<coordinates>121.484302,25.007698,37.6</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>20170926102027-65</name>
+<snippet/>
+<description><![CDATA[
+<table>
+<tr><td>Longitude: 121.483885 </td></tr>
+<tr><td>Latitude: 25.007755 </td></tr>
+<tr><td>Altitude: 72.488 ft </td></tr>
+<tr><td>Speed: 0.9464295821409672 mph </td></tr>
+<tr><td>Heading: 65 </td></tr>
+<tr><td>Time: 2017-10-19T21:23:35.000Z </td></tr>
+</table>
+]]></description>
+<LookAt>
+<longitude>121.483885</longitude>
+<latitude>25.007755</latitude>
+<tilt>66</tilt>
+</LookAt>
+<TimeStamp><when>2017-10-19T21:23:35.000Z</when></TimeStamp>
+<styleUrl>#track</styleUrl>
+<Point>
+<coordinates>121.483885,25.007755,22.1</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>20170926102027-66</name>
+<snippet/>
+<description><![CDATA[
+<table>
+<tr><td>Longitude: 121.484683 </td></tr>
+<tr><td>Latitude: 25.007727 </td></tr>
+<tr><td>Altitude: 78.392 ft </td></tr>
+<tr><td>Speed: 0.16195654933659637 mph </td></tr>
+<tr><td>Heading: 66 </td></tr>
+<tr><td>Time: 2017-10-19T21:20:25.000Z </td></tr>
+</table>
+]]></description>
+<LookAt>
+<longitude>121.484683</longitude>
+<latitude>25.007727</latitude>
+<tilt>66</tilt>
+</LookAt>
+<TimeStamp><when>2017-10-19T21:20:25.000Z</when></TimeStamp>
+<styleUrl>#track</styleUrl>
+<Point>
+<coordinates>121.484683,25.007727,23.9</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>20170926102027-67</name>
+<snippet/>
+<description><![CDATA[
+<table>
+<tr><td>Longitude: 121.48455 </td></tr>
+<tr><td>Latitude: 25.00778 </td></tr>
+<tr><td>Altitude: 212.54399999999998 ft </td></tr>
+<tr><td>Speed: 0.35845659095483984 mph </td></tr>
+<tr><td>Heading: 67 </td></tr>
+<tr><td>Time: 2017-10-19T21:17:03.000Z </td></tr>
+</table>
+]]></description>
+<LookAt>
+<longitude>121.48455</longitude>
+<latitude>25.00778</latitude>
+<tilt>66</tilt>
+</LookAt>
+<TimeStamp><when>2017-10-19T21:17:03.000Z</when></TimeStamp>
+<styleUrl>#track</styleUrl>
+<Point>
+<coordinates>121.48455,25.00778,64.8</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>20170926102027-68</name>
+<snippet/>
+<description><![CDATA[
+<table>
+<tr><td>Longitude: 121.484238 </td></tr>
+<tr><td>Latitude: 25.007783 </td></tr>
+<tr><td>Altitude: 59.04 ft </td></tr>
+<tr><td>Speed: 0.27332165031594247 mph </td></tr>
+<tr><td>Heading: 68 </td></tr>
+<tr><td>Time: 2017-10-19T21:13:47.000Z </td></tr>
+</table>
+]]></description>
+<LookAt>
+<longitude>121.484238</longitude>
+<latitude>25.007783</latitude>
+<tilt>66</tilt>
+</LookAt>
+<TimeStamp><when>2017-10-19T21:13:47.000Z</when></TimeStamp>
+<styleUrl>#track</styleUrl>
+<Point>
+<coordinates>121.484238,25.007783,18.0</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>20170926102027-69</name>
+<snippet/>
+<description><![CDATA[
+<table>
+<tr><td>Longitude: 121.484377 </td></tr>
+<tr><td>Latitude: 25.00801 </td></tr>
+<tr><td>Altitude: 19.352 ft </td></tr>
+<tr><td>Speed: 0.24330343401032195 mph </td></tr>
+<tr><td>Heading: 69 </td></tr>
+<tr><td>Time: 2017-10-19T21:09:51.000Z </td></tr>
+</table>
+]]></description>
+<LookAt>
+<longitude>121.484377</longitude>
+<latitude>25.00801</latitude>
+<tilt>66</tilt>
+</LookAt>
+<TimeStamp><when>2017-10-19T21:09:51.000Z</when></TimeStamp>
+<styleUrl>#track</styleUrl>
+<Point>
+<coordinates>121.484377,25.00801,5.9</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>20170926102027-70</name>
+<snippet/>
+<description><![CDATA[
+<table>
+<tr><td>Longitude: 121.484262 </td></tr>
+<tr><td>Latitude: 25.00785 </td></tr>
+<tr><td>Altitude: 43.952 ft </td></tr>
+<tr><td>Speed: 0.11928919894151242 mph </td></tr>
+<tr><td>Heading: 70 </td></tr>
+<tr><td>Time: 2017-10-19T21:06:36.000Z </td></tr>
+</table>
+]]></description>
+<LookAt>
+<longitude>121.484262</longitude>
+<latitude>25.00785</latitude>
+<tilt>66</tilt>
+</LookAt>
+<TimeStamp><when>2017-10-19T21:06:36.000Z</when></TimeStamp>
+<styleUrl>#track</styleUrl>
+<Point>
+<coordinates>121.484262,25.00785,13.4</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>20170926102027-71</name>
+<snippet/>
+<description><![CDATA[
+<table>
+<tr><td>Longitude: 121.484243 </td></tr>
+<tr><td>Latitude: 25.007943 </td></tr>
+<tr><td>Altitude: 77.73599999999999 ft </td></tr>
+<tr><td>Speed: 0.048071621093548615 mph </td></tr>
+<tr><td>Heading: 71 </td></tr>
+<tr><td>Time: 2017-10-19T21:03:19.000Z </td></tr>
+</table>
+]]></description>
+<LookAt>
+<longitude>121.484243</longitude>
+<latitude>25.007943</latitude>
+<tilt>66</tilt>
+</LookAt>
+<TimeStamp><when>2017-10-19T21:03:19.000Z</when></TimeStamp>
+<styleUrl>#track</styleUrl>
+<Point>
+<coordinates>121.484243,25.007943,23.7</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>20170926102027-72</name>
+<snippet/>
+<description><![CDATA[
+<table>
+<tr><td>Longitude: 121.484252 </td></tr>
+<tr><td>Latitude: 25.007983 </td></tr>
+<tr><td>Altitude: 73.472 ft </td></tr>
+<tr><td>Speed: 0.14550831159786365 mph </td></tr>
+<tr><td>Heading: 72 </td></tr>
+<tr><td>Time: 2017-10-19T20:59:48.000Z </td></tr>
+</table>
+]]></description>
+<LookAt>
+<longitude>121.484252</longitude>
+<latitude>25.007983</latitude>
+<tilt>66</tilt>
+</LookAt>
+<TimeStamp><when>2017-10-19T20:59:48.000Z</when></TimeStamp>
+<styleUrl>#track</styleUrl>
+<Point>
+<coordinates>121.484252,25.007983,22.4</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>20170926102027-73</name>
+<snippet/>
+<description><![CDATA[
+<table>
+<tr><td>Longitude: 121.48438 </td></tr>
+<tr><td>Latitude: 25.007963 </td></tr>
+<tr><td>Altitude: 95.448 ft </td></tr>
+<tr><td>Speed: 0.14537519020198017 mph </td></tr>
+<tr><td>Heading: 73 </td></tr>
+<tr><td>Time: 2017-10-19T20:56:27.000Z </td></tr>
+</table>
+]]></description>
+<LookAt>
+<longitude>121.48438</longitude>
+<latitude>25.007963</latitude>
+<tilt>66</tilt>
+</LookAt>
+<TimeStamp><when>2017-10-19T20:56:27.000Z</when></TimeStamp>
+<styleUrl>#track</styleUrl>
+<Point>
+<coordinates>121.48438,25.007963,29.1</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>20170926102027-74</name>
+<snippet/>
+<description><![CDATA[
+<table>
+<tr><td>Longitude: 121.484363 </td></tr>
+<tr><td>Latitude: 25.007847 </td></tr>
+<tr><td>Altitude: 149.23999999999998 ft </td></tr>
+<tr><td>Speed: 0.22438979483943242 mph </td></tr>
+<tr><td>Heading: 74 </td></tr>
+<tr><td>Time: 2017-10-19T20:53:07.000Z </td></tr>
+</table>
+]]></description>
+<LookAt>
+<longitude>121.484363</longitude>
+<latitude>25.007847</latitude>
+<tilt>66</tilt>
+</LookAt>
+<TimeStamp><when>2017-10-19T20:53:07.000Z</when></TimeStamp>
+<styleUrl>#track</styleUrl>
+<Point>
+<coordinates>121.484363,25.007847,45.5</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>20170926102027-75</name>
+<snippet/>
+<description><![CDATA[
+<table>
+<tr><td>Longitude: 121.484562 </td></tr>
+<tr><td>Latitude: 25.007837 </td></tr>
+<tr><td>Altitude: 200.07999999999998 ft </td></tr>
+<tr><td>Speed: 0.28986241205357416 mph </td></tr>
+<tr><td>Heading: 75 </td></tr>
+<tr><td>Time: 2017-10-19T20:49:47.000Z </td></tr>
+</table>
+]]></description>
+<LookAt>
+<longitude>121.484562</longitude>
+<latitude>25.007837</latitude>
+<tilt>66</tilt>
+</LookAt>
+<TimeStamp><when>2017-10-19T20:49:47.000Z</when></TimeStamp>
+<styleUrl>#track</styleUrl>
+<Point>
+<coordinates>121.484562,25.007837,61.0</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>20170926102027-76</name>
+<snippet/>
+<description><![CDATA[
+<table>
+<tr><td>Longitude: 121.484325 </td></tr>
+<tr><td>Latitude: 25.007752 </td></tr>
+<tr><td>Altitude: 93.80799999999999 ft </td></tr>
+<tr><td>Speed: 0.5428431226779197 mph </td></tr>
+<tr><td>Heading: 76 </td></tr>
+<tr><td>Time: 2017-10-19T20:46:29.000Z </td></tr>
+</table>
+]]></description>
+<LookAt>
+<longitude>121.484325</longitude>
+<latitude>25.007752</latitude>
+<tilt>66</tilt>
+</LookAt>
+<TimeStamp><when>2017-10-19T20:46:29.000Z</when></TimeStamp>
+<styleUrl>#track</styleUrl>
+<Point>
+<coordinates>121.484325,25.007752,28.6</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>20170926102027-77</name>
+<snippet/>
+<description><![CDATA[
+<table>
+<tr><td>Longitude: 121.484712 </td></tr>
+<tr><td>Latitude: 25.00799 </td></tr>
+<tr><td>Altitude: 134.808 ft </td></tr>
+<tr><td>Speed: 1.0919901329627675 mph </td></tr>
+<tr><td>Heading: 77 </td></tr>
+<tr><td>Time: 2017-10-19T20:43:15.000Z </td></tr>
+</table>
+]]></description>
+<LookAt>
+<longitude>121.484712</longitude>
+<latitude>25.00799</latitude>
+<tilt>66</tilt>
+</LookAt>
+<TimeStamp><when>2017-10-19T20:43:15.000Z</when></TimeStamp>
+<styleUrl>#track</styleUrl>
+<Point>
+<coordinates>121.484712,25.00799,41.1</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>20170926102027-78</name>
+<snippet/>
+<description><![CDATA[
+<table>
+<tr><td>Longitude: 121.483805 </td></tr>
+<tr><td>Latitude: 25.007718 </td></tr>
+<tr><td>Altitude: 44.279999999999994 ft </td></tr>
+<tr><td>Speed: 0.9804871469858265 mph </td></tr>
+<tr><td>Heading: 78 </td></tr>
+<tr><td>Time: 2017-10-19T20:39:58.000Z </td></tr>
+</table>
+]]></description>
+<LookAt>
+<longitude>121.483805</longitude>
+<latitude>25.007718</latitude>
+<tilt>66</tilt>
+</LookAt>
+<TimeStamp><when>2017-10-19T20:39:58.000Z</when></TimeStamp>
+<styleUrl>#track</styleUrl>
+<Point>
+<coordinates>121.483805,25.007718,13.5</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>20170926102027-79</name>
+<snippet/>
+<description><![CDATA[
+<table>
+<tr><td>Longitude: 121.484652 </td></tr>
+<tr><td>Latitude: 25.007813 </td></tr>
+<tr><td>Altitude: 217.46399999999997 ft </td></tr>
+<tr><td>Speed: 0.3079049573819022 mph </td></tr>
+<tr><td>Heading: 79 </td></tr>
+<tr><td>Time: 2017-10-19T20:36:42.000Z </td></tr>
+</table>
+]]></description>
+<LookAt>
+<longitude>121.484652</longitude>
+<latitude>25.007813</latitude>
+<tilt>66</tilt>
+</LookAt>
+<TimeStamp><when>2017-10-19T20:36:42.000Z</when></TimeStamp>
+<styleUrl>#track</styleUrl>
+<Point>
+<coordinates>121.484652,25.007813,66.3</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>20170926102027-80</name>
+<snippet/>
+<description><![CDATA[
+<table>
+<tr><td>Longitude: 121.48446 </td></tr>
+<tr><td>Latitude: 25.00764 </td></tr>
+<tr><td>Altitude: 75.44 ft </td></tr>
+<tr><td>Speed: 0.1249880820966065 mph </td></tr>
+<tr><td>Heading: 80 </td></tr>
+<tr><td>Time: 2017-10-19T20:33:24.000Z </td></tr>
+</table>
+]]></description>
+<LookAt>
+<longitude>121.48446</longitude>
+<latitude>25.00764</latitude>
+<tilt>66</tilt>
+</LookAt>
+<TimeStamp><when>2017-10-19T20:33:24.000Z</when></TimeStamp>
+<styleUrl>#track</styleUrl>
+<Point>
+<coordinates>121.48446,25.00764,23.0</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>20170926102027-81</name>
+<snippet/>
+<description><![CDATA[
+<table>
+<tr><td>Longitude: 121.48441 </td></tr>
+<tr><td>Latitude: 25.007727 </td></tr>
+<tr><td>Altitude: -6.56 ft </td></tr>
+<tr><td>Speed: 0.12086725003069569 mph </td></tr>
+<tr><td>Heading: 81 </td></tr>
+<tr><td>Time: 2017-10-19T20:30:09.000Z </td></tr>
+</table>
+]]></description>
+<LookAt>
+<longitude>121.48441</longitude>
+<latitude>25.007727</latitude>
+<tilt>66</tilt>
+</LookAt>
+<TimeStamp><when>2017-10-19T20:30:09.000Z</when></TimeStamp>
+<styleUrl>#track</styleUrl>
+<Point>
+<coordinates>121.48441,25.007727,-2.0</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>20170926102027-82</name>
+<snippet/>
+<description><![CDATA[
+<table>
+<tr><td>Longitude: 121.484305 </td></tr>
+<tr><td>Latitude: 25.007733 </td></tr>
+<tr><td>Altitude: 22.959999999999997 ft </td></tr>
+<tr><td>Speed: 0.10172371338238265 mph </td></tr>
+<tr><td>Heading: 82 </td></tr>
+<tr><td>Time: 2017-10-19T20:26:53.000Z </td></tr>
+</table>
+]]></description>
+<LookAt>
+<longitude>121.484305</longitude>
+<latitude>25.007733</latitude>
+<tilt>66</tilt>
+</LookAt>
+<TimeStamp><when>2017-10-19T20:26:53.000Z</when></TimeStamp>
+<styleUrl>#track</styleUrl>
+<Point>
+<coordinates>121.484305,25.007733,7.0</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>20170926102027-83</name>
+<snippet/>
+<description><![CDATA[
+<table>
+<tr><td>Longitude: 121.484233 </td></tr>
+<tr><td>Latitude: 25.007687 </td></tr>
+<tr><td>Altitude: 192.208 ft </td></tr>
+<tr><td>Speed: 0.5144263139202672 mph </td></tr>
+<tr><td>Heading: 83 </td></tr>
+<tr><td>Time: 2017-10-19T20:23:38.000Z </td></tr>
+</table>
+]]></description>
+<LookAt>
+<longitude>121.484233</longitude>
+<latitude>25.007687</latitude>
+<tilt>66</tilt>
+</LookAt>
+<TimeStamp><when>2017-10-19T20:23:38.000Z</when></TimeStamp>
+<styleUrl>#track</styleUrl>
+<Point>
+<coordinates>121.484233,25.007687,58.6</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>20170926102027-84</name>
+<snippet/>
+<description><![CDATA[
+<table>
+<tr><td>Longitude: 121.484665 </td></tr>
+<tr><td>Latitude: 25.007767 </td></tr>
+<tr><td>Altitude: 218.776 ft </td></tr>
+<tr><td>Speed: 0.29113716419161884 mph </td></tr>
+<tr><td>Heading: 84 </td></tr>
+<tr><td>Time: 2017-10-19T20:20:25.000Z </td></tr>
+</table>
+]]></description>
+<LookAt>
+<longitude>121.484665</longitude>
+<latitude>25.007767</latitude>
+<tilt>66</tilt>
+</LookAt>
+<TimeStamp><when>2017-10-19T20:20:25.000Z</when></TimeStamp>
+<styleUrl>#track</styleUrl>
+<Point>
+<coordinates>121.484665,25.007767,66.7</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>20170926102027-85</name>
+<snippet/>
+<description><![CDATA[
+<table>
+<tr><td>Longitude: 121.484802 </td></tr>
+<tr><td>Latitude: 25.00756 </td></tr>
+<tr><td>Altitude: 218.776 ft </td></tr>
+<tr><td>Speed: 0.5097566762355016 mph </td></tr>
+<tr><td>Heading: 85 </td></tr>
+<tr><td>Time: 2017-10-19T20:16:59.000Z </td></tr>
+</table>
+]]></description>
+<LookAt>
+<longitude>121.484802</longitude>
+<latitude>25.00756</latitude>
+<tilt>66</tilt>
+</LookAt>
+<TimeStamp><when>2017-10-19T20:16:59.000Z</when></TimeStamp>
+<styleUrl>#track</styleUrl>
+<Point>
+<coordinates>121.484802,25.00756,66.7</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>20170926102027-86</name>
+<snippet/>
+<description><![CDATA[
+<table>
+<tr><td>Longitude: 121.484383 </td></tr>
+<tr><td>Latitude: 25.00771 </td></tr>
+<tr><td>Altitude: 62.97599999999999 ft </td></tr>
+<tr><td>Speed: 0.25820103711952386 mph </td></tr>
+<tr><td>Heading: 86 </td></tr>
+<tr><td>Time: 2017-10-19T20:13:40.000Z </td></tr>
+</table>
+]]></description>
+<LookAt>
+<longitude>121.484383</longitude>
+<latitude>25.00771</latitude>
+<tilt>66</tilt>
+</LookAt>
+<TimeStamp><when>2017-10-19T20:13:40.000Z</when></TimeStamp>
+<styleUrl>#track</styleUrl>
+<Point>
+<coordinates>121.484383,25.00771,19.2</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>20170926102027-87</name>
+<snippet/>
+<description><![CDATA[
+<table>
+<tr><td>Longitude: 121.48434 </td></tr>
+<tr><td>Latitude: 25.00793 </td></tr>
+<tr><td>Altitude: 424.76 ft </td></tr>
+<tr><td>Speed: 0.23309786495589097 mph </td></tr>
+<tr><td>Heading: 87 </td></tr>
+<tr><td>Time: 2017-10-19T20:10:05.000Z </td></tr>
+</table>
+]]></description>
+<LookAt>
+<longitude>121.48434</longitude>
+<latitude>25.00793</latitude>
+<tilt>66</tilt>
+</LookAt>
+<TimeStamp><when>2017-10-19T20:10:05.000Z</when></TimeStamp>
+<styleUrl>#track</styleUrl>
+<Point>
+<coordinates>121.48434,25.00793,129.5</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>20170926102027-88</name>
+<snippet/>
+<description><![CDATA[
+<table>
+<tr><td>Longitude: 121.48448 </td></tr>
+<tr><td>Latitude: 25.007752 </td></tr>
+<tr><td>Altitude: 232.552 ft </td></tr>
+<tr><td>Speed: 0.24863854330751184 mph </td></tr>
+<tr><td>Heading: 88 </td></tr>
+<tr><td>Time: 2017-10-19T20:06:12.000Z </td></tr>
+</table>
+]]></description>
+<LookAt>
+<longitude>121.48448</longitude>
+<latitude>25.007752</latitude>
+<tilt>66</tilt>
+</LookAt>
+<TimeStamp><when>2017-10-19T20:06:12.000Z</when></TimeStamp>
+<styleUrl>#track</styleUrl>
+<Point>
+<coordinates>121.48448,25.007752,70.9</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>20170926102027-89</name>
+<snippet/>
+<description><![CDATA[
+<table>
+<tr><td>Longitude: 121.484647 </td></tr>
+<tr><td>Latitude: 25.007618 </td></tr>
+<tr><td>Altitude: 261.416 ft </td></tr>
+<tr><td>Speed: 0.5613779904338435 mph </td></tr>
+<tr><td>Heading: 89 </td></tr>
+<tr><td>Time: 2017-10-19T20:02:50.000Z </td></tr>
+</table>
+]]></description>
+<LookAt>
+<longitude>121.484647</longitude>
+<latitude>25.007618</latitude>
+<tilt>66</tilt>
+</LookAt>
+<TimeStamp><when>2017-10-19T20:02:50.000Z</when></TimeStamp>
+<styleUrl>#track</styleUrl>
+<Point>
+<coordinates>121.484647,25.007618,79.7</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>20170926102027-90</name>
+<snippet/>
+<description><![CDATA[
+<table>
+<tr><td>Longitude: 121.484228 </td></tr>
+<tr><td>Latitude: 25.00728 </td></tr>
+<tr><td>Altitude: 1510.1119999999999 ft </td></tr>
+<tr><td>Speed: 0.2130476944132274 mph </td></tr>
+<tr><td>Heading: 90 </td></tr>
+<tr><td>Time: 2017-10-19T19:59:05.000Z </td></tr>
+</table>
+]]></description>
+<LookAt>
+<longitude>121.484228</longitude>
+<latitude>25.00728</latitude>
+<tilt>66</tilt>
+</LookAt>
+<TimeStamp><when>2017-10-19T19:59:05.000Z</when></TimeStamp>
+<styleUrl>#track</styleUrl>
+<Point>
+<coordinates>121.484228,25.00728,460.4</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>20170926102027-91</name>
+<snippet/>
+<description><![CDATA[
+<table>
+<tr><td>Longitude: 121.484567 </td></tr>
+<tr><td>Latitude: 25.00759 </td></tr>
+<tr><td>Altitude: 37.72 ft </td></tr>
+<tr><td>Speed: 0.38889040768993494 mph </td></tr>
+<tr><td>Heading: 91 </td></tr>
+<tr><td>Time: 2017-10-19T19:50:36.000Z </td></tr>
+</table>
+]]></description>
+<LookAt>
+<longitude>121.484567</longitude>
+<latitude>25.00759</latitude>
+<tilt>66</tilt>
+</LookAt>
+<TimeStamp><when>2017-10-19T19:50:36.000Z</when></TimeStamp>
+<styleUrl>#track</styleUrl>
+<Point>
+<coordinates>121.484567,25.00759,11.5</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>20170926102027-92</name>
+<snippet/>
+<description><![CDATA[
+<table>
+<tr><td>Longitude: 121.484208 </td></tr>
+<tr><td>Latitude: 25.007313 </td></tr>
+<tr><td>Altitude: 1178.8319999999999 ft </td></tr>
+<tr><td>Speed: 0.5110169553711524 mph </td></tr>
+<tr><td>Heading: 92 </td></tr>
+<tr><td>Time: 2017-10-19T19:46:03.000Z </td></tr>
+</table>
+]]></description>
+<LookAt>
+<longitude>121.484208</longitude>
+<latitude>25.007313</latitude>
+<tilt>66</tilt>
+</LookAt>
+<TimeStamp><when>2017-10-19T19:46:03.000Z</when></TimeStamp>
+<styleUrl>#track</styleUrl>
+<Point>
+<coordinates>121.484208,25.007313,359.4</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>20170926102027-93</name>
+<snippet/>
+<description><![CDATA[
+<table>
+<tr><td>Longitude: 121.484448 </td></tr>
+<tr><td>Latitude: 25.007698 </td></tr>
+<tr><td>Altitude: -92.496 ft </td></tr>
+<tr><td>Speed: 0.07805753108408188 mph </td></tr>
+<tr><td>Heading: 93 </td></tr>
+<tr><td>Time: 2017-10-19T19:42:28.000Z </td></tr>
+</table>
+]]></description>
+<LookAt>
+<longitude>121.484448</longitude>
+<latitude>25.007698</latitude>
+<tilt>66</tilt>
+</LookAt>
+<TimeStamp><when>2017-10-19T19:42:28.000Z</when></TimeStamp>
+<styleUrl>#track</styleUrl>
+<Point>
+<coordinates>121.484448,25.007698,-28.2</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>20170926102027-94</name>
+<snippet/>
+<description><![CDATA[
+<table>
+<tr><td>Longitude: 121.484385 </td></tr>
+<tr><td>Latitude: 25.007762 </td></tr>
+<tr><td>Altitude: -73.14399999999999 ft </td></tr>
+<tr><td>Speed: 0.35685944661405555 mph </td></tr>
+<tr><td>Heading: 94 </td></tr>
+<tr><td>Time: 2017-10-19T19:37:55.000Z </td></tr>
+</table>
+]]></description>
+<LookAt>
+<longitude>121.484385</longitude>
+<latitude>25.007762</latitude>
+<tilt>66</tilt>
+</LookAt>
+<TimeStamp><when>2017-10-19T19:37:55.000Z</when></TimeStamp>
+<styleUrl>#track</styleUrl>
+<Point>
+<coordinates>121.484385,25.007762,-22.3</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>20170926102027-95</name>
+<snippet/>
+<description><![CDATA[
+<table>
+<tr><td>Longitude: 121.48515 </td></tr>
+<tr><td>Latitude: 25.007295 </td></tr>
+<tr><td>Altitude: 656.656 ft </td></tr>
+<tr><td>Speed: 0.43890626810666966 mph </td></tr>
+<tr><td>Heading: 95 </td></tr>
+<tr><td>Time: 2017-10-19T19:28:13.000Z </td></tr>
+</table>
+]]></description>
+<LookAt>
+<longitude>121.48515</longitude>
+<latitude>25.007295</latitude>
+<tilt>66</tilt>
+</LookAt>
+<TimeStamp><when>2017-10-19T19:28:13.000Z</when></TimeStamp>
+<styleUrl>#track</styleUrl>
+<Point>
+<coordinates>121.48515,25.007295,200.2</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>20170926102027-96</name>
+<snippet/>
+<description><![CDATA[
+<table>
+<tr><td>Longitude: 121.487787 </td></tr>
+<tr><td>Latitude: 25.00633 </td></tr>
+<tr><td>Altitude: 1305.1119999999999 ft </td></tr>
+<tr><td>Speed: 0.23399783318203915 mph </td></tr>
+<tr><td>Heading: 96 </td></tr>
+<tr><td>Time: 2017-10-19T19:03:54.000Z </td></tr>
+</table>
+]]></description>
+<LookAt>
+<longitude>121.487787</longitude>
+<latitude>25.00633</latitude>
+<tilt>66</tilt>
+</LookAt>
+<TimeStamp><when>2017-10-19T19:03:54.000Z</when></TimeStamp>
+<styleUrl>#track</styleUrl>
+<Point>
+<coordinates>121.487787,25.00633,397.9</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>20170926102027-97</name>
+<snippet/>
+<description><![CDATA[
+<table>
+<tr><td>Longitude: 121.484707 </td></tr>
+<tr><td>Latitude: 25.007688 </td></tr>
+<tr><td>Altitude: 206.31199999999998 ft </td></tr>
+<tr><td>Speed: 0.1330217577239316 mph </td></tr>
+<tr><td>Heading: 97 </td></tr>
+<tr><td>Time: 2017-10-19T18:08:58.000Z </td></tr>
+</table>
+]]></description>
+<LookAt>
+<longitude>121.484707</longitude>
+<latitude>25.007688</latitude>
+<tilt>66</tilt>
+</LookAt>
+<TimeStamp><when>2017-10-19T18:08:58.000Z</when></TimeStamp>
+<styleUrl>#track</styleUrl>
+<Point>
+<coordinates>121.484707,25.007688,62.9</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>20170926102027-98</name>
+<snippet/>
+<description><![CDATA[
+<table>
+<tr><td>Longitude: 121.484867 </td></tr>
+<tr><td>Latitude: 25.007683 </td></tr>
+<tr><td>Altitude: 159.736 ft </td></tr>
+<tr><td>Speed: 0.2959237366250538 mph </td></tr>
+<tr><td>Heading: 98 </td></tr>
+<tr><td>Time: 2017-10-19T18:04:27.000Z </td></tr>
+</table>
+]]></description>
+<LookAt>
+<longitude>121.484867</longitude>
+<latitude>25.007683</latitude>
+<tilt>66</tilt>
+</LookAt>
+<TimeStamp><when>2017-10-19T18:04:27.000Z</when></TimeStamp>
+<styleUrl>#track</styleUrl>
+<Point>
+<coordinates>121.484867,25.007683,48.7</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>20170926102027-99</name>
+<snippet/>
+<description><![CDATA[
+<table>
+<tr><td>Longitude: 121.484522 </td></tr>
+<tr><td>Latitude: 25.007567 </td></tr>
+<tr><td>Altitude: -236.816 ft </td></tr>
+<tr><td>Speed: 0.4159949055949314 mph </td></tr>
+<tr><td>Heading: 99 </td></tr>
+<tr><td>Time: 2017-10-19T17:59:47.000Z </td></tr>
+</table>
+]]></description>
+<LookAt>
+<longitude>121.484522</longitude>
+<latitude>25.007567</latitude>
+<tilt>66</tilt>
+</LookAt>
+<TimeStamp><when>2017-10-19T17:59:47.000Z</when></TimeStamp>
+<styleUrl>#track</styleUrl>
+<Point>
+<coordinates>121.484522,25.007567,-72.2</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>20170926102027-100</name>
+<snippet/>
+<description><![CDATA[
+<table>
+<tr><td>Longitude: 121.484822 </td></tr>
+<tr><td>Latitude: 25.007808 </td></tr>
+<tr><td>Altitude: 97.088 ft </td></tr>
+<tr><td>Speed: 0.17943766009684076 mph </td></tr>
+<tr><td>Heading: 100 </td></tr>
+<tr><td>Time: 2017-10-19T17:56:10.000Z </td></tr>
+</table>
+]]></description>
+<LookAt>
+<longitude>121.484822</longitude>
+<latitude>25.007808</latitude>
+<tilt>66</tilt>
+</LookAt>
+<TimeStamp><when>2017-10-19T17:56:10.000Z</when></TimeStamp>
+<styleUrl>#track</styleUrl>
+<Point>
+<coordinates>121.484822,25.007808,29.6</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>20170926102027-101</name>
+<snippet/>
+<description><![CDATA[
+<table>
+<tr><td>Longitude: 121.484753 </td></tr>
+<tr><td>Latitude: 25.007677 </td></tr>
+<tr><td>Altitude: -48.872 ft </td></tr>
+<tr><td>Speed: 0.24519365331089754 mph </td></tr>
+<tr><td>Heading: 101 </td></tr>
+<tr><td>Time: 2017-10-19T17:52:49.000Z </td></tr>
+</table>
+]]></description>
+<LookAt>
+<longitude>121.484753</longitude>
+<latitude>25.007677</latitude>
+<tilt>66</tilt>
+</LookAt>
+<TimeStamp><when>2017-10-19T17:52:49.000Z</when></TimeStamp>
+<styleUrl>#track</styleUrl>
+<Point>
+<coordinates>121.484753,25.007677,-14.9</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>20170926102027-102</name>
+<snippet/>
+<description><![CDATA[
+<table>
+<tr><td>Longitude: 121.48567 </td></tr>
+<tr><td>Latitude: 25.007715 </td></tr>
+<tr><td>Altitude: 129.232 ft </td></tr>
+<tr><td>Speed: 0.3900731177053454 mph </td></tr>
+<tr><td>Heading: 102 </td></tr>
+<tr><td>Time: 2017-10-19T17:38:46.000Z </td></tr>
+</table>
+]]></description>
+<LookAt>
+<longitude>121.48567</longitude>
+<latitude>25.007715</latitude>
+<tilt>66</tilt>
+</LookAt>
+<TimeStamp><when>2017-10-19T17:38:46.000Z</when></TimeStamp>
+<styleUrl>#track</styleUrl>
+<Point>
+<coordinates>121.48567,25.007715,39.4</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>20170926102027-103</name>
+<snippet/>
+<description><![CDATA[
+<table>
+<tr><td>Longitude: 121.485303 </td></tr>
+<tr><td>Latitude: 25.007843 </td></tr>
+<tr><td>Altitude: 252.88799999999998 ft </td></tr>
+<tr><td>Speed: 0.15321170763247702 mph </td></tr>
+<tr><td>Heading: 103 </td></tr>
+<tr><td>Time: 2017-10-19T17:34:59.000Z </td></tr>
+</table>
+]]></description>
+<LookAt>
+<longitude>121.485303</longitude>
+<latitude>25.007843</latitude>
+<tilt>66</tilt>
+</LookAt>
+<TimeStamp><when>2017-10-19T17:34:59.000Z</when></TimeStamp>
+<styleUrl>#track</styleUrl>
+<Point>
+<coordinates>121.485303,25.007843,77.1</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>20170926102027-104</name>
+<snippet/>
+<description><![CDATA[
+<table>
+<tr><td>Longitude: 121.484927 </td></tr>
+<tr><td>Latitude: 25.00783 </td></tr>
+<tr><td>Altitude: 427.384 ft </td></tr>
+<tr><td>Speed: 0.3816311163649724 mph </td></tr>
+<tr><td>Heading: 104 </td></tr>
+<tr><td>Time: 2017-10-19T17:25:46.000Z </td></tr>
+</table>
+]]></description>
+<LookAt>
+<longitude>121.484927</longitude>
+<latitude>25.00783</latitude>
+<tilt>66</tilt>
+</LookAt>
+<TimeStamp><when>2017-10-19T17:25:46.000Z</when></TimeStamp>
+<styleUrl>#track</styleUrl>
+<Point>
+<coordinates>121.484927,25.00783,130.3</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>20170926102027-105</name>
+<snippet/>
+<description><![CDATA[
+<table>
+<tr><td>Longitude: 121.48468 </td></tr>
+<tr><td>Latitude: 25.008157 </td></tr>
+<tr><td>Altitude: 253.54399999999998 ft </td></tr>
+<tr><td>Speed: 0.1601219417097454 mph </td></tr>
+<tr><td>Heading: 105 </td></tr>
+<tr><td>Time: 2017-10-19T17:21:28.000Z </td></tr>
+</table>
+]]></description>
+<LookAt>
+<longitude>121.48468</longitude>
+<latitude>25.008157</latitude>
+<tilt>66</tilt>
+</LookAt>
+<TimeStamp><when>2017-10-19T17:21:28.000Z</when></TimeStamp>
+<styleUrl>#track</styleUrl>
+<Point>
+<coordinates>121.48468,25.008157,77.3</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>20170926102027-106</name>
+<snippet/>
+<description><![CDATA[
+<table>
+<tr><td>Longitude: 121.484502 </td></tr>
+<tr><td>Latitude: 25.008215 </td></tr>
+<tr><td>Altitude: 205.328 ft </td></tr>
+<tr><td>Speed: 0.9564443826046238 mph </td></tr>
+<tr><td>Heading: 106 </td></tr>
+<tr><td>Time: 2017-10-19T17:17:02.000Z </td></tr>
+</table>
+]]></description>
+<LookAt>
+<longitude>121.484502</longitude>
+<latitude>25.008215</latitude>
+<tilt>66</tilt>
+</LookAt>
+<TimeStamp><when>2017-10-19T17:17:02.000Z</when></TimeStamp>
+<styleUrl>#track</styleUrl>
+<Point>
+<coordinates>121.484502,25.008215,62.6</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>20170926102027-107</name>
+<snippet/>
+<description><![CDATA[
+<table>
+<tr><td>Longitude: 121.484713 </td></tr>
+<tr><td>Latitude: 25.00739 </td></tr>
+<tr><td>Altitude: 51.824 ft </td></tr>
+<tr><td>Speed: 0.05097955722546833 mph </td></tr>
+<tr><td>Heading: 107 </td></tr>
+<tr><td>Time: 2017-10-19T17:13:22.000Z </td></tr>
+</table>
+]]></description>
+<LookAt>
+<longitude>121.484713</longitude>
+<latitude>25.00739</latitude>
+<tilt>66</tilt>
+</LookAt>
+<TimeStamp><when>2017-10-19T17:13:22.000Z</when></TimeStamp>
+<styleUrl>#track</styleUrl>
+<Point>
+<coordinates>121.484713,25.00739,15.8</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>20170926102027-108</name>
+<snippet/>
+<description><![CDATA[
+<table>
+<tr><td>Longitude: 121.484758 </td></tr>
+<tr><td>Latitude: 25.007392 </td></tr>
+<tr><td>Altitude: 28.535999999999994 ft </td></tr>
+<tr><td>Speed: 0.3776956158369014 mph </td></tr>
+<tr><td>Heading: 108 </td></tr>
+<tr><td>Time: 2017-10-19T17:10:03.000Z </td></tr>
+</table>
+]]></description>
+<LookAt>
+<longitude>121.484758</longitude>
+<latitude>25.007392</latitude>
+<tilt>66</tilt>
+</LookAt>
+<TimeStamp><when>2017-10-19T17:10:03.000Z</when></TimeStamp>
+<styleUrl>#track</styleUrl>
+<Point>
+<coordinates>121.484758,25.007392,8.7</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>20170926102027-109</name>
+<snippet/>
+<description><![CDATA[
+<table>
+<tr><td>Longitude: 121.484462 </td></tr>
+<tr><td>Latitude: 25.007507 </td></tr>
+<tr><td>Altitude: 60.024 ft </td></tr>
+<tr><td>Speed: 0.24898228824391408 mph </td></tr>
+<tr><td>Heading: 109 </td></tr>
+<tr><td>Time: 2017-10-19T17:06:51.000Z </td></tr>
+</table>
+]]></description>
+<LookAt>
+<longitude>121.484462</longitude>
+<latitude>25.007507</latitude>
+<tilt>66</tilt>
+</LookAt>
+<TimeStamp><when>2017-10-19T17:06:51.000Z</when></TimeStamp>
+<styleUrl>#track</styleUrl>
+<Point>
+<coordinates>121.484462,25.007507,18.3</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>20170926102027-110</name>
+<snippet/>
+<description><![CDATA[
+<table>
+<tr><td>Longitude: 121.484653 </td></tr>
+<tr><td>Latitude: 25.007423 </td></tr>
+<tr><td>Altitude: 62.97599999999999 ft </td></tr>
+<tr><td>Speed: 0.2460914221175252 mph </td></tr>
+<tr><td>Heading: 110 </td></tr>
+<tr><td>Time: 2017-10-19T17:03:39.000Z </td></tr>
+</table>
+]]></description>
+<LookAt>
+<longitude>121.484653</longitude>
+<latitude>25.007423</latitude>
+<tilt>66</tilt>
+</LookAt>
+<TimeStamp><when>2017-10-19T17:03:39.000Z</when></TimeStamp>
+<styleUrl>#track</styleUrl>
+<Point>
+<coordinates>121.484653,25.007423,19.2</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>20170926102027-111</name>
+<snippet/>
+<description><![CDATA[
+<table>
+<tr><td>Longitude: 121.4846 </td></tr>
+<tr><td>Latitude: 25.007607 </td></tr>
+<tr><td>Altitude: 235.176 ft </td></tr>
+<tr><td>Speed: 1.040459141838135 mph </td></tr>
+<tr><td>Heading: 111 </td></tr>
+<tr><td>Time: 2017-10-19T17:00:27.000Z </td></tr>
+</table>
+]]></description>
+<LookAt>
+<longitude>121.4846</longitude>
+<latitude>25.007607</latitude>
+<tilt>66</tilt>
+</LookAt>
+<TimeStamp><when>2017-10-19T17:00:27.000Z</when></TimeStamp>
+<styleUrl>#track</styleUrl>
+<Point>
+<coordinates>121.4846,25.007607,71.7</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>20170926102027-112</name>
+<snippet/>
+<description><![CDATA[
+<table>
+<tr><td>Longitude: 121.485293 </td></tr>
+<tr><td>Latitude: 25.007105 </td></tr>
+<tr><td>Altitude: 222.71200000000002 ft </td></tr>
+<tr><td>Speed: 0.5033977127798682 mph </td></tr>
+<tr><td>Heading: 112 </td></tr>
+<tr><td>Time: 2017-10-19T16:57:15.000Z </td></tr>
+</table>
+]]></description>
+<LookAt>
+<longitude>121.485293</longitude>
+<latitude>25.007105</latitude>
+<tilt>66</tilt>
+</LookAt>
+<TimeStamp><when>2017-10-19T16:57:15.000Z</when></TimeStamp>
+<styleUrl>#track</styleUrl>
+<Point>
+<coordinates>121.485293,25.007105,67.9</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>20170926102027-113</name>
+<snippet/>
+<description><![CDATA[
+<table>
+<tr><td>Longitude: 121.484875 </td></tr>
+<tr><td>Latitude: 25.007237 </td></tr>
+<tr><td>Altitude: 154.816 ft </td></tr>
+<tr><td>Speed: 1.8932212365509735 mph </td></tr>
+<tr><td>Heading: 113 </td></tr>
+<tr><td>Time: 2017-10-19T16:53:57.000Z </td></tr>
+</table>
+]]></description>
+<LookAt>
+<longitude>121.484875</longitude>
+<latitude>25.007237</latitude>
+<tilt>66</tilt>
+</LookAt>
+<TimeStamp><when>2017-10-19T16:53:57.000Z</when></TimeStamp>
+<styleUrl>#track</styleUrl>
+<Point>
+<coordinates>121.484875,25.007237,47.2</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>20170926102027-114</name>
+<snippet/>
+<description><![CDATA[
+<table>
+<tr><td>Longitude: 121.483542 </td></tr>
+<tr><td>Latitude: 25.008128 </td></tr>
+<tr><td>Altitude: -126.608 ft </td></tr>
+<tr><td>Speed: 2.2331800353388243 mph </td></tr>
+<tr><td>Heading: 114 </td></tr>
+<tr><td>Time: 2017-10-19T16:50:40.000Z </td></tr>
+</table>
+]]></description>
+<LookAt>
+<longitude>121.483542</longitude>
+<latitude>25.008128</latitude>
+<tilt>66</tilt>
+</LookAt>
+<TimeStamp><when>2017-10-19T16:50:40.000Z</when></TimeStamp>
+<styleUrl>#track</styleUrl>
+<Point>
+<coordinates>121.483542,25.008128,-38.6</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>20170926102027-115</name>
+<snippet/>
+<description><![CDATA[
+<table>
+<tr><td>Longitude: 121.485248 </td></tr>
+<tr><td>Latitude: 25.007265 </td></tr>
+<tr><td>Altitude: 375.56 ft </td></tr>
+<tr><td>Speed: 1.1583749498559532 mph </td></tr>
+<tr><td>Heading: 115 </td></tr>
+<tr><td>Time: 2017-10-19T16:47:23.000Z </td></tr>
+</table>
+]]></description>
+<LookAt>
+<longitude>121.485248</longitude>
+<latitude>25.007265</latitude>
+<tilt>66</tilt>
+</LookAt>
+<TimeStamp><when>2017-10-19T16:47:23.000Z</when></TimeStamp>
+<styleUrl>#track</styleUrl>
+<Point>
+<coordinates>121.485248,25.007265,114.5</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>20170926102027-116</name>
+<snippet/>
+<description><![CDATA[
+<table>
+<tr><td>Longitude: 121.48434 </td></tr>
+<tr><td>Latitude: 25.007723 </td></tr>
+<tr><td>Altitude: 153.176 ft </td></tr>
+<tr><td>Speed: 0.2175881250329124 mph </td></tr>
+<tr><td>Heading: 116 </td></tr>
+<tr><td>Time: 2017-10-19T16:44:01.000Z </td></tr>
+</table>
+]]></description>
+<LookAt>
+<longitude>121.48434</longitude>
+<latitude>25.007723</latitude>
+<tilt>66</tilt>
+</LookAt>
+<TimeStamp><when>2017-10-19T16:44:01.000Z</when></TimeStamp>
+<styleUrl>#track</styleUrl>
+<Point>
+<coordinates>121.48434,25.007723,46.7</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>20170926102027-117</name>
+<snippet/>
+<description><![CDATA[
+<table>
+<tr><td>Longitude: 121.484532 </td></tr>
+<tr><td>Latitude: 25.007703 </td></tr>
+<tr><td>Altitude: 155.14399999999998 ft </td></tr>
+<tr><td>Speed: 0.5487198501727116 mph </td></tr>
+<tr><td>Heading: 117 </td></tr>
+<tr><td>Time: 2017-10-19T16:40:41.000Z </td></tr>
+</table>
+]]></description>
+<LookAt>
+<longitude>121.484532</longitude>
+<latitude>25.007703</latitude>
+<tilt>66</tilt>
+</LookAt>
+<TimeStamp><when>2017-10-19T16:40:41.000Z</when></TimeStamp>
+<styleUrl>#track</styleUrl>
+<Point>
+<coordinates>121.484532,25.007703,47.3</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>20170926102027-118</name>
+<snippet/>
+<description><![CDATA[
+<table>
+<tr><td>Longitude: 121.484148 </td></tr>
+<tr><td>Latitude: 25.007975 </td></tr>
+<tr><td>Altitude: 126.608 ft </td></tr>
+<tr><td>Speed: 0.5007705884675618 mph </td></tr>
+<tr><td>Heading: 118 </td></tr>
+<tr><td>Time: 2017-10-19T16:37:21.000Z </td></tr>
+</table>
+]]></description>
+<LookAt>
+<longitude>121.484148</longitude>
+<latitude>25.007975</latitude>
+<tilt>66</tilt>
+</LookAt>
+<TimeStamp><when>2017-10-19T16:37:21.000Z</when></TimeStamp>
+<styleUrl>#track</styleUrl>
+<Point>
+<coordinates>121.484148,25.007975,38.6</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>20170926102027-119</name>
+<snippet/>
+<description><![CDATA[
+<table>
+<tr><td>Longitude: 121.483798 </td></tr>
+<tr><td>Latitude: 25.008227 </td></tr>
+<tr><td>Altitude: -54.448 ft </td></tr>
+<tr><td>Speed: 1.1349170741344086 mph </td></tr>
+<tr><td>Heading: 119 </td></tr>
+<tr><td>Time: 2017-10-19T16:34:00.000Z </td></tr>
+</table>
+]]></description>
+<LookAt>
+<longitude>121.483798</longitude>
+<latitude>25.008227</latitude>
+<tilt>66</tilt>
+</LookAt>
+<TimeStamp><when>2017-10-19T16:34:00.000Z</when></TimeStamp>
+<styleUrl>#track</styleUrl>
+<Point>
+<coordinates>121.483798,25.008227,-16.6</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>20170926102027-120</name>
+<snippet/>
+<description><![CDATA[
+<table>
+<tr><td>Longitude: 121.484597 </td></tr>
+<tr><td>Latitude: 25.00767 </td></tr>
+<tr><td>Altitude: 235.832 ft </td></tr>
+<tr><td>Speed: 0.26598673131770706 mph </td></tr>
+<tr><td>Heading: 120 </td></tr>
+<tr><td>Time: 2017-10-19T16:30:40.000Z </td></tr>
+</table>
+]]></description>
+<LookAt>
+<longitude>121.484597</longitude>
+<latitude>25.00767</latitude>
+<tilt>66</tilt>
+</LookAt>
+<TimeStamp><when>2017-10-19T16:30:40.000Z</when></TimeStamp>
+<styleUrl>#track</styleUrl>
+<Point>
+<coordinates>121.484597,25.00767,71.9</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>20170926102027-121</name>
+<snippet/>
+<description><![CDATA[
+<table>
+<tr><td>Longitude: 121.48478 </td></tr>
+<tr><td>Latitude: 25.007538 </td></tr>
+<tr><td>Altitude: 294.216 ft </td></tr>
+<tr><td>Speed: 0.41506019695833735 mph </td></tr>
+<tr><td>Heading: 121 </td></tr>
+<tr><td>Time: 2017-10-19T16:27:22.000Z </td></tr>
+</table>
+]]></description>
+<LookAt>
+<longitude>121.48478</longitude>
+<latitude>25.007538</latitude>
+<tilt>66</tilt>
+</LookAt>
+<TimeStamp><when>2017-10-19T16:27:22.000Z</when></TimeStamp>
+<styleUrl>#track</styleUrl>
+<Point>
+<coordinates>121.48478,25.007538,89.7</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>20170926102027-122</name>
+<snippet/>
+<description><![CDATA[
+<table>
+<tr><td>Longitude: 121.484685 </td></tr>
+<tr><td>Latitude: 25.00721 </td></tr>
+<tr><td>Altitude: 228.28799999999995 ft </td></tr>
+<tr><td>Speed: 0.55183805888279 mph </td></tr>
+<tr><td>Heading: 122 </td></tr>
+<tr><td>Time: 2017-10-19T16:23:59.000Z </td></tr>
+</table>
+]]></description>
+<LookAt>
+<longitude>121.484685</longitude>
+<latitude>25.00721</latitude>
+<tilt>66</tilt>
+</LookAt>
+<TimeStamp><when>2017-10-19T16:23:59.000Z</when></TimeStamp>
+<styleUrl>#track</styleUrl>
+<Point>
+<coordinates>121.484685,25.00721,69.6</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>20170926102027-123</name>
+<snippet/>
+<description><![CDATA[
+<table>
+<tr><td>Longitude: 121.484447 </td></tr>
+<tr><td>Latitude: 25.007583 </td></tr>
+<tr><td>Altitude: 228.61599999999999 ft </td></tr>
+<tr><td>Speed: 0.14100005959419767 mph </td></tr>
+<tr><td>Heading: 123 </td></tr>
+<tr><td>Time: 2017-10-19T16:20:45.000Z </td></tr>
+</table>
+]]></description>
+<LookAt>
+<longitude>121.484447</longitude>
+<latitude>25.007583</latitude>
+<tilt>66</tilt>
+</LookAt>
+<TimeStamp><when>2017-10-19T16:20:45.000Z</when></TimeStamp>
+<styleUrl>#track</styleUrl>
+<Point>
+<coordinates>121.484447,25.007583,69.7</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>20170926102027-124</name>
+<snippet/>
+<description><![CDATA[
+<table>
+<tr><td>Longitude: 121.484567 </td></tr>
+<tr><td>Latitude: 25.00757 </td></tr>
+<tr><td>Altitude: 223.36799999999997 ft </td></tr>
+<tr><td>Speed: 2.4792954532774654 mph </td></tr>
+<tr><td>Heading: 124 </td></tr>
+<tr><td>Time: 2017-10-19T16:17:32.000Z </td></tr>
+</table>
+]]></description>
+<LookAt>
+<longitude>121.484567</longitude>
+<latitude>25.00757</latitude>
+<tilt>66</tilt>
+</LookAt>
+<TimeStamp><when>2017-10-19T16:17:32.000Z</when></TimeStamp>
+<styleUrl>#track</styleUrl>
+<Point>
+<coordinates>121.484567,25.00757,68.1</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>20170926102027-125</name>
+<snippet/>
+<description><![CDATA[
+<table>
+<tr><td>Longitude: 121.486685 </td></tr>
+<tr><td>Latitude: 25.006807 </td></tr>
+<tr><td>Altitude: 786.2159999999999 ft </td></tr>
+<tr><td>Speed: 13.45343610594593 mph </td></tr>
+<tr><td>Heading: 125 </td></tr>
+<tr><td>Time: 2017-10-19T16:14:05.000Z </td></tr>
+</table>
+]]></description>
+<LookAt>
+<longitude>121.486685</longitude>
+<latitude>25.006807</latitude>
+<tilt>66</tilt>
+</LookAt>
+<TimeStamp><when>2017-10-19T16:14:05.000Z</when></TimeStamp>
+<styleUrl>#track</styleUrl>
+<Point>
+<coordinates>121.486685,25.006807,239.7</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>20170926102027-126</name>
+<snippet/>
+<description><![CDATA[
+<table>
+<tr><td>Longitude: 121.475053 </td></tr>
+<tr><td>Latitude: 25.00621 </td></tr>
+<tr><td>Altitude: -628.776 ft </td></tr>
+<tr><td>Speed: 14.460475287078703 mph </td></tr>
+<tr><td>Heading: 126 </td></tr>
+<tr><td>Time: 2017-10-19T16:10:50.000Z </td></tr>
+</table>
+]]></description>
+<LookAt>
+<longitude>121.475053</longitude>
+<latitude>25.00621</latitude>
+<tilt>66</tilt>
+</LookAt>
+<TimeStamp><when>2017-10-19T16:10:50.000Z</when></TimeStamp>
+<styleUrl>#track</styleUrl>
+<Point>
+<coordinates>121.475053,25.00621,-191.7</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>20170926102027-127</name>
+<snippet/>
+<description><![CDATA[
+<table>
+<tr><td>Longitude: 121.48744 </td></tr>
+<tr><td>Latitude: 25.006595 </td></tr>
+<tr><td>Altitude: 1114.5439999999999 ft </td></tr>
+<tr><td>Speed: 3.597577894256049 mph </td></tr>
+<tr><td>Heading: 127 </td></tr>
+<tr><td>Time: 2017-10-19T16:07:37.000Z </td></tr>
+</table>
+]]></description>
+<LookAt>
+<longitude>121.48744</longitude>
+<latitude>25.006595</latitude>
+<tilt>66</tilt>
+</LookAt>
+<TimeStamp><when>2017-10-19T16:07:37.000Z</when></TimeStamp>
+<styleUrl>#track</styleUrl>
+<Point>
+<coordinates>121.48744,25.006595,339.8</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>20170926102027-128</name>
+<snippet/>
+<description><![CDATA[
+<table>
+<tr><td>Longitude: 121.484445 </td></tr>
+<tr><td>Latitude: 25.007472 </td></tr>
+<tr><td>Altitude: 268.304 ft </td></tr>
+<tr><td>Speed: 0.7408688690972564 mph </td></tr>
+<tr><td>Heading: 128 </td></tr>
+<tr><td>Time: 2017-10-19T16:04:20.000Z </td></tr>
+</table>
+]]></description>
+<LookAt>
+<longitude>121.484445</longitude>
+<latitude>25.007472</latitude>
+<tilt>66</tilt>
+</LookAt>
+<TimeStamp><when>2017-10-19T16:04:20.000Z</when></TimeStamp>
+<styleUrl>#track</styleUrl>
+<Point>
+<coordinates>121.484445,25.007472,81.8</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>20170926102027-129</name>
+<snippet/>
+<description><![CDATA[
+<table>
+<tr><td>Longitude: 121.48456 </td></tr>
+<tr><td>Latitude: 25.006903 </td></tr>
+<tr><td>Altitude: 542.512 ft </td></tr>
+<tr><td>Speed: 1.3747615828259525 mph </td></tr>
+<tr><td>Heading: 129 </td></tr>
+<tr><td>Time: 2017-10-19T16:01:06.000Z </td></tr>
+</table>
+]]></description>
+<LookAt>
+<longitude>121.48456</longitude>
+<latitude>25.006903</latitude>
+<tilt>66</tilt>
+</LookAt>
+<TimeStamp><when>2017-10-19T16:01:06.000Z</when></TimeStamp>
+<styleUrl>#track</styleUrl>
+<Point>
+<coordinates>121.48456,25.006903,165.4</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>20170926102027-130</name>
+<snippet/>
+<description><![CDATA[
+<table>
+<tr><td>Longitude: 121.485605 </td></tr>
+<tr><td>Latitude: 25.007372 </td></tr>
+<tr><td>Altitude: 532.672 ft </td></tr>
+<tr><td>Speed: 1.1528862256909815 mph </td></tr>
+<tr><td>Heading: 130 </td></tr>
+<tr><td>Time: 2017-10-19T15:57:55.000Z </td></tr>
+</table>
+]]></description>
+<LookAt>
+<longitude>121.485605</longitude>
+<latitude>25.007372</latitude>
+<tilt>66</tilt>
+</LookAt>
+<TimeStamp><when>2017-10-19T15:57:55.000Z</when></TimeStamp>
+<styleUrl>#track</styleUrl>
+<Point>
+<coordinates>121.485605,25.007372,162.4</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>20170926102027-131</name>
+<snippet/>
+<description><![CDATA[
+<table>
+<tr><td>Longitude: 121.484773 </td></tr>
+<tr><td>Latitude: 25.008067 </td></tr>
+<tr><td>Altitude: 422.1359999999999 ft </td></tr>
+<tr><td>Speed: 0.6793244388249591 mph </td></tr>
+<tr><td>Heading: 131 </td></tr>
+<tr><td>Time: 2017-10-19T15:54:14.000Z </td></tr>
+</table>
+]]></description>
+<LookAt>
+<longitude>121.484773</longitude>
+<latitude>25.008067</latitude>
+<tilt>66</tilt>
+</LookAt>
+<TimeStamp><when>2017-10-19T15:54:14.000Z</when></TimeStamp>
+<styleUrl>#track</styleUrl>
+<Point>
+<coordinates>121.484773,25.008067,128.7</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>20170926102027-132</name>
+<snippet/>
+<description><![CDATA[
+<table>
+<tr><td>Longitude: 121.484165 </td></tr>
+<tr><td>Latitude: 25.007847 </td></tr>
+<tr><td>Altitude: 39.032 ft </td></tr>
+<tr><td>Speed: 0.5822737541841163 mph </td></tr>
+<tr><td>Heading: 132 </td></tr>
+<tr><td>Time: 2017-10-19T15:50:37.000Z </td></tr>
+</table>
+]]></description>
+<LookAt>
+<longitude>121.484165</longitude>
+<latitude>25.007847</latitude>
+<tilt>66</tilt>
+</LookAt>
+<TimeStamp><when>2017-10-19T15:50:37.000Z</when></TimeStamp>
+<styleUrl>#track</styleUrl>
+<Point>
+<coordinates>121.484165,25.007847,11.9</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>20170926102027-133</name>
+<snippet/>
+<description><![CDATA[
+<table>
+<tr><td>Longitude: 121.484677 </td></tr>
+<tr><td>Latitude: 25.00785 </td></tr>
+<tr><td>Altitude: 279.784 ft </td></tr>
+<tr><td>Speed: 0.7928848401834901 mph </td></tr>
+<tr><td>Heading: 133 </td></tr>
+<tr><td>Time: 2017-10-19T15:47:19.000Z </td></tr>
+</table>
+]]></description>
+<LookAt>
+<longitude>121.484677</longitude>
+<latitude>25.00785</latitude>
+<tilt>66</tilt>
+</LookAt>
+<TimeStamp><when>2017-10-19T15:47:19.000Z</when></TimeStamp>
+<styleUrl>#track</styleUrl>
+<Point>
+<coordinates>121.484677,25.00785,85.3</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>20170926102027-134</name>
+<snippet/>
+<description><![CDATA[
+<table>
+<tr><td>Longitude: 121.483973 </td></tr>
+<tr><td>Latitude: 25.007867 </td></tr>
+<tr><td>Altitude: -7.543999999999999 ft </td></tr>
+<tr><td>Speed: 0.20662376977069374 mph </td></tr>
+<tr><td>Heading: 134 </td></tr>
+<tr><td>Time: 2017-10-19T15:43:59.000Z </td></tr>
+</table>
+]]></description>
+<LookAt>
+<longitude>121.483973</longitude>
+<latitude>25.007867</latitude>
+<tilt>66</tilt>
+</LookAt>
+<TimeStamp><when>2017-10-19T15:43:59.000Z</when></TimeStamp>
+<styleUrl>#track</styleUrl>
+<Point>
+<coordinates>121.483973,25.007867,-2.3</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>20170926102027-135</name>
+<snippet/>
+<description><![CDATA[
+<table>
+<tr><td>Longitude: 121.483965 </td></tr>
+<tr><td>Latitude: 25.007705 </td></tr>
+<tr><td>Altitude: -64.944 ft </td></tr>
+<tr><td>Speed: 1.563289354627974 mph </td></tr>
+<tr><td>Heading: 135 </td></tr>
+<tr><td>Time: 2017-10-19T15:40:44.000Z </td></tr>
+</table>
+]]></description>
+<LookAt>
+<longitude>121.483965</longitude>
+<latitude>25.007705</latitude>
+<tilt>66</tilt>
+</LookAt>
+<TimeStamp><when>2017-10-19T15:40:44.000Z</when></TimeStamp>
+<styleUrl>#track</styleUrl>
+<Point>
+<coordinates>121.483965,25.007705,-19.8</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>20170926102027-136</name>
+<snippet/>
+<description><![CDATA[
+<table>
+<tr><td>Longitude: 121.485477 </td></tr>
+<tr><td>Latitude: 25.00785 </td></tr>
+<tr><td>Altitude: 468.712 ft </td></tr>
+<tr><td>Speed: 0.43027375071938806 mph </td></tr>
+<tr><td>Heading: 136 </td></tr>
+<tr><td>Time: 2017-10-19T15:37:05.000Z </td></tr>
+</table>
+]]></description>
+<LookAt>
+<longitude>121.485477</longitude>
+<latitude>25.00785</latitude>
+<tilt>66</tilt>
+</LookAt>
+<TimeStamp><when>2017-10-19T15:37:05.000Z</when></TimeStamp>
+<styleUrl>#track</styleUrl>
+<Point>
+<coordinates>121.485477,25.00785,142.9</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>20170926102027-137</name>
+<snippet/>
+<description><![CDATA[
+<table>
+<tr><td>Longitude: 121.484545 </td></tr>
+<tr><td>Latitude: 25.008275 </td></tr>
+<tr><td>Altitude: 551.3679999999999 ft </td></tr>
+<tr><td>Speed: 0.3926102212968674 mph </td></tr>
+<tr><td>Heading: 137 </td></tr>
+<tr><td>Time: 2017-10-19T15:27:59.000Z </td></tr>
+</table>
+]]></description>
+<LookAt>
+<longitude>121.484545</longitude>
+<latitude>25.008275</latitude>
+<tilt>66</tilt>
+</LookAt>
+<TimeStamp><when>2017-10-19T15:27:59.000Z</when></TimeStamp>
+<styleUrl>#track</styleUrl>
+<Point>
+<coordinates>121.484545,25.008275,168.1</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>20170926102027-138</name>
+<snippet/>
+<description><![CDATA[
+<table>
+<tr><td>Longitude: 121.48466 </td></tr>
+<tr><td>Latitude: 25.00798 </td></tr>
+<tr><td>Altitude: 332.26399999999995 ft </td></tr>
+<tr><td>Speed: 0.12382400824698953 mph </td></tr>
+<tr><td>Heading: 138 </td></tr>
+<tr><td>Time: 2017-10-19T15:24:41.000Z </td></tr>
+</table>
+]]></description>
+<LookAt>
+<longitude>121.48466</longitude>
+<latitude>25.00798</latitude>
+<tilt>66</tilt>
+</LookAt>
+<TimeStamp><when>2017-10-19T15:24:41.000Z</when></TimeStamp>
+<styleUrl>#track</styleUrl>
+<Point>
+<coordinates>121.48466,25.00798,101.3</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>20170926102027-139</name>
+<snippet/>
+<description><![CDATA[
+<table>
+<tr><td>Longitude: 121.484758 </td></tr>
+<tr><td>Latitude: 25.007937 </td></tr>
+<tr><td>Altitude: 339.47999999999996 ft </td></tr>
+<tr><td>Speed: 0.2037623521145894 mph </td></tr>
+<tr><td>Heading: 139 </td></tr>
+<tr><td>Time: 2017-10-19T15:21:23.000Z </td></tr>
+</table>
+]]></description>
+<LookAt>
+<longitude>121.484758</longitude>
+<latitude>25.007937</latitude>
+<tilt>66</tilt>
+</LookAt>
+<TimeStamp><when>2017-10-19T15:21:23.000Z</when></TimeStamp>
+<styleUrl>#track</styleUrl>
+<Point>
+<coordinates>121.484758,25.007937,103.5</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>20170926102027-140</name>
+<snippet/>
+<description><![CDATA[
+<table>
+<tr><td>Longitude: 121.48466 </td></tr>
+<tr><td>Latitude: 25.007805 </td></tr>
+<tr><td>Altitude: 272.568 ft </td></tr>
+<tr><td>Speed: 0.1922690517385405 mph </td></tr>
+<tr><td>Heading: 140 </td></tr>
+<tr><td>Time: 2017-10-19T15:18:09.000Z </td></tr>
+</table>
+]]></description>
+<LookAt>
+<longitude>121.48466</longitude>
+<latitude>25.007805</latitude>
+<tilt>66</tilt>
+</LookAt>
+<TimeStamp><when>2017-10-19T15:18:09.000Z</when></TimeStamp>
+<styleUrl>#track</styleUrl>
+<Point>
+<coordinates>121.48466,25.007805,83.1</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>20170926102027-141</name>
+<snippet/>
+<description><![CDATA[
+<table>
+<tr><td>Longitude: 121.48469 </td></tr>
+<tr><td>Latitude: 25.007955 </td></tr>
+<tr><td>Altitude: 305.69599999999997 ft </td></tr>
+<tr><td>Speed: 0.4305841732991513 mph </td></tr>
+<tr><td>Heading: 141 </td></tr>
+<tr><td>Time: 2017-10-19T15:14:52.000Z </td></tr>
+</table>
+]]></description>
+<LookAt>
+<longitude>121.48469</longitude>
+<latitude>25.007955</latitude>
+<tilt>66</tilt>
+</LookAt>
+<TimeStamp><when>2017-10-19T15:14:52.000Z</when></TimeStamp>
+<styleUrl>#track</styleUrl>
+<Point>
+<coordinates>121.48469,25.007955,93.2</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>20170926102027-142</name>
+<snippet/>
+<description><![CDATA[
+<table>
+<tr><td>Longitude: 121.484705 </td></tr>
+<tr><td>Latitude: 25.0076 </td></tr>
+<tr><td>Altitude: 207.296 ft </td></tr>
+<tr><td>Speed: 0.3480474791285361 mph </td></tr>
+<tr><td>Heading: 142 </td></tr>
+<tr><td>Time: 2017-10-19T15:11:27.000Z </td></tr>
+</table>
+]]></description>
+<LookAt>
+<longitude>121.484705</longitude>
+<latitude>25.0076</latitude>
+<tilt>66</tilt>
+</LookAt>
+<TimeStamp><when>2017-10-19T15:11:27.000Z</when></TimeStamp>
+<styleUrl>#track</styleUrl>
+<Point>
+<coordinates>121.484705,25.0076,63.2</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>20170926102027-143</name>
+<snippet/>
+<description><![CDATA[
+<table>
+<tr><td>Longitude: 121.484728 </td></tr>
+<tr><td>Latitude: 25.007885 </td></tr>
+<tr><td>Altitude: 267.976 ft </td></tr>
+<tr><td>Speed: 0.18534401587395663 mph </td></tr>
+<tr><td>Heading: 143 </td></tr>
+<tr><td>Time: 2017-10-19T15:08:03.000Z </td></tr>
+</table>
+]]></description>
+<LookAt>
+<longitude>121.484728</longitude>
+<latitude>25.007885</latitude>
+<tilt>66</tilt>
+</LookAt>
+<TimeStamp><when>2017-10-19T15:08:03.000Z</when></TimeStamp>
+<styleUrl>#track</styleUrl>
+<Point>
+<coordinates>121.484728,25.007885,81.7</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>20170926102027-144</name>
+<snippet/>
+<description><![CDATA[
+<table>
+<tr><td>Longitude: 121.484545 </td></tr>
+<tr><td>Latitude: 25.007763 </td></tr>
+<tr><td>Altitude: 231.56799999999996 ft </td></tr>
+<tr><td>Speed: 0.3634847960813609 mph </td></tr>
+<tr><td>Heading: 144 </td></tr>
+<tr><td>Time: 2017-10-19T15:03:27.000Z </td></tr>
+</table>
+]]></description>
+<LookAt>
+<longitude>121.484545</longitude>
+<latitude>25.007763</latitude>
+<tilt>66</tilt>
+</LookAt>
+<TimeStamp><when>2017-10-19T15:03:27.000Z</when></TimeStamp>
+<styleUrl>#track</styleUrl>
+<Point>
+<coordinates>121.484545,25.007763,70.6</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>20170926102027-145</name>
+<snippet/>
+<description><![CDATA[
+<table>
+<tr><td>Longitude: 121.484247 </td></tr>
+<tr><td>Latitude: 25.0079 </td></tr>
+<tr><td>Altitude: 398.52 ft </td></tr>
+<tr><td>Speed: 0.5147157181817845 mph </td></tr>
+<tr><td>Heading: 145 </td></tr>
+<tr><td>Time: 2017-10-19T15:00:00.000Z </td></tr>
+</table>
+]]></description>
+<LookAt>
+<longitude>121.484247</longitude>
+<latitude>25.0079</latitude>
+<tilt>66</tilt>
+</LookAt>
+<TimeStamp><when>2017-10-19T15:00:00.000Z</when></TimeStamp>
+<styleUrl>#track</styleUrl>
+<Point>
+<coordinates>121.484247,25.0079,121.5</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>20170926102027-146</name>
+<snippet/>
+<description><![CDATA[
+<table>
+<tr><td>Longitude: 121.48467 </td></tr>
+<tr><td>Latitude: 25.007802 </td></tr>
+<tr><td>Altitude: 278.472 ft </td></tr>
+<tr><td>Speed: 0.19511342126241496 mph </td></tr>
+<tr><td>Heading: 146 </td></tr>
+<tr><td>Time: 2017-10-19T14:56:49.000Z </td></tr>
+</table>
+]]></description>
+<LookAt>
+<longitude>121.48467</longitude>
+<latitude>25.007802</latitude>
+<tilt>66</tilt>
+</LookAt>
+<TimeStamp><when>2017-10-19T14:56:49.000Z</when></TimeStamp>
+<styleUrl>#track</styleUrl>
+<Point>
+<coordinates>121.48467,25.007802,84.9</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>20170926102027-147</name>
+<snippet/>
+<description><![CDATA[
+<table>
+<tr><td>Longitude: 121.48483 </td></tr>
+<tr><td>Latitude: 25.007893 </td></tr>
+<tr><td>Altitude: 452.312 ft </td></tr>
+<tr><td>Speed: 0.6933112103034689 mph </td></tr>
+<tr><td>Heading: 147 </td></tr>
+<tr><td>Time: 2017-10-19T14:53:11.000Z </td></tr>
+</table>
+]]></description>
+<LookAt>
+<longitude>121.48483</longitude>
+<latitude>25.007893</latitude>
+<tilt>66</tilt>
+</LookAt>
+<TimeStamp><when>2017-10-19T14:53:11.000Z</when></TimeStamp>
+<styleUrl>#track</styleUrl>
+<Point>
+<coordinates>121.48483,25.007893,137.9</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>20170926102027-148</name>
+<snippet/>
+<description><![CDATA[
+<table>
+<tr><td>Longitude: 121.485427 </td></tr>
+<tr><td>Latitude: 25.007813 </td></tr>
+<tr><td>Altitude: 462.152 ft </td></tr>
+<tr><td>Speed: 2.053895821940557 mph </td></tr>
+<tr><td>Heading: 148 </td></tr>
+<tr><td>Time: 2017-10-19T14:49:55.000Z </td></tr>
+</table>
+]]></description>
+<LookAt>
+<longitude>121.485427</longitude>
+<latitude>25.007813</latitude>
+<tilt>66</tilt>
+</LookAt>
+<TimeStamp><when>2017-10-19T14:49:55.000Z</when></TimeStamp>
+<styleUrl>#track</styleUrl>
+<Point>
+<coordinates>121.485427,25.007813,140.9</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>20170926102027-149</name>
+<snippet/>
+<description><![CDATA[
+<table>
+<tr><td>Longitude: 121.483562 </td></tr>
+<tr><td>Latitude: 25.007417 </td></tr>
+<tr><td>Altitude: -90.19999999999999 ft </td></tr>
+<tr><td>Speed: 1.3472887952842738 mph </td></tr>
+<tr><td>Heading: 149 </td></tr>
+<tr><td>Time: 2017-10-19T14:46:25.000Z </td></tr>
+</table>
+]]></description>
+<LookAt>
+<longitude>121.483562</longitude>
+<latitude>25.007417</latitude>
+<tilt>66</tilt>
+</LookAt>
+<TimeStamp><when>2017-10-19T14:46:25.000Z</when></TimeStamp>
+<styleUrl>#track</styleUrl>
+<Point>
+<coordinates>121.483562,25.007417,-27.5</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>20170926102027-150</name>
+<snippet/>
+<description><![CDATA[
+<table>
+<tr><td>Longitude: 121.484705 </td></tr>
+<tr><td>Latitude: 25.007678 </td></tr>
+<tr><td>Altitude: 172.2 ft </td></tr>
+<tr><td>Speed: 0.2590707875113953 mph </td></tr>
+<tr><td>Heading: 150 </td></tr>
+<tr><td>Time: 2017-10-19T14:43:08.000Z </td></tr>
+</table>
+]]></description>
+<LookAt>
+<longitude>121.484705</longitude>
+<latitude>25.007678</latitude>
+<tilt>66</tilt>
+</LookAt>
+<TimeStamp><when>2017-10-19T14:43:08.000Z</when></TimeStamp>
+<styleUrl>#track</styleUrl>
+<Point>
+<coordinates>121.484705,25.007678,52.5</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>20170926102027-151</name>
+<snippet/>
+<description><![CDATA[
+<table>
+<tr><td>Longitude: 121.484655 </td></tr>
+<tr><td>Latitude: 25.007483 </td></tr>
+<tr><td>Altitude: 92.496 ft </td></tr>
+<tr><td>Speed: 0.5620716563268994 mph </td></tr>
+<tr><td>Heading: 151 </td></tr>
+<tr><td>Time: 2017-10-19T14:39:56.000Z </td></tr>
+</table>
+]]></description>
+<LookAt>
+<longitude>121.484655</longitude>
+<latitude>25.007483</latitude>
+<tilt>66</tilt>
+</LookAt>
+<TimeStamp><when>2017-10-19T14:39:56.000Z</when></TimeStamp>
+<styleUrl>#track</styleUrl>
+<Point>
+<coordinates>121.484655,25.007483,28.2</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>20170926102027-152</name>
+<snippet/>
+<description><![CDATA[
+<table>
+<tr><td>Longitude: 121.484752 </td></tr>
+<tr><td>Latitude: 25.008092 </td></tr>
+<tr><td>Altitude: 398.84799999999996 ft </td></tr>
+<tr><td>Speed: 0.20370111431200416 mph </td></tr>
+<tr><td>Heading: 152 </td></tr>
+<tr><td>Time: 2017-10-19T14:35:24.000Z </td></tr>
+</table>
+]]></description>
+<LookAt>
+<longitude>121.484752</longitude>
+<latitude>25.008092</latitude>
+<tilt>66</tilt>
+</LookAt>
+<TimeStamp><when>2017-10-19T14:35:24.000Z</when></TimeStamp>
+<styleUrl>#track</styleUrl>
+<Point>
+<coordinates>121.484752,25.008092,121.6</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>20170926102027-153</name>
+<snippet/>
+<description><![CDATA[
+<table>
+<tr><td>Longitude: 121.484568 </td></tr>
+<tr><td>Latitude: 25.008113 </td></tr>
+<tr><td>Altitude: 385.72799999999995 ft </td></tr>
+<tr><td>Speed: 0.11799450347382774 mph </td></tr>
+<tr><td>Heading: 153 </td></tr>
+<tr><td>Time: 2017-10-19T14:31:59.000Z </td></tr>
+</table>
+]]></description>
+<LookAt>
+<longitude>121.484568</longitude>
+<latitude>25.008113</latitude>
+<tilt>66</tilt>
+</LookAt>
+<TimeStamp><when>2017-10-19T14:31:59.000Z</when></TimeStamp>
+<styleUrl>#track</styleUrl>
+<Point>
+<coordinates>121.484568,25.008113,117.6</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>20170926102027-154</name>
+<snippet/>
+<description><![CDATA[
+<table>
+<tr><td>Longitude: 121.484663 </td></tr>
+<tr><td>Latitude: 25.008167 </td></tr>
+<tr><td>Altitude: 350.632 ft </td></tr>
+<tr><td>Speed: 0.34415872492964233 mph </td></tr>
+<tr><td>Heading: 154 </td></tr>
+<tr><td>Time: 2017-10-19T14:28:25.000Z </td></tr>
+</table>
+]]></description>
+<LookAt>
+<longitude>121.484663</longitude>
+<latitude>25.008167</latitude>
+<tilt>66</tilt>
+</LookAt>
+<TimeStamp><when>2017-10-19T14:28:25.000Z</when></TimeStamp>
+<styleUrl>#track</styleUrl>
+<Point>
+<coordinates>121.484663,25.008167,106.9</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>20170926102027-155</name>
+<snippet/>
+<description><![CDATA[
+<table>
+<tr><td>Longitude: 121.484723 </td></tr>
+<tr><td>Latitude: 25.007818 </td></tr>
+<tr><td>Altitude: 302.08799999999997 ft </td></tr>
+<tr><td>Speed: 0.3492912327987641 mph </td></tr>
+<tr><td>Heading: 155 </td></tr>
+<tr><td>Time: 2017-10-19T14:24:10.000Z </td></tr>
+</table>
+]]></description>
+<LookAt>
+<longitude>121.484723</longitude>
+<latitude>25.007818</latitude>
+<tilt>66</tilt>
+</LookAt>
+<TimeStamp><when>2017-10-19T14:24:10.000Z</when></TimeStamp>
+<styleUrl>#track</styleUrl>
+<Point>
+<coordinates>121.484723,25.007818,92.1</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>20170926102027-156</name>
+<snippet/>
+<description><![CDATA[
+<table>
+<tr><td>Longitude: 121.484652 </td></tr>
+<tr><td>Latitude: 25.007527 </td></tr>
+<tr><td>Altitude: 139.728 ft </td></tr>
+<tr><td>Speed: 0.615483995819061 mph </td></tr>
+<tr><td>Heading: 156 </td></tr>
+<tr><td>Time: 2017-10-19T14:20:38.000Z </td></tr>
+</table>
+]]></description>
+<LookAt>
+<longitude>121.484652</longitude>
+<latitude>25.007527</latitude>
+<tilt>66</tilt>
+</LookAt>
+<TimeStamp><when>2017-10-19T14:20:38.000Z</when></TimeStamp>
+<styleUrl>#track</styleUrl>
+<Point>
+<coordinates>121.484652,25.007527,42.6</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>20170926102027-157</name>
+<snippet/>
+<description><![CDATA[
+<table>
+<tr><td>Longitude: 121.484855 </td></tr>
+<tr><td>Latitude: 25.007995 </td></tr>
+<tr><td>Altitude: 270.272 ft </td></tr>
+<tr><td>Speed: 0.2592051968130566 mph </td></tr>
+<tr><td>Heading: 157 </td></tr>
+<tr><td>Time: 2017-10-19T14:17:15.000Z </td></tr>
+</table>
+]]></description>
+<LookAt>
+<longitude>121.484855</longitude>
+<latitude>25.007995</latitude>
+<tilt>66</tilt>
+</LookAt>
+<TimeStamp><when>2017-10-19T14:17:15.000Z</when></TimeStamp>
+<styleUrl>#track</styleUrl>
+<Point>
+<coordinates>121.484855,25.007995,82.4</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>20170926102027-158</name>
+<snippet/>
+<description><![CDATA[
+<table>
+<tr><td>Longitude: 121.484637 </td></tr>
+<tr><td>Latitude: 25.008028 </td></tr>
+<tr><td>Altitude: 293.232 ft </td></tr>
+<tr><td>Speed: 0.23595475026370596 mph </td></tr>
+<tr><td>Heading: 158 </td></tr>
+<tr><td>Time: 2017-10-19T14:14:03.000Z </td></tr>
+</table>
+]]></description>
+<LookAt>
+<longitude>121.484637</longitude>
+<latitude>25.008028</latitude>
+<tilt>66</tilt>
+</LookAt>
+<TimeStamp><when>2017-10-19T14:14:03.000Z</when></TimeStamp>
+<styleUrl>#track</styleUrl>
+<Point>
+<coordinates>121.484637,25.008028,89.4</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>20170926102027-159</name>
+<snippet/>
+<description><![CDATA[
+<table>
+<tr><td>Longitude: 121.484685 </td></tr>
+<tr><td>Latitude: 25.008208 </td></tr>
+<tr><td>Altitude: 338.82399999999996 ft </td></tr>
+<tr><td>Speed: 0.44308333849498577 mph </td></tr>
+<tr><td>Heading: 159 </td></tr>
+<tr><td>Time: 2017-10-19T14:10:48.000Z </td></tr>
+</table>
+]]></description>
+<LookAt>
+<longitude>121.484685</longitude>
+<latitude>25.008208</latitude>
+<tilt>66</tilt>
+</LookAt>
+<TimeStamp><when>2017-10-19T14:10:48.000Z</when></TimeStamp>
+<styleUrl>#track</styleUrl>
+<Point>
+<coordinates>121.484685,25.008208,103.3</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>20170926102027-160</name>
+<snippet/>
+<description><![CDATA[
+<table>
+<tr><td>Longitude: 121.484293 </td></tr>
+<tr><td>Latitude: 25.008003 </td></tr>
+<tr><td>Altitude: 54.775999999999996 ft </td></tr>
+<tr><td>Speed: 1.2824923270604573 mph </td></tr>
+<tr><td>Heading: 160 </td></tr>
+<tr><td>Time: 2017-10-19T14:06:58.000Z </td></tr>
+</table>
+]]></description>
+<LookAt>
+<longitude>121.484293</longitude>
+<latitude>25.008003</latitude>
+<tilt>66</tilt>
+</LookAt>
+<TimeStamp><when>2017-10-19T14:06:58.000Z</when></TimeStamp>
+<styleUrl>#track</styleUrl>
+<Point>
+<coordinates>121.484293,25.008003,16.7</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>20170926102027-161</name>
+<snippet/>
+<description><![CDATA[
+<table>
+<tr><td>Longitude: 121.485355 </td></tr>
+<tr><td>Latitude: 25.007353 </td></tr>
+<tr><td>Altitude: 441.8159999999999 ft </td></tr>
+<tr><td>Speed: 0.42726214959610836 mph </td></tr>
+<tr><td>Heading: 161 </td></tr>
+<tr><td>Time: 2017-10-19T14:03:13.000Z </td></tr>
+</table>
+]]></description>
+<LookAt>
+<longitude>121.485355</longitude>
+<latitude>25.007353</latitude>
+<tilt>66</tilt>
+</LookAt>
+<TimeStamp><when>2017-10-19T14:03:13.000Z</when></TimeStamp>
+<styleUrl>#track</styleUrl>
+<Point>
+<coordinates>121.485355,25.007353,134.7</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>20170926102027-162</name>
+<snippet/>
+<description><![CDATA[
+<table>
+<tr><td>Longitude: 121.485392 </td></tr>
+<tr><td>Latitude: 25.007678 </td></tr>
+<tr><td>Altitude: 501.84 ft </td></tr>
+<tr><td>Speed: 0.5622048478387004 mph </td></tr>
+<tr><td>Heading: 162 </td></tr>
+<tr><td>Time: 2017-10-19T14:00:03.000Z </td></tr>
+</table>
+]]></description>
+<LookAt>
+<longitude>121.485392</longitude>
+<latitude>25.007678</latitude>
+<tilt>66</tilt>
+</LookAt>
+<TimeStamp><when>2017-10-19T14:00:03.000Z</when></TimeStamp>
+<styleUrl>#track</styleUrl>
+<Point>
+<coordinates>121.485392,25.007678,153.0</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>20170926102027-163</name>
+<snippet/>
+<description><![CDATA[
+<table>
+<tr><td>Longitude: 121.485378 </td></tr>
+<tr><td>Latitude: 25.007203 </td></tr>
+<tr><td>Altitude: 415.90399999999994 ft </td></tr>
+<tr><td>Speed: 1.3901268828836266 mph </td></tr>
+<tr><td>Heading: 163 </td></tr>
+<tr><td>Time: 2017-10-19T13:56:33.000Z </td></tr>
+</table>
+]]></description>
+<LookAt>
+<longitude>121.485378</longitude>
+<latitude>25.007203</latitude>
+<tilt>66</tilt>
+</LookAt>
+<TimeStamp><when>2017-10-19T13:56:33.000Z</when></TimeStamp>
+<styleUrl>#track</styleUrl>
+<Point>
+<coordinates>121.485378,25.007203,126.8</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>20170926102027-164</name>
+<snippet/>
+<description><![CDATA[
+<table>
+<tr><td>Longitude: 121.484217 </td></tr>
+<tr><td>Latitude: 25.0076 </td></tr>
+<tr><td>Altitude: -30.832 ft </td></tr>
+<tr><td>Speed: 0.27641845098070167 mph </td></tr>
+<tr><td>Heading: 164 </td></tr>
+<tr><td>Time: 2017-10-19T13:53:12.000Z </td></tr>
+</table>
+]]></description>
+<LookAt>
+<longitude>121.484217</longitude>
+<latitude>25.0076</latitude>
+<tilt>66</tilt>
+</LookAt>
+<TimeStamp><when>2017-10-19T13:53:12.000Z</when></TimeStamp>
+<styleUrl>#track</styleUrl>
+<Point>
+<coordinates>121.484217,25.0076,-9.4</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>20170926102027-165</name>
+<snippet/>
+<description><![CDATA[
+<table>
+<tr><td>Longitude: 121.484502 </td></tr>
+<tr><td>Latitude: 25.007653 </td></tr>
+<tr><td>Altitude: 546.776 ft </td></tr>
+<tr><td>Speed: 0.2756672196434185 mph </td></tr>
+<tr><td>Heading: 165 </td></tr>
+<tr><td>Time: 2017-10-19T13:49:15.000Z </td></tr>
+</table>
+]]></description>
+<LookAt>
+<longitude>121.484502</longitude>
+<latitude>25.007653</latitude>
+<tilt>66</tilt>
+</LookAt>
+<TimeStamp><when>2017-10-19T13:49:15.000Z</when></TimeStamp>
+<styleUrl>#track</styleUrl>
+<Point>
+<coordinates>121.484502,25.007653,166.7</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>20170926102027-166</name>
+<snippet/>
+<description><![CDATA[
+<table>
+<tr><td>Longitude: 121.484353 </td></tr>
+<tr><td>Latitude: 25.007855 </td></tr>
+<tr><td>Altitude: 440.832 ft </td></tr>
+<tr><td>Speed: 0.3485345394356908 mph </td></tr>
+<tr><td>Heading: 166 </td></tr>
+<tr><td>Time: 2017-10-19T13:45:36.000Z </td></tr>
+</table>
+]]></description>
+<LookAt>
+<longitude>121.484353</longitude>
+<latitude>25.007855</latitude>
+<tilt>66</tilt>
+</LookAt>
+<TimeStamp><when>2017-10-19T13:45:36.000Z</when></TimeStamp>
+<styleUrl>#track</styleUrl>
+<Point>
+<coordinates>121.484353,25.007855,134.4</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>20170926102027-167</name>
+<snippet/>
+<description><![CDATA[
+<table>
+<tr><td>Longitude: 121.484667 </td></tr>
+<tr><td>Latitude: 25.007732 </td></tr>
+<tr><td>Altitude: 559.568 ft </td></tr>
+<tr><td>Speed: 0.2192920012785299 mph </td></tr>
+<tr><td>Heading: 167 </td></tr>
+<tr><td>Time: 2017-10-19T13:41:55.000Z </td></tr>
+</table>
+]]></description>
+<LookAt>
+<longitude>121.484667</longitude>
+<latitude>25.007732</latitude>
+<tilt>66</tilt>
+</LookAt>
+<TimeStamp><when>2017-10-19T13:41:55.000Z</when></TimeStamp>
+<styleUrl>#track</styleUrl>
+<Point>
+<coordinates>121.484667,25.007732,170.6</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>20170926102027-168</name>
+<snippet/>
+<description><![CDATA[
+<table>
+<tr><td>Longitude: 121.484882 </td></tr>
+<tr><td>Latitude: 25.007723 </td></tr>
+<tr><td>Altitude: 414.91999999999996 ft </td></tr>
+<tr><td>Speed: 2.0245479783648546 mph </td></tr>
+<tr><td>Heading: 168 </td></tr>
+<tr><td>Time: 2017-10-19T13:38:14.000Z </td></tr>
+</table>
+]]></description>
+<LookAt>
+<longitude>121.484882</longitude>
+<latitude>25.007723</latitude>
+<tilt>66</tilt>
+</LookAt>
+<TimeStamp><when>2017-10-19T13:38:14.000Z</when></TimeStamp>
+<styleUrl>#track</styleUrl>
+<Point>
+<coordinates>121.484882,25.007723,126.5</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>20170926102027-169</name>
+<snippet/>
+<description><![CDATA[
+<table>
+<tr><td>Longitude: 121.486152 </td></tr>
+<tr><td>Latitude: 25.00637 </td></tr>
+<tr><td>Altitude: 1044.6799999999998 ft </td></tr>
+<tr><td>Speed: 1.892679029962127 mph </td></tr>
+<tr><td>Heading: 169 </td></tr>
+<tr><td>Time: 2017-10-19T13:34:36.000Z </td></tr>
+</table>
+]]></description>
+<LookAt>
+<longitude>121.486152</longitude>
+<latitude>25.00637</latitude>
+<tilt>66</tilt>
+</LookAt>
+<TimeStamp><when>2017-10-19T13:34:36.000Z</when></TimeStamp>
+<styleUrl>#track</styleUrl>
+<Point>
+<coordinates>121.486152,25.00637,318.5</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>20170926102027-170</name>
+<snippet/>
+<description><![CDATA[
+<table>
+<tr><td>Longitude: 121.48494 </td></tr>
+<tr><td>Latitude: 25.00748 </td></tr>
+<tr><td>Altitude: 654.36 ft </td></tr>
+<tr><td>Speed: 0.4340949067103558 mph </td></tr>
+<tr><td>Heading: 170 </td></tr>
+<tr><td>Time: 2017-10-19T13:31:11.000Z </td></tr>
+</table>
+]]></description>
+<LookAt>
+<longitude>121.48494</longitude>
+<latitude>25.00748</latitude>
+<tilt>66</tilt>
+</LookAt>
+<TimeStamp><when>2017-10-19T13:31:11.000Z</when></TimeStamp>
+<styleUrl>#track</styleUrl>
+<Point>
+<coordinates>121.48494,25.00748,199.5</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>20170926102027-171</name>
+<snippet/>
+<description><![CDATA[
+<table>
+<tr><td>Longitude: 121.484642 </td></tr>
+<tr><td>Latitude: 25.00767 </td></tr>
+<tr><td>Altitude: 419.512 ft </td></tr>
+<tr><td>Speed: 1.7116340887219526 mph </td></tr>
+<tr><td>Heading: 171 </td></tr>
+<tr><td>Time: 2017-10-19T13:28:02.000Z </td></tr>
+</table>
+]]></description>
+<LookAt>
+<longitude>121.484642</longitude>
+<latitude>25.00767</latitude>
+<tilt>66</tilt>
+</LookAt>
+<TimeStamp><when>2017-10-19T13:28:02.000Z</when></TimeStamp>
+<styleUrl>#track</styleUrl>
+<Point>
+<coordinates>121.484642,25.00767,127.9</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>20170926102027-172</name>
+<snippet/>
+<description><![CDATA[
+<table>
+<tr><td>Longitude: 121.484682 </td></tr>
+<tr><td>Latitude: 25.006148 </td></tr>
+<tr><td>Altitude: 2147.0879999999997 ft </td></tr>
+<tr><td>Speed: 2.3449275143977157 mph </td></tr>
+<tr><td>Heading: 172 </td></tr>
+<tr><td>Time: 2017-10-19T13:24:21.000Z </td></tr>
+</table>
+]]></description>
+<LookAt>
+<longitude>121.484682</longitude>
+<latitude>25.006148</latitude>
+<tilt>66</tilt>
+</LookAt>
+<TimeStamp><when>2017-10-19T13:24:21.000Z</when></TimeStamp>
+<styleUrl>#track</styleUrl>
+<Point>
+<coordinates>121.484682,25.006148,654.6</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>20170926102027-173</name>
+<snippet/>
+<description><![CDATA[
+<table>
+<tr><td>Longitude: 121.484005 </td></tr>
+<tr><td>Latitude: 25.007853 </td></tr>
+<tr><td>Altitude: -38.704 ft </td></tr>
+<tr><td>Speed: 0.4464382401677615 mph </td></tr>
+<tr><td>Heading: 173 </td></tr>
+<tr><td>Time: 2017-10-19T13:21:09.000Z </td></tr>
+</table>
+]]></description>
+<LookAt>
+<longitude>121.484005</longitude>
+<latitude>25.007853</latitude>
+<tilt>66</tilt>
+</LookAt>
+<TimeStamp><when>2017-10-19T13:21:09.000Z</when></TimeStamp>
+<styleUrl>#track</styleUrl>
+<Point>
+<coordinates>121.484005,25.007853,-11.8</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>20170926102027-174</name>
+<snippet/>
+<description><![CDATA[
+<table>
+<tr><td>Longitude: 121.48437 </td></tr>
+<tr><td>Latitude: 25.007727 </td></tr>
+<tr><td>Altitude: 240.096 ft </td></tr>
+<tr><td>Speed: 0.058692630308489334 mph </td></tr>
+<tr><td>Heading: 174 </td></tr>
+<tr><td>Time: 2017-10-19T13:17:52.000Z </td></tr>
+</table>
+]]></description>
+<LookAt>
+<longitude>121.48437</longitude>
+<latitude>25.007727</latitude>
+<tilt>66</tilt>
+</LookAt>
+<TimeStamp><when>2017-10-19T13:17:52.000Z</when></TimeStamp>
+<styleUrl>#track</styleUrl>
+<Point>
+<coordinates>121.48437,25.007727,73.2</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>20170926102027-175</name>
+<snippet/>
+<description><![CDATA[
+<table>
+<tr><td>Longitude: 121.484348 </td></tr>
+<tr><td>Latitude: 25.007768 </td></tr>
+<tr><td>Altitude: 69.208 ft </td></tr>
+<tr><td>Speed: 0.9328364109967094 mph </td></tr>
+<tr><td>Heading: 175 </td></tr>
+<tr><td>Time: 2017-10-19T13:14:39.000Z </td></tr>
+</table>
+]]></description>
+<LookAt>
+<longitude>121.484348</longitude>
+<latitude>25.007768</latitude>
+<tilt>66</tilt>
+</LookAt>
+<TimeStamp><when>2017-10-19T13:14:39.000Z</when></TimeStamp>
+<styleUrl>#track</styleUrl>
+<Point>
+<coordinates>121.484348,25.007768,21.1</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>20170926102027-176</name>
+<snippet/>
+<description><![CDATA[
+<table>
+<tr><td>Longitude: 121.483982 </td></tr>
+<tr><td>Latitude: 25.008408 </td></tr>
+<tr><td>Altitude: -5.904 ft </td></tr>
+<tr><td>Speed: 1.0409352001519259 mph </td></tr>
+<tr><td>Heading: 176 </td></tr>
+<tr><td>Time: 2017-10-19T13:11:27.000Z </td></tr>
+</table>
+]]></description>
+<LookAt>
+<longitude>121.483982</longitude>
+<latitude>25.008408</latitude>
+<tilt>66</tilt>
+</LookAt>
+<TimeStamp><when>2017-10-19T13:11:27.000Z</when></TimeStamp>
+<styleUrl>#track</styleUrl>
+<Point>
+<coordinates>121.483982,25.008408,-1.8</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>20170926102027-177</name>
+<snippet/>
+<description><![CDATA[
+<table>
+<tr><td>Longitude: 121.484708 </td></tr>
+<tr><td>Latitude: 25.007938 </td></tr>
+<tr><td>Altitude: -7.543999999999999 ft </td></tr>
+<tr><td>Speed: 2.6940270015860177 mph </td></tr>
+<tr><td>Heading: 177 </td></tr>
+<tr><td>Time: 2017-10-19T13:08:14.000Z </td></tr>
+</table>
+]]></description>
+<LookAt>
+<longitude>121.484708</longitude>
+<latitude>25.007938</latitude>
+<tilt>66</tilt>
+</LookAt>
+<TimeStamp><when>2017-10-19T13:08:14.000Z</when></TimeStamp>
+<styleUrl>#track</styleUrl>
+<Point>
+<coordinates>121.484708,25.007938,-2.3</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>20170926102027-178</name>
+<snippet/>
+<description><![CDATA[
+<table>
+<tr><td>Longitude: 121.482343 </td></tr>
+<tr><td>Latitude: 25.008187 </td></tr>
+<tr><td>Altitude: -153.832 ft </td></tr>
+<tr><td>Speed: 2.0038304251514503 mph </td></tr>
+<tr><td>Heading: 178 </td></tr>
+<tr><td>Time: 2017-10-19T13:04:55.000Z </td></tr>
+</table>
+]]></description>
+<LookAt>
+<longitude>121.482343</longitude>
+<latitude>25.008187</latitude>
+<tilt>66</tilt>
+</LookAt>
+<TimeStamp><when>2017-10-19T13:04:55.000Z</when></TimeStamp>
+<styleUrl>#track</styleUrl>
+<Point>
+<coordinates>121.482343,25.008187,-46.9</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>20170926102027-179</name>
+<snippet/>
+<description><![CDATA[
+<table>
+<tr><td>Longitude: 121.484027 </td></tr>
+<tr><td>Latitude: 25.007925 </td></tr>
+<tr><td>Altitude: -148.256 ft </td></tr>
+<tr><td>Speed: 1.4216526961668092 mph </td></tr>
+<tr><td>Heading: 179 </td></tr>
+<tr><td>Time: 2017-10-19T13:01:43.000Z </td></tr>
+</table>
+]]></description>
+<LookAt>
+<longitude>121.484027</longitude>
+<latitude>25.007925</latitude>
+<tilt>66</tilt>
+</LookAt>
+<TimeStamp><when>2017-10-19T13:01:43.000Z</when></TimeStamp>
+<styleUrl>#track</styleUrl>
+<Point>
+<coordinates>121.484027,25.007925,-45.2</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>20170926102027-180</name>
+<snippet/>
+<description><![CDATA[
+<table>
+<tr><td>Longitude: 121.485237 </td></tr>
+<tr><td>Latitude: 25.00769 </td></tr>
+<tr><td>Altitude: 369.984 ft </td></tr>
+<tr><td>Speed: 0.8365193741898511 mph </td></tr>
+<tr><td>Heading: 180 </td></tr>
+<tr><td>Time: 2017-10-19T12:58:27.000Z </td></tr>
+</table>
+]]></description>
+<LookAt>
+<longitude>121.485237</longitude>
+<latitude>25.00769</latitude>
+<tilt>66</tilt>
+</LookAt>
+<TimeStamp><when>2017-10-19T12:58:27.000Z</when></TimeStamp>
+<styleUrl>#track</styleUrl>
+<Point>
+<coordinates>121.485237,25.00769,112.8</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>20170926102027-181</name>
+<snippet/>
+<description><![CDATA[
+<table>
+<tr><td>Longitude: 121.48449 </td></tr>
+<tr><td>Latitude: 25.007625 </td></tr>
+<tr><td>Altitude: 164.328 ft </td></tr>
+<tr><td>Speed: 0.17453045777469936 mph </td></tr>
+<tr><td>Heading: 181 </td></tr>
+<tr><td>Time: 2017-10-19T12:55:05.000Z </td></tr>
+</table>
+]]></description>
+<LookAt>
+<longitude>121.48449</longitude>
+<latitude>25.007625</latitude>
+<tilt>66</tilt>
+</LookAt>
+<TimeStamp><when>2017-10-19T12:55:05.000Z</when></TimeStamp>
+<styleUrl>#track</styleUrl>
+<Point>
+<coordinates>121.48449,25.007625,50.1</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>20170926102027-182</name>
+<snippet/>
+<description><![CDATA[
+<table>
+<tr><td>Longitude: 121.484443 </td></tr>
+<tr><td>Latitude: 25.00775 </td></tr>
+<tr><td>Altitude: 256.16799999999995 ft </td></tr>
+<tr><td>Speed: 0.2659441774919454 mph </td></tr>
+<tr><td>Heading: 182 </td></tr>
+<tr><td>Time: 2017-10-19T12:51:57.000Z </td></tr>
+</table>
+]]></description>
+<LookAt>
+<longitude>121.484443</longitude>
+<latitude>25.00775</latitude>
+<tilt>66</tilt>
+</LookAt>
+<TimeStamp><when>2017-10-19T12:51:57.000Z</when></TimeStamp>
+<styleUrl>#track</styleUrl>
+<Point>
+<coordinates>121.484443,25.00775,78.1</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>20170926102027-183</name>
+<snippet/>
+<description><![CDATA[
+<table>
+<tr><td>Longitude: 121.484688 </td></tr>
+<tr><td>Latitude: 25.007715 </td></tr>
+<tr><td>Altitude: 180.07199999999997 ft </td></tr>
+<tr><td>Speed: 0.5857503870000706 mph </td></tr>
+<tr><td>Heading: 183 </td></tr>
+<tr><td>Time: 2017-10-19T12:48:27.000Z </td></tr>
+</table>
+]]></description>
+<LookAt>
+<longitude>121.484688</longitude>
+<latitude>25.007715</latitude>
+<tilt>66</tilt>
+</LookAt>
+<TimeStamp><when>2017-10-19T12:48:27.000Z</when></TimeStamp>
+<styleUrl>#track</styleUrl>
+<Point>
+<coordinates>121.484688,25.007715,54.9</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>20170926102027-184</name>
+<snippet/>
+<description><![CDATA[
+<table>
+<tr><td>Longitude: 121.484928 </td></tr>
+<tr><td>Latitude: 25.00812 </td></tr>
+<tr><td>Altitude: 305.03999999999996 ft </td></tr>
+<tr><td>Speed: 0.7502911035721662 mph </td></tr>
+<tr><td>Heading: 184 </td></tr>
+<tr><td>Time: 2017-10-19T12:45:12.000Z </td></tr>
+</table>
+]]></description>
+<LookAt>
+<longitude>121.484928</longitude>
+<latitude>25.00812</latitude>
+<tilt>66</tilt>
+</LookAt>
+<TimeStamp><when>2017-10-19T12:45:12.000Z</when></TimeStamp>
+<styleUrl>#track</styleUrl>
+<Point>
+<coordinates>121.484928,25.00812,93.0</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>20170926102027-185</name>
+<snippet/>
+<description><![CDATA[
+<table>
+<tr><td>Longitude: 121.484567 </td></tr>
+<tr><td>Latitude: 25.007645 </td></tr>
+<tr><td>Altitude: 302.08799999999997 ft </td></tr>
+<tr><td>Speed: 0.315882983524415 mph </td></tr>
+<tr><td>Heading: 185 </td></tr>
+<tr><td>Time: 2017-10-19T12:42:01.000Z </td></tr>
+</table>
+]]></description>
+<LookAt>
+<longitude>121.484567</longitude>
+<latitude>25.007645</latitude>
+<tilt>66</tilt>
+</LookAt>
+<TimeStamp><when>2017-10-19T12:42:01.000Z</when></TimeStamp>
+<styleUrl>#track</styleUrl>
+<Point>
+<coordinates>121.484567,25.007645,92.1</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>20170926102027-186</name>
+<snippet/>
+<description><![CDATA[
+<table>
+<tr><td>Longitude: 121.484782 </td></tr>
+<tr><td>Latitude: 25.00747 </td></tr>
+<tr><td>Altitude: 442.144 ft </td></tr>
+<tr><td>Speed: 0.13361041362910647 mph </td></tr>
+<tr><td>Heading: 186 </td></tr>
+<tr><td>Time: 2017-10-19T12:38:35.000Z </td></tr>
+</table>
+]]></description>
+<LookAt>
+<longitude>121.484782</longitude>
+<latitude>25.00747</latitude>
+<tilt>66</tilt>
+</LookAt>
+<TimeStamp><when>2017-10-19T12:38:35.000Z</when></TimeStamp>
+<styleUrl>#track</styleUrl>
+<Point>
+<coordinates>121.484782,25.00747,134.8</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>20170926102027-187</name>
+<snippet/>
+<description><![CDATA[
+<table>
+<tr><td>Longitude: 121.484187 </td></tr>
+<tr><td>Latitude: 25.007765 </td></tr>
+<tr><td>Altitude: 48.872 ft </td></tr>
+<tr><td>Speed: 0.2126900903179643 mph </td></tr>
+<tr><td>Heading: 187 </td></tr>
+<tr><td>Time: 2017-10-19T12:19:32.000Z </td></tr>
+</table>
+]]></description>
+<LookAt>
+<longitude>121.484187</longitude>
+<latitude>25.007765</latitude>
+<tilt>66</tilt>
+</LookAt>
+<TimeStamp><when>2017-10-19T12:19:32.000Z</when></TimeStamp>
+<styleUrl>#track</styleUrl>
+<Point>
+<coordinates>121.484187,25.007765,14.9</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>20170926102027-188</name>
+<snippet/>
+<description><![CDATA[
+<table>
+<tr><td>Longitude: 121.483983 </td></tr>
+<tr><td>Latitude: 25.007762 </td></tr>
+<tr><td>Altitude: 31.159999999999997 ft </td></tr>
+<tr><td>Speed: 0.5356553821693814 mph </td></tr>
+<tr><td>Heading: 188 </td></tr>
+<tr><td>Time: 2017-10-19T12:15:56.000Z </td></tr>
+</table>
+]]></description>
+<LookAt>
+<longitude>121.483983</longitude>
+<latitude>25.007762</latitude>
+<tilt>66</tilt>
+</LookAt>
+<TimeStamp><when>2017-10-19T12:15:56.000Z</when></TimeStamp>
+<styleUrl>#track</styleUrl>
+<Point>
+<coordinates>121.483983,25.007762,9.5</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>20170926102027-189</name>
+<snippet/>
+<description><![CDATA[
+<table>
+<tr><td>Longitude: 121.484525 </td></tr>
+<tr><td>Latitude: 25.007647 </td></tr>
+<tr><td>Altitude: 144.976 ft </td></tr>
+<tr><td>Speed: 1.249864235903422 mph </td></tr>
+<tr><td>Heading: 189 </td></tr>
+<tr><td>Time: 2017-10-19T12:12:02.000Z </td></tr>
+</table>
+]]></description>
+<LookAt>
+<longitude>121.484525</longitude>
+<latitude>25.007647</latitude>
+<tilt>66</tilt>
+</LookAt>
+<TimeStamp><when>2017-10-19T12:12:02.000Z</when></TimeStamp>
+<styleUrl>#track</styleUrl>
+<Point>
+<coordinates>121.484525,25.007647,44.2</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>20170926102027-190</name>
+<snippet/>
+<description><![CDATA[
+<table>
+<tr><td>Longitude: 121.485393 </td></tr>
+<tr><td>Latitude: 25.006988 </td></tr>
+<tr><td>Altitude: 441.8159999999999 ft </td></tr>
+<tr><td>Speed: 1.7443921368923616 mph </td></tr>
+<tr><td>Heading: 190 </td></tr>
+<tr><td>Time: 2017-10-19T12:08:38.000Z </td></tr>
+</table>
+]]></description>
+<LookAt>
+<longitude>121.485393</longitude>
+<latitude>25.006988</latitude>
+<tilt>66</tilt>
+</LookAt>
+<TimeStamp><when>2017-10-19T12:08:38.000Z</when></TimeStamp>
+<styleUrl>#track</styleUrl>
+<Point>
+<coordinates>121.485393,25.006988,134.7</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>20170926102027-191</name>
+<snippet/>
+<description><![CDATA[
+<table>
+<tr><td>Longitude: 121.48395 </td></tr>
+<tr><td>Latitude: 25.007823 </td></tr>
+<tr><td>Altitude: -17.056 ft </td></tr>
+<tr><td>Speed: NaN mph </td></tr>
+<tr><td>Heading: 191 </td></tr>
+<tr><td>Time: 2017-10-19T12:04:57.000Z </td></tr>
+</table>
+]]></description>
+<LookAt>
+<longitude>121.48395</longitude>
+<latitude>25.007823</latitude>
+<tilt>66</tilt>
+</LookAt>
+<TimeStamp><when>2017-10-19T12:04:57.000Z</when></TimeStamp>
+<styleUrl>#track</styleUrl>
+<Point>
+<coordinates>121.48395,25.007823,-5.2</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>20170926102027-192</name>
+<snippet/>
+<description><![CDATA[
+<table>
+<tr><td>Longitude: 121.484005 </td></tr>
+<tr><td>Latitude: 25.007725 </td></tr>
+<tr><td>Altitude: -25.584 ft </td></tr>
+<tr><td>Speed: NaN mph </td></tr>
+<tr><td>Heading: 192 </td></tr>
+<tr><td>Time: 2017-10-19T12:01:06.000Z </td></tr>
+</table>
+]]></description>
+<LookAt>
+<longitude>121.484005</longitude>
+<latitude>25.007725</latitude>
+<tilt>66</tilt>
+</LookAt>
+<TimeStamp><when>2017-10-19T12:01:06.000Z</when></TimeStamp>
+<styleUrl>#track</styleUrl>
+<Point>
+<coordinates>121.484005,25.007725,-7.8</coordinates>
+</Point>
+</Placemark>
+</Folder>
+<Placemark>
+<name>Path</name>
+<styleUrl>#lineStyle</styleUrl>
+<LineString>
+<tessellate>1</tessellate>
+<coordinates>
+121.484253,25.008067,35.9
+121.484857,25.00772,75.7
+121.48351,25.007717,-50.7
+121.484168,25.007585,27.9
+121.484577,25.00788,68.3
+121.485655,25.006288,44.3
+121.484425,25.00775,32.5
+121.484572,25.00779,23.1
+121.484747,25.007753,56.5
+121.484395,25.007458,35.8
+121.48328,25.00775,-47.0
+121.483895,25.007767,-15.4
+121.48519,25.007637,70.3
+121.484163,25.007812,6.9
+121.484203,25.007617,14.7
+121.483462,25.007765,23.3
+121.484787,25.007425,49.8
+121.484368,25.007537,44.9
+121.484475,25.007303,40.0
+121.484078,25.007745,34.7
+121.484557,25.00776,45.0
+121.484453,25.00774,38.6
+121.484593,25.007738,60.4
+121.485317,25.007513,107.7
+121.483615,25.007833,-25.1
+121.485362,25.007722,113.5
+121.484193,25.007503,-27.4
+121.483878,25.007708,-28.8
+121.483893,25.007903,-34.8
+121.485062,25.007412,113.4
+121.485313,25.007422,111.4
+121.483198,25.008097,-14.3
+121.48376,25.007745,-15.2
+121.484502,25.007625,0.3
+121.483768,25.00796,13.3
+121.484923,25.007572,57.7
+121.485017,25.007527,57.4
+121.484117,25.007978,35.6
+121.48467,25.007438,30.8
+121.4836,25.007678,-22.6
+121.482982,25.00768,-82.0
+121.483965,25.007527,-16.5
+121.483945,25.007908,43.0
+121.484292,25.007708,41.9
+121.48408,25.007805,-39.6
+121.483925,25.007747,11.5
+121.48445,25.007615,90.7
+121.484635,25.007655,8.5
+121.485337,25.006967,57.8
+121.485467,25.007288,56.2
+121.486088,25.006932,18.8
+121.485037,25.007352,41.3
+121.484627,25.007528,49.4
+121.483892,25.007932,121.5
+121.485448,25.007272,31.3
+121.481917,25.008648,208.8
+121.48409,25.007887,126.3
+121.485,25.007553,67.3
+121.485417,25.007133,38.5
+121.484752,25.007728,29.1
+121.483503,25.00758,28.1
+121.484353,25.007658,26.1
+121.484692,25.00782,65.8
+121.484167,25.007728,27.3
+121.484302,25.007698,37.6
+121.483885,25.007755,22.1
+121.484683,25.007727,23.9
+121.48455,25.00778,64.8
+121.484238,25.007783,18.0
+121.484377,25.00801,5.9
+121.484262,25.00785,13.4
+121.484243,25.007943,23.7
+121.484252,25.007983,22.4
+121.48438,25.007963,29.1
+121.484363,25.007847,45.5
+121.484562,25.007837,61.0
+121.484325,25.007752,28.6
+121.484712,25.00799,41.1
+121.483805,25.007718,13.5
+121.484652,25.007813,66.3
+121.48446,25.00764,23.0
+121.48441,25.007727,-2.0
+121.484305,25.007733,7.0
+121.484233,25.007687,58.6
+121.484665,25.007767,66.7
+121.484802,25.00756,66.7
+121.484383,25.00771,19.2
+121.48434,25.00793,129.5
+121.48448,25.007752,70.9
+121.484647,25.007618,79.7
+121.484228,25.00728,460.4
+121.484567,25.00759,11.5
+121.484208,25.007313,359.4
+121.484448,25.007698,-28.2
+121.484385,25.007762,-22.3
+121.48515,25.007295,200.2
+121.487787,25.00633,397.9
+121.484707,25.007688,62.9
+121.484867,25.007683,48.7
+121.484522,25.007567,-72.2
+121.484822,25.007808,29.6
+121.484753,25.007677,-14.9
+121.48567,25.007715,39.4
+121.485303,25.007843,77.1
+121.484927,25.00783,130.3
+121.48468,25.008157,77.3
+121.484502,25.008215,62.6
+121.484713,25.00739,15.8
+121.484758,25.007392,8.7
+121.484462,25.007507,18.3
+121.484653,25.007423,19.2
+121.4846,25.007607,71.7
+121.485293,25.007105,67.9
+121.484875,25.007237,47.2
+121.483542,25.008128,-38.6
+121.485248,25.007265,114.5
+121.48434,25.007723,46.7
+121.484532,25.007703,47.3
+121.484148,25.007975,38.6
+121.483798,25.008227,-16.6
+121.484597,25.00767,71.9
+121.48478,25.007538,89.7
+121.484685,25.00721,69.6
+121.484447,25.007583,69.7
+121.484567,25.00757,68.1
+121.486685,25.006807,239.7
+121.475053,25.00621,-191.7
+121.48744,25.006595,339.8
+121.484445,25.007472,81.8
+121.48456,25.006903,165.4
+121.485605,25.007372,162.4
+121.484773,25.008067,128.7
+121.484165,25.007847,11.9
+121.484677,25.00785,85.3
+121.483973,25.007867,-2.3
+121.483965,25.007705,-19.8
+121.485477,25.00785,142.9
+121.484545,25.008275,168.1
+121.48466,25.00798,101.3
+121.484758,25.007937,103.5
+121.48466,25.007805,83.1
+121.48469,25.007955,93.2
+121.484705,25.0076,63.2
+121.484728,25.007885,81.7
+121.484545,25.007763,70.6
+121.484247,25.0079,121.5
+121.48467,25.007802,84.9
+121.48483,25.007893,137.9
+121.485427,25.007813,140.9
+121.483562,25.007417,-27.5
+121.484705,25.007678,52.5
+121.484655,25.007483,28.2
+121.484752,25.008092,121.6
+121.484568,25.008113,117.6
+121.484663,25.008167,106.9
+121.484723,25.007818,92.1
+121.484652,25.007527,42.6
+121.484855,25.007995,82.4
+121.484637,25.008028,89.4
+121.484685,25.008208,103.3
+121.484293,25.008003,16.7
+121.485355,25.007353,134.7
+121.485392,25.007678,153.0
+121.485378,25.007203,126.8
+121.484217,25.0076,-9.4
+121.484502,25.007653,166.7
+121.484353,25.007855,134.4
+121.484667,25.007732,170.6
+121.484882,25.007723,126.5
+121.486152,25.00637,318.5
+121.48494,25.00748,199.5
+121.484642,25.00767,127.9
+121.484682,25.006148,654.6
+121.484005,25.007853,-11.8
+121.48437,25.007727,73.2
+121.484348,25.007768,21.1
+121.483982,25.008408,-1.8
+121.484708,25.007938,-2.3
+121.482343,25.008187,-46.9
+121.484027,25.007925,-45.2
+121.485237,25.00769,112.8
+121.48449,25.007625,50.1
+121.484443,25.00775,78.1
+121.484688,25.007715,54.9
+121.484928,25.00812,93.0
+121.484567,25.007645,92.1
+121.484782,25.00747,134.8
+121.484187,25.007765,14.9
+121.483983,25.007762,9.5
+121.484525,25.007647,44.2
+121.485393,25.006988,134.7
+121.48395,25.007823,-5.2
+121.484005,25.007725,-7.8
+</coordinates>
+</LineString>
+</Placemark>
+</Folder>
+</Folder>
+</Document>
+</kml>

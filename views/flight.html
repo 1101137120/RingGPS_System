@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>flight</title>
+		<link rel="stylesheet"  href="css/bootstrap3.3.5.min.css">
+		<link rel="stylesheet"  href="css/bootstrap-theme.min.css">
+		<script src="js/jquery-1.9.1.min.js"></script>
+		<!-- <script src="https://cdn.socket.io/socket.io-1.0.6.js"></script>	 -->
+		<link rel="stylesheet" href="js/dist/leaflet.css" />
+		<link rel="stylesheet" href="js/bootstrap-datetimepicker-master/build/css/bootstrap-datetimepicker.min.css" />
+		<link rel="stylesheet" href="js/leaflet-routing-machine-3.2.5/dist/leaflet-routing-machine.css" />
+		<link rel="stylesheet" href="css/leaflet-measure-path.css" />
+		<script src="js/dist/leaflet.js"></script>
+		<script src="js/leaflet-measure-path.js"></script>
+		<script src="js/leaflet-ant-path/dist/leaflet-ant-path.js"></script>
+		<script src="js/leaflet-routing-machine-3.2.5/dist/leaflet-routing-machine.min.js"></script>
+		<!-- <script src="js/L.Deflate.js"></script>-->
+		<!-- <script src="js/leaflet-polygon.fillPattern.js"></script>-->
+		<script src="js/pagination.js"></script>
+		<script src="js/socket.io-1.3.5.js"></script>
+		<script src="js/flight.js"></script>
+		<script src="js/moment/moment.js"></script>
+		<script src="js/chart.js/dist/Chart.min.js"></script>
+		
+		<script src="js/bootstrap-datetimepicker-master/build/js/bootstrap-datetimepicker.min.js"></script>
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="js/bootstrap3.3.5.min.js"></script>
+	</head>
+	<style>
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+     
+	  #right-panel {
+        font-family: 'Roboto','sans-serif';
+        line-height: 30px;
+        padding-left: 10px;
+      }
+
+      #right-panel select, #right-panel input {
+        font-size: 15px;
+      }
+
+      #right-panel select {
+        width: 100%;
+      }
+
+      #right-panel i {
+        font-size: 12px;
+      }
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      #mainmap {
+        float: left;
+        width: 63%;
+        height: 100%;
+      }
+      #right-panel {
+        float: right;
+        width: 34%;
+        height: 100%;
+      }
+      .panel {
+        height: 100%;
+        overflow: auto;
+      }  
+.table-hidden tbody{
+  overflow-y: auto;
+	height: 100px;
+	display: block;
+}
+
+.table-hidden thead th[data-th="操作"]{ width:200px;}
+.table-hidden tbody td[data-th="操作"]{ width:183px;}
+
+.table-hidden td[data-th="序號"],
+.table-hidden th[data-th="序號"]{ width:28.75px;}
+.table-hidden td[data-th="休息時間(體力)"],
+.table-hidden th[data-th="休息時間(體力)"]{ width:88.75px;}
+.table-hidden td[data-th="實際飛行均速"],
+.table-hidden th[data-th="實際飛行均速"]{ width:105px;}
+.table-hidden td[data-th="最快飛速(爆發力)"],
+.table-hidden th[data-th="最快飛速(爆發力)"]{ width:105px;}
+.table-hidden td[data-th="總休息(專注力)"],
+.table-hidden th[data-th="總休息(專注力)"]{ width:90px;}
+.table-hidden td[data-th="目的距離(導航力)"],
+.table-hidden th[data-th="目的距離(導航力)"]{ width:115px;}
+.table-hidden td[data-th="時間"],
+.table-hidden th[data-th="時間"]{ width:230px;}
+.table-hidden td[data-th="UID"],
+.table-hidden th[data-th="UID"]{ width:160px;}
+.table-hidden td[data-th="目的距離(導航力)"],
+.table-hidden th[data-th="目的距離(導航力)"]{ width:115px;}
+.table-hidden td[data-th="訓練次數"],
+.table-hidden th[data-th="訓練次數"]{ width:27px;}
+.table-hidden thead th[data-th="操作"]{ width:83.75px;}
+.table-hidden tbody td[data-th="操作"]{ width:68.75px;}
+.table-hidden thead th[data-th="速度"]{ width:157px;}
+.table-hidden tbody td[data-th="速度"]{ width:142px;}
+  
+.table-hidden tr {
+	width: 100%;
+	display: inline-table;
+}
+	  td.hover{
+		background:#eee;
+	  }
+    </style>
+	<body>
+	<header>
+	<div id="logo">
+	<img src="img/logo.png">
+	<h1>鴿環資訊<span  style="float:right;"><a role="button" class="btn btn-primary" href="Home">返回首頁</a><a role="button" class="btn btn-primary" href="ring">鴿環設定</a></span></h1>
+	</div>
+	</header>
+	<ul class="nav nav-tabs" role="tablist">
+    <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">鴿環路徑</a></li>
+    <li role="presentation" onclick="linepage();"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">資料分析</a></li>
+    <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">優劣分類</a></li>
+    <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">鴿環基本資料</a></li>
+	<li role="presentation"><a href="#analysisPage" aria-controls="analysisPage" role="tab" data-toggle="tab">重點分析</a></li>
+</ul>
+  <div class="tab-content">
+    <div role="tabpanel" class="tab-pane active" id="home">	
+	<div>
+	<nav class="navbar navbar-default">
+		<form class="navbar-form navbar-left" role="search">
+		<div class="container">
+    <div class="row">
+        <div class='col-sm-6'>
+            <div class="form-group">
+                <div class='input-group date' id='datetimepicker1'>
+                    <input type='text' class="form-control" />
+                    <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-calendar"></span>
+                    </span>
+                </div>
+            </div>
+        </div>
+		<div class='col-sm-6'>
+			<div class="form-group">
+				<input id="flightUID" type="text" class="form-control" placeholder="卡片IUD">
+				</div>
+				<button  onclick="searchflight()"  type="button" class="btn btn-default">搜尋</button>
+			</div>
+		</div>
+</div>
+		
+ 
+</form>
+</nav>
+	</div>	
+	<table class="table table-hover" id="flightTable">
+		<thead>
+			<tr>
+				<th data-field="number">序號</th>
+				<th data-field="tag_type">模式</th>
+				<th data-field="tag_uid">卡片UID</th>
+				<th data-field="start">起始</th>
+				<th data-field="end">終了</th>
+				<th data-field="total">總時</th>
+				<th data-field="gps_count">筆數</th>
+				<th data-field="tag_name">名稱</th>
+				<th data-field="tag_gender">性別</th>
+				<th data-field="tag_age">年齡</th>
+				<th data-field="map">路線分析</th>
+				<th data-field="del">操作</th>
+				<th data-field="tag_level">等級</th>
+			</tr>
+		</thead>
+		<tbody>
+	
+		</tbody>
+	</table>	
+	<div class="paging-container" id="tablePaging"> </div>
+	</div>
+	
+	
+	
+	
+    <div role="tabpanel" class="tab-pane" id="profile">	
+		<nav class="navbar navbar-default">
+		<form class="navbar-form navbar-left" role="searchchartsdata">
+		<div class="container">
+    <div class="row">
+        <div class='col-sm-6'>
+            <div class="form-group">
+                <div class='input-group date' id='datetimepicker2'>
+                    <input type='text' class="form-control" />
+                    <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-calendar"></span>
+                    </span>
+                </div>
+            </div>
+        </div>
+		<div class='col-sm-6'>
+			<div class="form-group">
+				<input id="flightchartsUID" type="text" class="form-control" placeholder="卡片IUD">
+				</div>
+				<button  onclick="searchflightchart()"  type="button" class="btn btn-default">搜尋</button>
+			</div>
+		</div>
+</div>
+</form>
+</nav>
+<div class="row" id="chartpage" style="width:100%;height:50%;">
+
+</div>
+</div>
+
+
+
+
+    <div role="tabpanel" class="tab-pane" id="messages">
+<nav class="navbar navbar-default">
+		<form class="navbar-form navbar-left" role="search">
+		<div class="container">
+    <div class="row">
+		<div class='col-sm-6'>
+				<button type="button" class="btn btn-default" data-toggle="modal" data-target="#levelInsertModal">新增</button>
+		</div>
+		</div>
+</div>
+		
+ 
+</form>
+</nav>	
+	<table class="table table-hover" id="levelTable">
+		<thead>
+			<tr>
+				<th data-field="number">序號</th>
+				<th data-field="tag_uid">狀態</th>
+				<th data-field="tag_name">數值</th>
+			</tr>
+		</thead>
+		<tbody>
+	
+		</tbody>
+	</table>	
+	</div>
+	
+	
+	
+	
+    <div role="tabpanel" class="tab-pane" id="settings">
+		<nav class="navbar navbar-default">
+		<form class="navbar-form navbar-left" role="search">
+		<div class="container">
+    <div class="row">
+		<div class='col-sm-6'>
+				<!--<button type="button" class="btn btn-default" data-toggle="modal" data-target="#levelInsertModal">新增</button>-->
+		</div>
+		</div>
+</div>
+		
+ 
+</form>
+</nav>	
+	<table class="table table-hover" id="tagTable">
+		<thead>
+			<tr>
+				<th data-field="number">序號</th>
+				<th data-field="tag_name">名稱</th>
+				<th data-field="tag_gender">性別</th>
+				<th data-field="tag_age">年齡</th>
+				<th data-field="tag_age">鴿環編號</th>
+			</tr>
+		</thead>
+		<tbody>
+	
+		</tbody>
+	</table>	
+  </div>
+  
+      <div role="tabpanel" class="tab-pane" id="analysisPage">
+			<div>
+	<nav class="navbar navbar-default">
+		<form class="navbar-form navbar-left" role="search">
+		<div class="container">
+    <div class="row">
+        <div class='col-sm-4'>
+            <div class="form-group">
+                <div class='input-group date' id='datetimepicker3'>
+                    <input type='text' class="form-control" />
+                    <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-calendar"></span>
+                    </span>
+                </div>
+            </div>
+        </div>
+		<div class='col-sm-6'>
+			<div class="form-group">
+				<input id="analyzeDIS" type="text" class="form-control" placeholder="里程">
+				<input id="analyzeUID" type="text" class="form-control" placeholder="卡片IUD">
+				</div>
+				<button id="analyzesearch"  type="button" class="btn btn-default">搜尋</button>
+			</div>
+			<div class='col-sm-2'>
+				<button id="testanalyze"  type="button" class="btn btn-info">快速查詢</button>
+			</div>
+		</div>
+</div>
+		
+ 
+</form>
+</nav>
+	</div>	
+	<table class="table table-hover" id="analyzeTable">
+		<thead>
+			<tr>
+				<th data-field="number">序號</th>
+				<th data-field="count">鴿環編號</th>
+				<th data-field="count">訓練次數</th>
+				<th data-field="distance">總里程</th>
+				<th data-field="ar_speed">平均分度</th>
+				<th data-field="speedest">平均速度</th>
+				<th data-field="allflight">排序</th>
+			</tr>
+		</thead>
+		<tbody>
+	
+		</tbody>
+	</table>
+<div class="paging-container" id="AtablePaging"> </div>	
+  </div>
+  
+
+	<div id="levelInsertModal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">地圖資訊</h4>
+                </div>
+                <div class="modal-body">
+                     <div class="form-group">
+						<label for="exampleInputEmail1">名稱</label>
+						<input type="text" class="form-control" id="levelName" placeholder="名稱">
+					</div>
+					<div class="form-group">
+						<label for="exampleInputPassword1">數值</label>
+						<input type="text" class="form-control" id="levelValue" placeholder="數值">
+					</div>
+				</div>
+                <div class="modal-footer">
+					<button id="levelInsert" type="submit" class="btn btn-default" data-dismiss="modal">新增</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+	
+		<div id="flightmapModal" class="modal fade" role="dialog" style="z-index: 1200;">
+        <div class="modal-dialog modal-lg">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">地圖資訊</h4>
+                </div>
+                <div class="modal-body">
+                    <div id="mapdata" style='height:600px;width:800px;'>
+                     
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+  <!-- s------------------->	
+				<div id="flightmaptestModal" class="modal fade" role="dialog" style="z-index: 1200;">
+        <div class="modal-dialog modal-lg">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">地圖資訊</h4>
+                </div>
+                <div class="modal-body">
+                    <div id="mapdatatest" style='height:600px;width:800px;'>
+                     
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- s------------------->	
+	<div id="delectModal" class="modal fade" role="dialog" style='z-index:1200;'>
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">刪除視窗</h4>
+                </div>
+                <div class="modal-body">
+                    <div id="deldata" >
+                     
+                    </div>
+                </div>
+                <div class="modal-footer">
+					 <button id="analyzeFlightDel" type="submit" class="btn btn-default" data-dismiss="modal">確定</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+	
+	
+	<div id="analyzeAppointModal" class="modal fade" role="dialog" >
+        <div class="modal-dialog modal-lg">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">地圖資訊</h4>
+                </div>
+                <div class="modal-body">
+				<div id='analyzeRadar' ></div>
+                    <table class="table table-hover table-hidden" id="analyzeAppointTable" style="height:50%;width:100%">
+		<thead>
+			<tr>
+				<th data-field="number" data-th="序號">序號</th>
+				<th data-field="count" data-th="休息時間(體力)">休息時間(體力)</th>
+				<th data-field="count" data-th="實際飛行均速">實際飛行均速</th>
+				<th data-field="distance" data-th="最快飛速(爆發力)">最快飛速(爆發力)</th>
+				<th data-field="ar_speed" data-th="總休息(專注力)">總休息(專注力)</th>
+				<th data-field="speedest" data-th="目的距離(導航力)">目的距離(導航力)</th>
+				<th data-field="speedest" data-th="時間">時間</th>
+				<th data-field="allflight" data-th="操作">操作</th>
+			</tr>
+		</thead>
+		<tbody>
+	
+		</tbody>
+	</table>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+	<div id="testModal" class="modal fade" role="dialog" >
+        <div class="modal-dialog modal-lg">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">地圖資訊</h4>
+                </div>
+                <div class="modal-body">
+				<div id='testRadar' ></div>
+                    <table class="table table-hover table-hidden" id="testTable" style="height:50%;width:100%">
+		<thead>
+			<tr>
+				<th data-field="number" data-th="序號">序號</th>
+				<th data-field="count" data-th="UID">UID</th>
+				<th data-field="count" data-th="訓練次數">訓練次數</th>
+				<th data-field="distance" data-th="最快飛速(爆發力)">最快飛速(爆發力)</th>
+				<th data-field="count" data-th="實際飛行均速">實際飛行均速</th>
+				<th data-field="speedest" data-th="目的距離(導航力)">目的距離(導航力)</th>
+				<th data-field="ar_speed" data-th="總休息(專注力)">總休息(專注力)</th>
+				<th data-field="speedest" data-th="速度">速度</th>
+			</tr>
+		</thead>
+		<tbody>
+	
+		</tbody>
+	</table>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+
+        </div>
+    </div>	
+	
+	</body>
+</html>

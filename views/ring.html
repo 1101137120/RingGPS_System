@@ -1,0 +1,531 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <title>2.4G</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+	<link rel="stylesheet" href="css/bootstrap-datetimepicker.css">
+	<link rel="stylesheet" href="css/bootstrap-datetimepicker.min.css">
+	<link rel="stylesheet" href="css/bootstrap-theme.min.css">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<link rel="stylesheet" href="js/dist/leaflet.css" />
+	<link rel="stylesheet" href="js/leaflet-routing-machine-3.2.5/dist/leaflet-routing-machine.css" />
+	<link rel="stylesheet" href="css/leaflet-measure-path.css" />
+	<script src="js/dist/leaflet.js"></script>
+	<script src="js/leaflet-measure-path.js"></script>
+	<script src="js/leaflet-ant-path/dist/leaflet-ant-path.js"></script>
+	<script src="js/leaflet-routing-machine-3.2.5/dist/leaflet-routing-machine.min.js"></script>
+    <script src="js/jquery-1.9.1.min.js"></script>
+	
+	
+    <!-- <script src="https://cdn.so    cket.io/socket.io-1.0.6.js"></script>	 -->
+    <script src="js/ring.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/socket.io-2.1.0.js"></script>
+    <script src="js/moment/moment.js"></script>
+	 <script src="js/bootstrap-datetimepicker.min.js"></script>
+	 <script src="js/jquery.blockUI.js"></script>
+
+</head>
+
+<body>
+    <header>
+        <div id="logo">
+            <img src="img/logo.png">
+            	<h1>鴿環設定<span  style="float:right;"><a role="button" class="btn btn-primary" href="flight">鴿環資訊</a></span><span  style="float:right;"><a role="button" class="btn btn-primary" href="Home">返回首頁</a></span></h1>
+        </div>
+    </header>
+    <div class="row">
+        <div class="  col-md-12   overflow-hidden ">
+            <div class=" card" style="padding:5px;">
+                <div class=" card-header">基本資訊</div>
+				   <div class="card-body">
+				<div class="container">
+				<div class="row">
+				<div class="col-md-8">
+                <div class="row">
+                    
+                    <div class="col-xs-11" style="font-size: 25px;" id="connectMach">裝置連線(等待中.....)<div id="ringlinkicon" class="glyphicon glyphicon-remove-circle"></div></div>
+					
+                </div>
+
+                <div class="row">
+                    <div class="col-xs-1"></div>
+                    <div class="col-xs-4" style="font-size: 20px;">裝置版本:</div><div id="qqa" class="col-xs-7" style="font-size: 20px;">00000000</div>
+                </div>
+				 <div class="row">
+                    <div class="col-xs-1"></div>
+                    <div class="col-xs-4" style="font-size: 20px;">裝置模式:</div><div id="ringS" class="col-xs-7" style="font-size: 20px;"></div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-1"></div>
+                    <div class="col-xs-4" style="font-size: 20px;">ID編碼:</div><div class="col-xs-7" style="font-size: 20px;">0000000000000</div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-1"></div>
+                    <div class="col-xs-4" style="font-size: 20px;">鴿環UUID:</div><div  id="ringUUID"  class="col-xs-7" style="font-size: 20px;">0000000000</div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-1"></div>
+                    <div class="col-xs-4" style="font-size: 20px;">裝置電壓:</div><div id="ringV" class="col-xs-7" style="font-size: 20px;">0V</div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-1"></div>
+                    <div class="col-xs-4" style="font-size: 20px;">裝置時間:</div><div id="ringDateTimeNow" class="col-xs-7" style="font-size: 20px;">2018/04/16 10:56:22</div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-1"></div>
+                    <div class="col-xs-4" style="font-size: 20px;">裝置預約:</div><div id="ringcheck" class="col-xs-7" style="font-size: 20px;">2015/07/05 12:55:22.</div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-1"></div>
+                    <div class="col-xs-4" style="font-size: 20px;">軌跡筆數:</div><div id="GPStotal" class="col-xs-7" style="font-size: 20px;">0</div>
+                </div>
+
+				 </div>
+					<div class="col-md-4">
+							<img id="battery" src="img/power_03.png"></img> 
+				            <button type="button" class="btn btn-primary" id="autoConnect">自動連線</button>
+							<a href="#" id="errormessagesend">錯誤回報</a>
+					</div>
+									
+			 
+				 </div>
+				 
+				 					
+                <div class="row">
+                    <div class="col-md-8">
+					<button style="margin:10px" class="btn btn-primary" type="button"data-toggle="modal"  id="TTypeBotton" >訓練</button>
+					<button style="margin:10px" class="btn btn-primary" type="button" data-toggle="modal"   id="RTypeBotton">比賽</button>
+
+                    </div>
+					<div class="col-md-4">
+					<button style="margin:10px" class="btn btn-primary" type="button" data-toggle="modal"   id="mapNowBotton">此次軌跡</button>
+					<button style="margin:10px" class="btn btn-primary" type="button" data-toggle="modal"   id="mapTypeBotton">Tag軌跡紀錄</button>
+					</div>
+                </div>	
+				 </div>
+				 </div>
+                </div>
+        </div>
+       <!-- <div class="bg-light col-md-8 overflow-hidden">
+            <!--<div class="row funkyradio">
+            <h2 class="text-center">設定</h2>
+            <div >電腦時間</div>
+            <div >4252452452452452</div>
+        </div>
+        <div class="row"><div class="col-xs-4">設定時間.</div><span class="col-xs-4">2015/07/05 12:55:22.</span><div class="col-xs-4">2015/07/05 12:55:22.</div></div>
+        <div class="row"><div class="col-xs-4">預約時間.</div><span class="col-xs-4">2015/07/05 12:55:22.</span><div class="col-xs-4">2015/07/05 12:55:22.</div></div>
+        <div class="row funkyradio"><div class="col-xs-2 funkyradio-primary"><input type="checkbox" name="checkbox" id="changeNum" /><label for="checkbox1">更改編碼</label></div><div class="col-xs-3" style="text-align:center;">2***************</div></div>
+        <div class="row funkyradio"><div class="col-xs-2 funkyradio-primary"><input type="checkbox" name="checkbox" id="changePass"  /><label for="checkbox2">更改密碼</label></div><div class="col-xs-3" style="text-align:center;">***********</div></div>
+        <div class="row"><div class="col-xs-2"></div><div class="col-xs-3"><label for="checkbox3">Password</label></div><span class="col-xs-3"  style="text-align:center;">***********</span></div>
+        <div class="row funkyradio"><div class="col-xs-4 funkyradio-primary"><input type="radio" name="radio" id="TType" checked/><label for="radio1">T模式</label></div><div class="col-xs-4 funkyradio-primary"><input type="radio" name="radio" id="RType" /><label for="radio2">R模式</label></div></div>
+        <div class="row funkyradio"><div class="col-xs-3 funkyradio-primary"><input type="checkbox" id="clean" name="checkbox"><label>清除軌跡</label></div><div class="col-xs-3 funkyradio-primary"><input type="checkbox" id="nowtime"  name="checkbox"><label>目前時間</label></div><div class="col-xs-3 funkyradio-primary"><input type="checkbox" id="IDcopy" name="checkbox" ><label>內碼複製</label></div><div class="col-xs-3"></div></div>
+        <div class="row funkyradio"><div class="col-xs-3"><button type="button" class="btn btn-primary">通訊設定</button></div><div class="col-xs-3"><button type="button" class="btn btn-primary">執行</button></div><div class="col-xs-6"></div></div>
+        <div class="bg-dark box-shadow mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;"></div>
+            <div class="card" style="padding:5px;">
+            <div class="card-header">設定</div>
+ <div class="card-body">
+            <!---<div class="row">
+                <div>電腦時間</div>
+                <div id="showbox" style="font-size: 20px;"></div>
+            </div>
+
+
+
+
+            <div class="row">
+                <div class="col-xs-1"></div>
+                <div class="col-xs-4">
+                    <div class="form-group">
+                        <label class="sr-only" for="exampleInputAmount">Password</label>
+                        <div class="input-group">
+                            <div class="input-group-text">Password</div>
+                            <input type="password" onkeyup="value=value.replace(/[^\d]/g,'')" Maxlength="8"  class="form-control" id="exampleInputAmount"   placeholder="Password">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+           <div class="row funkyradio">
+                <div class="col-xs-3 funkyradio-primary">
+                    <input type="checkbox" name="checkbox" id="cleantime" checked />
+                    <label for="cleantime">清除軌跡</label>
+                </div>
+
+                <!--<div class="col-xs-3 funkyradio-primary">
+                    <input type="checkbox" name="checkbox" id="IDcopy"  />
+                    <label for="IDcopy">內碼複製</label>
+                </div>
+            </div>
+             <div class="row ">
+ <div class="col-md-2 ">
+ 
+    <a  style="margin:10px" class="btn btn-primary" data-toggle="collapse" href="#multiCollapseUUID" role="button" aria-expanded="false" aria-controls="multiCollapseUUID">UID 更改</a>
+  <button style="margin:10px" class="btn btn-primary" type="button" data-toggle="collapse" data-target="#multiCollapseT_R" aria-expanded="false" aria-controls="multiCollapseT_R">鴿環模式</button>
+  <button  style="margin:10px" class="btn btn-primary" type="button" data-toggle="collapse" data-target="#multiCollapseGPSData" aria-expanded="false" aria-controls="multiCollapseGPSData">鴿環GPS</button>
+  
+ </div>
+ <div class="col-md-10 ">
+ <div class="col">
+    <div class="collapse multi-collapse" id="multiCollapseT_R">
+      <div class="card card-body" style="margin:10px;">
+                    <div class="row funkyradio">
+                <div class="col-xs-4 funkyradio-primary"  >
+                    <input type="radio" name="radio" id="trainRadio" checked/>
+                    <label for="trainRadio">T模式</label>
+                </div>
+                <div class="col-xs-4 funkyradio-primary" data-toggle="collapse" data-target="#multiCollapseTEST" aria-expanded="false" aria-controls="multiCollapseTEST">
+                    <input type="radio" name="radio" id="RaceRadio"  />
+                    <label for="RaceRadio">R模式</label>
+                </div>
+				
+						    <div class="col-xs-3 funkyradio-primary">
+                    <input type="checkbox" name="checkbox" id="nowtime"  />
+                    <label for="nowtime">目前時間</label>
+                </div>
+            </div>
+	
+            <div class="row">
+                <div class="col-xs-2"><label for="datetimepicker6" style="font-size: 20px;">設定鴿環時間:</label></div>
+               
+                    <div class='col-xs-5'>
+                        <div class="form-group">
+                            <div class='input-group date' id='datetimepicker1'>
+                                <input type='text' class="form-control" />
+                                <span class="input-group-addon">
+                                    <span class="glyphicon glyphicon-calendar"></span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='col-xs-5'>
+                        <div class="form-group">
+                            <div class='input-group date' id='datetimepicker2'>
+                                <input type='text' class="form-control" />
+                                <span class="input-group-addon">
+                                    <span class="glyphicon glyphicon-calendar"></span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+              
+            </div>
+
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="collapse multi-collapse" id="multiCollapseUUID">
+      <div class="card card-body "  style="margin:10px;">
+                    <div class=" row funkyradio form-group">
+                <div class=" col-xs-4 funkyradio-primary">
+                    <input type="checkbox" name="checkbox" id="changeNum" checked />
+                    <label for="changeNum">更改編碼</label>
+                </div>
+				            </div>
+				<div class="row">
+				 <div class="col-xs-3" style="font-size: 20px;">鴿環UUID:</div><div  id="ringUUID"  class="col-xs-3" style="font-size: 20px;">00000</div>
+                <div class="col-xs-5">
+				 <div class="input-group">
+                            <div class="input-group-text">更新UUID</div>
+					<input    onkeyup="value=value.replace(/[^\d]/g,'')" Maxlength="16" style="position: relative;line-height: 2.5em;cursor: pointer;-webkit-user-select: none; -moz-user-select: none;-ms-user-select: none;user-select: none;height: 36.67px;" type="text" class="form-control" id="inputChangeNum" placeholder="編號" value="0000000000000000"></div>
+				</div>
+				</div>
+            <!--<div class="col-xs-3 funkyradio-primary">
+                    <input type="checkbox" name="checkbox" id="changePass"  />
+                    <label for="changePass">更改密碼</label>
+                </div>
+
+                <div class="col-xs-3"><label for="inputChangePass" class="sr-only">Password</label>
+<input    onkeyup="value=value.replace(/[^\d]/g,'')" Maxlength="8" style="position: relative;line-height: 2.5em;margin-top: 2em;cursor: pointer;-webkit-user-select: none; -moz-user-select: none;-ms-user-select: none;user-select: none;height: 36.67px;" type="text" class="form-control" id="inputChangePass" placeholder="密碼"></div>
+
+      </div>
+    </div>
+  </div>
+    <div class="col">
+    <div class="collapse multi-collapse" id="multiCollapseGPSData">
+      <div class="card card-body" style="margin:10px;">
+	      <div class="col-xs-4">
+              <button style="width: 100%;"  type="button" class="btn btn-primary" id="readTrack">讀取軌跡</button>
+          </div>
+		  <div class="row funkyradio">
+                <div class="col-xs-3 funkyradio-primary">
+                    <input type="checkbox" name="checkbox" id="cleantime" checked />
+                    <label for="cleantime">清除軌跡</label>
+                </div>
+			</div>
+      </div>
+    </div>
+  </div>
+ </div>
+
+</div>
+            <div class="row">
+                <div class="col-xs-3">
+                    <button type="button" class="btn btn-primary" id="autoConnect">自動連線</button>
+                </div>
+
+                <div class="col-xs-3">
+                    <button type="button" class="btn btn-primary">通訊設定</button>
+                </div>
+
+                <div class="col-xs-3">
+                    <button type="button" class="btn btn-primary" id="writeInfoOnRing" data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Processing Order">執行</button>
+                </div>
+            </div>
+			</div>
+                </div>
+        </div>
+    </div>-->
+	<div class="container">
+    </div>
+  
+  
+    </div>
+	
+	  <!-- Button to Open the Modal -->
+
+
+  <!-- The Modal -->
+  <div class="modal fade" id="TTypeModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">模式確認</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        
+        <!-- Modal body -->
+        <div class="modal-body">
+          <div>設定為訓練模式，將清除現有GPS紀錄。</div>
+		  <div class="row">
+		  	<div class="col-md-2">ID:  </div>
+			<div class="ringUUIDSet col-md-4"><div></div></div>
+			<div class="col-md-3"><button type="button" class="UUIDChange btn btn-danger">修改</button></div>
+		  </div>
+		  <div>
+		  	<span>Status:  </span>
+			<span id="showbox" style="font-size: 20px;"></span>
+		  </div>
+        </div>
+        <!-- Modal footer -->
+        <div class="modal-footer">
+			<button type="button" class="btn btn-danger" data-dismiss="modal" id="setTrainInfo">設定</button>
+          <button type="button" class="btn btn-danger" data-dismiss="modal">離開</button>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+  
+  
+    <!-- The Modal -->
+  <div class="modal fade" id="RTypeModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">模式確認</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        
+        <!-- Modal body -->
+        <div class="modal-body">
+
+          <div>設定為比賽模式，將清除現有GPS紀錄。</div>
+		  	<div class="row">
+		  	<div class="col-md-2">ID:  </div>
+			<div class="ringUUIDSet col-md-4"><div></div></div>
+			<div class="col-md-3"><button type="button" class="UUIDChange btn btn-danger">修改</button></div>
+		  </div>
+		              <div class="row">
+                <div class="col-xs-2"><label for="datetimepicker6" style="font-size: 20px;">預約時間:</label></div>
+
+                   <!-- <div class='col-xs-5'>
+                        <div class="form-group">
+                            <div class='input-group date' id='datetimepicker6'>
+                                <input type='text' class="form-control" />
+                                <span class="input-group-addon">
+                                    <span class="glyphicon glyphicon-calendar"></span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='col-xs-5'>
+                        <div class="form-group">
+                            <div class='input-group date' id='datetimepicker7'>
+                                <input type='text' class="form-control" />
+                                <span class="input-group-addon">
+                                    <span class="glyphicon glyphicon-calendar"></span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>-->
+             
+            </div>
+			<div class="form-group">
+            <label for="recipient-name" class="col-form-label">日期:</label>
+            <input type="text" class="form-control" id="datepicker">
+          </div>
+
+
+						           <div class="form-group">
+            <label for="recipient-name" class="col-form-label">時間:</label>
+            <input type="text" class="form-control" id="timepicker">
+          </div>
+	
+   	
+        </div>
+        
+        <!-- Modal footer -->
+        <div class="modal-footer">
+			<button type="button" class="btn btn-danger" data-dismiss="modal" id="setRaceInfo">設定</button>
+          <button type="button" class="btn btn-danger" data-dismiss="modal">離開</button>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+  
+  
+    <!-- The Modal -->
+  <div class="modal fade" id="TTypeModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">模式確認</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        
+        <!-- Modal body -->
+        <div class="modal-body">
+          <div>設定為訓練模式，將清除現有GPS紀錄。</div>
+		  <div class="row">
+		  	<div class="col-md-2">ID:  </div>
+			<div class="ringUUIDT col-md-4"><div></div></div>
+			<div class="col-md-3"><button type="button" class="UUIDChange btn btn-danger">修改</button></div>
+		  </div>
+		  <div>
+		  	<span>Status:  </span>
+			<span id="showbox" style="font-size: 20px;"></span>
+		  </div>
+        </div>
+        <!-- Modal footer -->
+        <div class="modal-footer">
+			<button type="button" class="btn btn-danger" data-dismiss="modal" id="setTrainInfo">設定</button>
+          <button type="button" class="btn btn-danger" data-dismiss="modal">離開</button>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+  
+  
+    <!-- The Modal -->
+  <div class="modal fade" id="ErrorModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">警告</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <!-- Modal body -->
+        <div class="modal-body">
+
+        </div> 
+      </div>
+    </div>
+  </div>
+
+  
+  
+  	<div id="analyzeAppointModal" class="modal fade">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+					<h4 class="modal-title">地圖資訊</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body" style="height:500px; overflow-y:auto;">
+                    <table class="table table-hover table-hidden" id="analyzeTable" style="height:50%;width:100%">
+		<thead>
+			<tr>
+				<th data-field="number" data-th="序號">序號</th>
+				<th data-field="number" data-th="模式">模式</th>
+				<th data-field="count" data-th="飛行日期">飛行日期</th>
+			</tr>
+		</thead>
+		<tbody>
+	
+		</tbody>
+	</table>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+  
+  		<div id="flightmapModal" class="modal fade">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title"> </h4>
+                </div>
+                <div class="modal-body">
+                    <div id="mapdata" style='height:600px;width:800px;'>
+                     
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+	
+	
+	<div id="OKModal" class="modal fade">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+					<h4 class="modal-title">完成</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    
+                </div>
+                <div class="modal-body">
+					<div>設定完成</div>
+					<div id="SetInfo" style="color:Red;"></div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">離開</button>
+					<button type="button" class="btn btn-default"  id="backHome">下一個</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+
+</html>

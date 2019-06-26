@@ -1,18 +1,45 @@
- var serverBaseUrl = document.domain+":9004";
+ var serverBaseUrl = document.domain+":3000";
 function init() {
 
 	console.log("server base url:"+"http://"+serverBaseUrl);
 	var socket = io.connect("http://"+serverBaseUrl);
 
+	
 	socket.on('connect', function () {
 
 
 	});	
+var show_socket={};
+/*setInterval(function(){
+console.log("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
+  var aa ="AAAAAAAAAA";
+  console.log("SSSSSSSSSS"+aa);
 
-	socket.on("channel1", function (readerObj) {
+  show_socket.aa = aa;
+
+  socket.emit("sockettest",show_socket);
+
+},1000*5);*/ 
+	
+	socket.on("socketshow", function (readerObj) {
 		console.log("2.4頁面receive"+JSON.stringify(readerObj));
- 		console.log("get the reader name:"+readerObj.reader_name);	
+		//for(var i=0;i<readerObj.aa.length;i++)
+		//{
+			if($("#"+readerObj+" td:nth-child(1)").text()==readerObj)
+			{
+				console.log("aaaa");
+				
+			}else{
+				
+				var row = 
+					"<tr id='"+readerObj+"'>"+
+						"<td data-field='tag_id'>"+readerObj+"</td>"+
+					"</tr>";
+					console.log("server base url:"+"http://"+row);
+				$("#readerTable tbody").append(row);
+			}
 		
+		//}
 		$("#readerTable tr").css('background','#FFFFFF');
 		console.log("did I get readerTable:"+$("#readerTable").length);
 		//adding color
@@ -22,16 +49,18 @@ function init() {
 			$("#"+readerObj.reader_name).css('background-color','#FF0000');
 		
 		}
-		console.log("position:"+readerObj.position);
+		$("#"+readerObj+" td:nth-child(1)").text(readerObj);
+		/*$("#"+readerObj.aa+" td:nth-child(2)").text(readerObj.bb);
+		$("#"+readerObj.aa+" td:nth-child(3)").text(readerObj.cc);*/
 		//position column
-		$("#"+readerObj.tag_uid+" td:nth-child(4)").text(readerObj.position);
+		//$("#"+readerObj.tag_uid+" td:nth-child(4)").text(readerObj.position);
 		
-		var date = new Date(readerObj.created_at);
+		/*var date = new Date(readerObj.created_at);
 		var formatDate = date.getFullYear() + "-"+addZero(date.getMonth()+1)+"-"+addZero(date.getDate())+" "
 		+addZero(date.getHours()) + ":" + addZero(date.getMinutes())+":"+addZero(date.getSeconds()); 
-		
-		$("#"+readerObj.tag_uid+" td:nth-child(5)").text(formatDate);
-		$("#"+readerObj.tag_uid).css('background-color','#FFE700');
+		*/
+		//$("#"+readerObj.tag_uid+" td:nth-child(5)").text(formatDate);
+		//$("#"+readerObj.tag_uid).css('background-color','#FFE700');
 		//tag name column
 		//$("#"+readerObj.reader_name+" td:nth-child(3)").text(readerObj.tag_name);
 		
@@ -55,7 +84,7 @@ function init() {
 	});
 
 
-	var protocol = location.protocol;
+	/*var protocol = location.protocol;
 	var hostname = location.hostname;
 	$.ajax({
 		 type: "GET",
@@ -94,6 +123,7 @@ function init() {
 					.success(function(msg) {
 						//alert(JSON.stringify(msg));
 						// console.log("tag id:"+JSON.stringify(msg.response[0].position));
+						console.log("最後更新時間："+JSON.stringify(msg));
 						console.log("tag_uid:"+tag_uid);
 						$("#"+tag_uid+" td:nth-child(4)").text(msg.response[0].position);
 
@@ -138,7 +168,7 @@ function init() {
 	})
 	.always(function() {
 			console.log("complete")
-	});
+	});*/
 
 }
 function addZero(n){

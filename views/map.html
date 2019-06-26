@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<!--<html>
+<body>
+
+<p id="demo">Click the button to get your position.</p>
+
+<button onclick="getLocation()">Try It</button>
+
+<div id="mapholder"></div>
+
+<script>
+var x = document.getElementById("demo");
+
+function getLocation() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition, showError);
+    } else {
+        x.innerHTML = "Geolocation is not supported by this browser.";
+    }
+}
+
+function showPosition(position) {
+    var latlon = position.coords.latitude + "," + position.coords.longitude;
+    var img_url = "https://maps.googleapis.com/maps/api/staticmap?center="
+    +latlon+"&zoom=14&size=400x300&key=AIzaSyDPTTD7shmP7GY5O_13bs1rayI5l9NLa4Y";
+    document.getElementById("mapholder").innerHTML = "<img src='"+img_url+"'>";
+}
+//To use this code on your website, get a free API key from Google.
+//Read more at: https://www.w3schools.com/graphics/google_maps_basic.asp
+
+function showError(error) {
+    switch(error.code) {
+        case error.PERMISSION_DENIED:
+            x.innerHTML = "User denied the request for Geolocation."
+            break;
+        case error.POSITION_UNAVAILABLE:
+            x.innerHTML = "Location information is unavailable."
+            break;
+        case error.TIMEOUT:
+            x.innerHTML = "The request to get user location timed out."
+            break;
+        case error.UNKNOWN_ERROR:
+            x.innerHTML = "An unknown error occurred."
+            break;
+    }
+}
+</script>
+
+</body>
+</html>-->
+
+<html>
+  <head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <title>Marker Clustering</title>
+    <style>
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+     
+	  #right-panel {
+        font-family: 'Roboto','sans-serif';
+        line-height: 30px;
+        padding-left: 10px;
+      }
+
+      #right-panel select, #right-panel input {
+        font-size: 15px;
+      }
+
+      #right-panel select {
+        width: 100%;
+      }
+
+      #right-panel i {
+        font-size: 12px;
+      }
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      #map {
+        height: 100%;
+        float: left;
+        width: 63%;
+        height: 100%;
+      }
+      #right-panel {
+        float: right;
+        width: 34%;
+        height: 100%;
+      }
+      .panel {
+        height: 100%;
+        overflow: auto;
+      }
+    </style>
+	<script src="js/jquery-1.9.1.min.js"></script>
+  </head>
+  <body>
+    <div id="map"></div>
+	
+	<div id="right-panel">
+	<div id="heightest"></div>
+	<div id="speed"></div>
+      <p>Total Distance: <span id="total"></span></p>
+    </div>
+    <script>
+
+      function initMap() {
+		var heightest =0;
+		var locations = Array();
+		var waypts = Array();
+		var speedtotal = 0;
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 12,
+          center: {lat: 23.849647, lng: 120.922398}
+        });
+		
+		/*var directionsService = new google.maps.DirectionsService;
+        var directionsDisplay = new google.maps.DirectionsRenderer({
+          draggable: true,
+          map: map,
+          panel: document.getElementById('right-panel')
+        });*/
+        // Create an array of alphabetical characters used to label the markers.
+        var labels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+		$.ajax({
+						 type: "POST",
+						 url: location.protocol+"//"+location.hostname+":3000/map/v1/maptest"
+					}).success(function(msg) {
+					
+				
+					var k=0;
+					var y=msg.response.length-2;
+					var istart=msg.response.length-1;
+					for(var i=msg.response.length-1;i>=0;i--){
+						var total = ssDISTANCE-msg.response[i].DISTANCE;
+						
+					
+						
+						
+						console.log(y);
+						if(y>0){
+						var total1 = msg.response[i].DISTANCE-msg.response[y].DISTANCE;}
+						if(total>0.05&&total1>0.05||i==istart||i==0){
+						locations[k]={lat:msg.response[i].LATITUDE,lng:msg.response[i].LONGITUDE};
+						console.log("k"+k);
+						if(ssDate&&ssTime&&DDDDF){
+							speedtotal=speedtotal+speedcount(msg.response[i].DATE,msg.response[i].TIME,ssDate,ssTime,DDDDF,msg.response[i].DISTANCE);
+						console.log("speedtotal"+speedtotal);
+						}
+						var datetimeE=new Date(msg.response[i].DATE+" "+msg.response[i].TIME);
+						if(heightest<msg.response[i].HEIGHT){
+						heightest = msg.response[i].HEIGHT;
+						}
+						if(heightest<msg.response[i].HEIGHT){
+						heightest = msg.response[i].HEIGHT;
+						}
+						console.log(locations[k]);
+						k=k+1;
+						var ss= {lat:msg.response[i].LATITUDE,lng:msg.response[i].LONGITUDE};
+						
+						var DDDDF=msg.response[i].DISTANCE;
+						var ssDate=msg.response[i].DATE;
+						var ssTime=msg.response[i].TIME;
+					}
+					
+					var ssDISTANCE=msg.response[i].DISTANCE;
+					y=i-2;
+					}
+					var count = Math.ceil(locations.length/23);
+					var Speed = speedtotal/locations.length;
+					var tol = 0+count;
+					
+					/*for(var i=0;i<locations.length;i++){
+						if(tol==i){
+					
+						console.log("ININ");
+						waypts.push({
+						location: new google.maps.LatLng(locations[i].lat,locations[i].lng),
+						stopover: true
+					});
+					
+					tol=tol+count;
+					}
+					}*/
+					
+					
+					/*directionsService.route({
+						origin: locations[0],
+						destination: ss,
+						waypoints: waypts,
+						travelMode: 'WALKING',
+						avoidTolls: true
+						}, function(response, status) {
+						if (status === 'OK') {
+							directionsDisplay.setDirections(response);
+						} else {
+							alert('Could not display directions due to: ' + status);
+						}
+					});*/
+					var markers = locations.map(function(location, i) {
+          return new google.maps.Marker({
+            position: location,
+            map: map,
+			label: {
+			text: i.toString(),
+			color: 'white',
+			}
+          });
+        });
+		$('#speed').text("平均時速"+Speed+"km/h");
+		$('#heightest').text("最高高度"+heightest);
+		
+        // Add a marker clusterer to manage the markers.
+
+					});
+					
+			}		
+        // Add some markers to the map.
+        // Note: The code uses the JavaScript Array.prototype.map() method to
+        // create an array of markers based on a given "locations" array.
+        // The map() method here has nothing to do with the Google Maps API.
+        
+      function speedcount(Edate,Etime,Sdate,Stime,Edis,Sdis){
+					var dis = Edis-Sdis;
+					console.log("dis"+dis);
+					var datetimeE=new Date(Edate+" "+Etime);
+					var datetimeS=new Date(Sdate+" "+Stime);
+					var Date_C = datetimeE.getTime()-datetimeS.getTime();
+					console.log("Date_C"+Date_C);
+					var leave1=Date_C%(24*3600*1000);
+					var hours=Math.floor(leave1/(3600*1000));  
+					var leave2=leave1%(3600*1000);        
+					var minutes=Math.floor(leave2/(60*1000)) ; 
+					var leave3=leave2%(60*1000);
+					var seconds=Math.round(leave3/1000); 
+					var datemath = parseInt(hours)+parseInt(minutes)/60+parseInt(seconds)/3600;
+					console.log("datemath"+datemath);
+					var Speed = accDiv(dis,datemath);
+					console.log("Speed"+Speed);
+					return Speed;
+	  }
+	  
+	  function accDiv(arg1,arg2){
+			var t1=0,t2=0,r1,r2;
+			try{t1=arg1.toString().split(".")[1].length}catch(e){}
+			try{t2=arg2.toString().split(".")[1].length}catch(e){}
+			with(Math){
+			r1=Number(arg1.toString().replace(".",""))
+			r2=Number(arg2.toString().replace(".",""))
+		return (r1/r2)*pow(10,t2-t1);
+					}
+			}
+			
+			$( document ).ready(function() {
+    initMap();
+});
+    </script>
+    <script 
+    src="js/googleapis.js">
+    </script>
+  </body>
+</html>
+
+<!DOCTYPE html>
+
+<!--<html>
+  <head>
+  </head>
+  <script src="js/jquery-1.9.1.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+    <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
+  <script src="js/maptest.js"></script>
+  <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDPTTD7shmP7GY5O_13bs1rayI5l9NLa4Y&callback=initMap""></script>
+  
+  <body>
+    <div id="map"></div>
+   
+    
+  </body>
+</html>-->

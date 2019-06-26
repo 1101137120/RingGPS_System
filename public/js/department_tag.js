@@ -41,23 +41,31 @@ function init() {
 		}
 		console.log("position:"+readerObj.position);
 		//position column
-		$("#"+readerObj.tag_uid+" td:nth-child(4)").text(readerObj.position);
-		
-		var date = new Date(readerObj.created_at);
-		var formatDate = date.getFullYear() + "-"+addZero(date.getMonth()+1)+"-"+addZero(date.getDate())+" "
-		+addZero(date.getHours()) + ":" + addZero(date.getMinutes())+":"+addZero(date.getSeconds()); 
-		
-		$("#"+readerObj.tag_uid+" td:nth-child(5)").text(formatDate);
-		$("#"+readerObj.tag_uid).css('background-color','#FFE700');
+		if(readerObj.tag_uid !== "")
+		{
+			$("#"+readerObj.tag_uid+" td:nth-child(4)").text(readerObj.position);
+			
+			var date = new Date(readerObj.created_at);
+			var formatDate = date.getFullYear() + "-"+addZero(date.getMonth()+1)+"-"+addZero(date.getDate())+" "
+			+addZero(date.getHours()) + ":" + addZero(date.getMinutes())+":"+addZero(date.getSeconds()); 
+			
+			$("#"+readerObj.tag_uid+" td:nth-child(5)").text(formatDate);
+			$("#"+readerObj.tag_uid).css('background-color','#FFE700');
 
-		var currenttime = new Date();
-		var diff = Math.abs(currenttime - date);
+			var currenttime = new Date();
+			var diff = Math.abs(currenttime - date);
+			
+			if(diff < 1000 * 60 * 10)
+			{		
+				//$("#"+readerObj.tag_uid).show();
+				//$("#"+tag_uid).css('background-color','#d2d0d0');
+			}		
 		
-		if(diff < 1000 * 60 * 10)
-		{		
-			//$("#"+readerObj.tag_uid).show();
-			//$("#"+tag_uid).css('background-color','#d2d0d0');
+		
 		}
+		
+		
+
 		
 	});
 

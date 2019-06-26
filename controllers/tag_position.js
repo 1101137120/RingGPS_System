@@ -29,9 +29,9 @@ exports.postFindTagPosition = function(req, res,next) {
 		// "SELECT * FROM `reader` WHERE reader_name ="+
 		// "(select reader_name from time_line where tag_name = (select tag_name from tag where id = "+tag_id+")"+
 		// "order by created_at desc limit 1)";		
-		"SELECT *,(select created_at from time_line where tag_name = (select tag_name from tag where id = "+tag_id+")"+
+		"SELECT *,(select created_at from time_line_today where tag_name = (select tag_name from tag where id = "+tag_id+")"+
 		"order by created_at desc limit 1)as created_at FROM `reader` WHERE reader_name ="+
-		"(select reader_name from time_line where tag_name = (select tag_name from tag where id = "+tag_id+")"+
+		"(select reader_name from time_line_today where tag_name = (select tag_name from tag where id = "+tag_id+")"+
 		"order by created_at desc limit 1)"	;
 		
 		
